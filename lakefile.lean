@@ -31,8 +31,8 @@ you can use `require mathlib from git "[URL]" @ leanVersion`
  -/
 
 
-
--- require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ leanVersion
+-- uncommented by AB
+require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ leanVersion
 
 
 
@@ -41,6 +41,8 @@ you can use `require mathlib from git "[URL]" @ leanVersion`
 -- NOTE: We abuse the `trace.debug` option to toggle messages in VSCode on and
 -- off when calling `lake build`. Ideally there would be a better way using `logInfo` and
 -- an option like `lean4game.verbose`.
+
+
 package Game where
   moreLeanArgs := #[
     "-Dtactic.hygienic=false",
