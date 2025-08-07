@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Aug  5 14:13:07 2025\n"
+"POT-Creation-Date: Thu Aug  7 09:23:36 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,37 +20,165 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
+#: Game.Levels.GroupWorld.L01_Hello
+msgid "Welcome to Group World"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using `«{h}»` or `«{g}»`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{h}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{g}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.GroupWorld.L02_Hello
+msgid "Welcome to Group World"
 msgstr ""
 
-#: Game.Levels.DemoWorld
+#: Game.Levels.GroupWorld.L02_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L02_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L04_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L04_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L04_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L05_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L05_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L05_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L06_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L06_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L06_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L07_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L07_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L07_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L09_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L09_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L09_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L10_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L10_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L10_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L11_Hello
+msgid "Welcome to Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L11_Hello
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L11_Hello
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.GroupWorld
+msgid "Group World"
+msgstr ""
+
+#: Game.Levels.GroupWorld
 msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
 msgstr ""
 

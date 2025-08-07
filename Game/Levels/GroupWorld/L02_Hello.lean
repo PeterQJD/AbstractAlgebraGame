@@ -1,5 +1,5 @@
 import Game.Levels.GroupWorld.L01_Hello
-import Game.Metadata
+
 
 
 World "GroupWorld"
@@ -13,7 +13,8 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variables {G : Type} [Group G]
+variable {G : Type} [MyGroup G]
+open MyGroup
 
 Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := by
   rw [← one_mul x] at h

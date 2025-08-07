@@ -1,8 +1,8 @@
-import Game.Metadata
+import Game.Levels.GroupWorld.L02_Hello
 
 
 World "GroupWorld"
-Level 1
+Level 3
 
 Title " Welcome to Group World"
 
@@ -14,6 +14,7 @@ namespace mygroup
 
 variables {G : Type} [MyGroup G]
 open MyGroup
+
 
 Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
   nth_rewrite 1 [← one_mul a]

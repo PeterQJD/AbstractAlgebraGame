@@ -1,4 +1,6 @@
 import Game.Metadata
+import Game.CustomStructure.MyGroup
+
 
 World "GroupWorld"
 Level 1
@@ -11,15 +13,17 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variable (G : Type) [Group G]
+variable {G : Type} [MyGroup G]
+open MyGroup
+
+-- missing documentation
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
   have h1 : a⁻¹ * (a * x) = a⁻¹ * (a * y) := by rw [h]
   rw [← mul_assoc] at h1
-  rw [mul_left_inv, one_mul] at h1
-  symm at h1
+  rw [mul_left_inv] at h1
+  rw [one_mul] at h1
   rw [← mul_assoc,mul_left_inv, one_mul] at h1
-  symm at h1
   exact h1
 
 Conclusion "This last message appears if the level is solved."
@@ -29,4 +33,5 @@ Conclusion "This last message appears if the level is solved."
 NewTactic mul_left_cancel
 -- NewTheorem Nat.add_comm Nat.add_assoc
 -- NewDefinition Nat Add Eq
+
 end mygroup

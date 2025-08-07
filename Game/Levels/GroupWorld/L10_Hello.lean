@@ -1,8 +1,8 @@
-import Game.Levels.GroupWorld.L03_Hello
+import Game.Levels.GroupWorld.L09_Hello
 
 
 World "GroupWorld"
-Level 4
+Level 10
 
 Title " Welcome to Group World"
 
@@ -15,16 +15,17 @@ namespace mygroup
 variables {G : Type} [MyGroup G]
 open MyGroup
 
-Statement mul_one (a : G) : a * 1 = a := by
-  rw [← mul_left_inv a]
-  rw [← mul_assoc]
+Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  rw [← one_mul a⁻¹⁻¹]
+  rw [← mul_right_inv a]
+  rw [mul_assoc]
   rw [mul_right_inv]
-  rw [one_mul]
+  rw [mul_one]
 
 Conclusion "This last message appears if the level is solved."
 
 /- Use these commands to add items to the game's inventory. -/
 
-NewTactic mul_one
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
+NewTactic mul_left_eq_self
+-- NewTheorem mul_left_eq_self
+-- NewDefinition mul_left_eq_self

@@ -1,5 +1,14 @@
-import Game.Metadata -- doesn't recognise world otherwise
 import Game.Levels.GroupWorld.L01_Hello
+import Game.Levels.GroupWorld.L02_Hello
+import Game.Levels.GroupWorld.L03_Hello
+import Game.Levels.GroupWorld.L04_Hello
+import Game.Levels.GroupWorld.L05_Hello
+import Game.Levels.GroupWorld.L06_Hello
+import Game.Levels.GroupWorld.L07_Hello
+import Game.Levels.GroupWorld.L08_Hello
+import Game.Levels.GroupWorld.L09_Hello
+import Game.Levels.GroupWorld.L10_Hello
+import Game.Levels.GroupWorld.L11_Hello
 
 World "Group World"
 Title "Group World"

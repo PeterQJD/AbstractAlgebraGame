@@ -1,9 +1,8 @@
-import Game.Metadata
-import Game.CustomStructure.MyGroup
+import Game.Levels.GroupWorld.L06_Hello
 
 
 World "GroupWorld"
-Level 1
+Level 7
 
 Title " Welcome to Group World"
 

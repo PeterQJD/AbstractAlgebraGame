@@ -1,6 +1,7 @@
 import GameServer.Commands
 import Mathlib.Tactic.NthRewrite
-import Mathlib.Algebra.Group.Defs
+import Mathlib.Tactic.Common
+
 
 /-! Use this file to add things that should be available in all levels.
 
