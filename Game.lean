@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld
+import Game.Levels.DemoWorld
 
 -- Here's what we'll put on the title screen
 Title "Abstract Algebra Game"
