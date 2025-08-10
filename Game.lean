@@ -1,4 +1,6 @@
-import Game.Levels.DemoWorld
+import GameServer.Commands
+import Game.Levels.TutorialWorld
+import Game.Levels.GroupWorld
 
 -- Here's what we'll put on the title screen
 Title "Abstract Algebra Game"
@@ -15,6 +17,10 @@ from the starting through the drop-down menu.
 For example: Game version, Credits, Link to Github and Zulip, etc.
 
 Use markdown.
+Version:
+Credits:
+Github:
+
 "
 
 /-! Information to be displayed on the servers landing page. -/
