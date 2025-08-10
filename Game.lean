@@ -4,7 +4,9 @@ import Game.Levels.MonoidWorld
 import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.GroupWorld
+import GameServer.Commands
 import Game.Levels.TutorialWorld
+import Game.Levels.GroupWorld
 
 -- Here's what we'll put on the title screen
 Title "Abstract Algebra Game"
@@ -23,7 +25,6 @@ For example: Game version, Credits, Link to Github and Zulip, etc.
 Use markdown.
 Version:
 Credits:
-Christiansen, D et al. (2025) https://lean-lang.org/doc/reference/latest/
 Github:
 
 "
