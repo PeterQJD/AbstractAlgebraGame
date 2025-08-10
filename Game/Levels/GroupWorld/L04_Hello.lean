@@ -13,6 +13,7 @@ depending on the proof a user provides."
 namespace mygroup
 
 variable {G : Type} [MyGroup G]
+variable {G : Type} [MyGroup G]
 open MyGroup
 
 /--
