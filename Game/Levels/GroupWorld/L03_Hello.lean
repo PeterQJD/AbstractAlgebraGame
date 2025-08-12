@@ -21,6 +21,7 @@ This is some sample documentation - (test)
 TheoremDoc mygroup.mul_right_inv as "mul_right_inv" in "Mul"
 
 Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
+  Hint "using 'nth_rewrite' can allow for precision rewriting"
   nth_rewrite 1 [← one_mul a]
   nth_rewrite 1 [←mul_left_inv a⁻¹]
   rw [mul_assoc (a⁻¹⁻¹) a⁻¹ a]

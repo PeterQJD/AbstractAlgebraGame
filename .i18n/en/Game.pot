@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Aug 12 15:11:12 2025\n"
+"POT-Creation-Date: Tue Aug 12 16:11:29 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -47,6 +47,10 @@ msgid "Identitys are cool!"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
+msgid "You will need to use all 3 Group Axioms!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -65,6 +69,10 @@ msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L02_Hello
+msgid "A previously proved theorem might be useful here"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L02_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -80,6 +88,10 @@ msgstr ""
 
 #: Game.Levels.GroupWorld.L03_Hello
 msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
+msgid "using 'nth_rewrite' can allow for precision rewriting"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L03_Hello
@@ -170,6 +182,10 @@ msgstr ""
 
 #: Game.Levels.GroupWorld.L08_Hello
 msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "Try generating a new hypothesis from [«{h}»] using 'have'."
 msgstr ""
 
 #: Game.Levels.GroupWorld.L08_Hello
