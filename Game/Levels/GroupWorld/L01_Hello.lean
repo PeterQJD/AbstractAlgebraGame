@@ -37,6 +37,7 @@ TheoremDoc one_mul as "one_mul" in "Group Axioms"
 
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
+  Hint "You will need to use all 3 Group Axioms!"
   have h1 : a⁻¹ * (a * x) = a⁻¹ * (a * y) := by rw [h]
   rw [← mul_assoc] at h1
   rw [mul_left_inv] at h1

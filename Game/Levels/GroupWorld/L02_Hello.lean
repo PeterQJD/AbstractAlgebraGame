@@ -24,6 +24,7 @@ Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := b
   rw [← one_mul x] at h
   rw [← mul_left_inv a] at h
   rw [mul_assoc] at h
+  Hint (hidden := true) "A previously proved theorem might be useful here"
   exact mul_left_cancel a⁻¹ (a * x) y h
 
 Conclusion "This last message appears if the level is solved."

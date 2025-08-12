@@ -90,6 +90,10 @@ msgid "Identitys are cool!"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
+msgid "You will need to use all 3 Group Axioms!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -108,6 +112,10 @@ msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L02_Hello
+msgid "A previously proved theorem might be useful here"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L02_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -123,6 +131,10 @@ msgstr ""
 
 #: Game.Levels.GroupWorld.L03_Hello
 msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
+msgid "using 'nth_rewrite' can allow for precision rewriting"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L03_Hello
@@ -213,6 +225,10 @@ msgstr ""
 
 #: Game.Levels.GroupWorld.L08_Hello
 msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "Try generating a new hypothesis from [«{h}»] using 'have'."
 msgstr ""
 
 #: Game.Levels.GroupWorld.L08_Hello
