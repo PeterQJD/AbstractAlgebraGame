@@ -1,7 +1,6 @@
 import Game.Levels.GroupWorld.L01_Hello
 
 
-
 World "GroupWorld"
 Level 2
 
@@ -16,6 +15,11 @@ namespace mygroup
 variable {G : Type} [MyGroup G]
 open MyGroup
 
+/--
+This is some sample documentation - (test)
+-/
+TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Mul"
+
 Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := by
   rw [← one_mul x] at h
   rw [← mul_left_inv a] at h
@@ -23,9 +27,3 @@ Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := b
   exact mul_left_cancel a⁻¹ (a * x) y h
 
 Conclusion "This last message appears if the level is solved."
-
-/- Use these commands to add items to the game's inventory. -/
-
-NewTactic mul_eq_of_eq_inv_mul
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq

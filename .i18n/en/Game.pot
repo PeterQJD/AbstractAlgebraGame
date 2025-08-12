@@ -64,7 +64,7 @@ msgid "In this tutorial world you will be introduced to the magma a basic struct
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
-msgid "Welcome to Group World"
+msgid "Welcome to Group World - Getting to grips with the axioms"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
@@ -74,6 +74,22 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
+msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
+msgid "Associativity is cool!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
+msgid "Inverses are cool!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
+msgid "Identitys are cool!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -85,6 +101,10 @@ msgstr ""
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L02_Hello
+msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L02_Hello
@@ -102,6 +122,10 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L03_Hello
+msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L03_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -113,6 +137,10 @@ msgstr ""
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L04_Hello
+msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L04_Hello
@@ -130,6 +158,10 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L05_Hello
+msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L05_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -141,6 +173,10 @@ msgstr ""
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L06_Hello
+msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L06_Hello
@@ -158,6 +194,10 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L07_Hello
+msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L07_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -169,6 +209,10 @@ msgstr ""
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.GroupWorld.L08_Hello
+msgid "This is some sample documentation - (test)"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L08_Hello
@@ -186,6 +230,10 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L09_Hello
+msgid "This is some sample documentation - (test)"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L09_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -200,20 +248,10 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L10_Hello
-msgid "This last message appears if the level is solved."
+msgid "This is some sample documentation - (test)"
 msgstr ""
 
-#: Game.Levels.GroupWorld.L11_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L11_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L11_Hello
+#: Game.Levels.GroupWorld.L10_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
@@ -222,7 +260,9 @@ msgid "Group World"
 msgstr ""
 
 #: Game.Levels.GroupWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown.\n"
+"\n"
+"# Welcome to Group World, here we have yet more structure with 3 axioms!"
 msgstr ""
 
 #: Game
