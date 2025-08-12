@@ -18,7 +18,7 @@ open MyGroup
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_right_inv as "mul_right_inv" in "Mul"
+TheoremDoc mygroup.mul_right_inv as "mul_right_inv" in "Group"
 
 Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
   Hint "using 'nth_rewrite' can allow for precision rewriting"
@@ -31,3 +31,5 @@ Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
   rw [mul_left_inv]
 
 Conclusion "This last message appears if the level is solved."
+
+NewTheorem mygroup.mul_right_inv

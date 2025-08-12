@@ -18,7 +18,7 @@ open MyGroup
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Mul"
+TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
 
 Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
   constructor
@@ -35,3 +35,5 @@ Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
   rw [one_mul]
 
 Conclusion "This last message appears if the level is solved."
+
+NewTheorem mygroup.mul_left_eq_self

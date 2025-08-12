@@ -18,7 +18,7 @@ open MyGroup
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Inverses"
+TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 
 Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   rw [← one_mul a⁻¹⁻¹]
@@ -28,3 +28,5 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   rw [mul_one]
 
 Conclusion "This last message appears if the level is solved."
+
+NewTheorem mygroup.inv_inv

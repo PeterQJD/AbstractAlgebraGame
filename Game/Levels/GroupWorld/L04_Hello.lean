@@ -18,7 +18,7 @@ open MyGroup
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_one as "mul_one" in "Identity"
+TheoremDoc mygroup.mul_one as "mul_one" in "Group"
 
 Statement mul_one (a : G) : a * 1 = a := by
   rw [← mul_left_inv a]

@@ -18,7 +18,7 @@ open MyGroup
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Mul"
+TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
 
 Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := by
   rw [← one_mul x] at h
@@ -28,3 +28,5 @@ Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := b
   exact mul_left_cancel a⁻¹ (a * x) y h
 
 Conclusion "This last message appears if the level is solved."
+
+NewTheorem mygroup.mul_eq_of_eq_inv_mul
