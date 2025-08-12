@@ -12,8 +12,13 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variables {G : Type} [MyGroup G]
+variable {G : Type} [MyGroup G]
 open MyGroup
+
+/--
+This is some sample documentation - (test)
+-/
+TheoremDoc mygroup.id_unique as "id_unique" in "Identity"
 
 Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
   have h1 : e * 1 = 1 := by rw[h]
@@ -21,9 +26,3 @@ Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
   exact h1
 
 Conclusion "This last message appears if the level is solved."
-
-/- Use these commands to add items to the game's inventory. -/
-
-NewTactic id_unique
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq

@@ -12,8 +12,13 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variables {G : Type} [MyGroup G]
+variable {G : Type} [MyGroup G]
 open MyGroup
+
+/--
+This is some sample documentation - (test)
+-/
+TheoremDoc mygroup.mul_one as "mul_one" in "Identity"
 
 Statement mul_one (a : G) : a * 1 = a := by
   rw [← mul_left_inv a]
@@ -22,9 +27,3 @@ Statement mul_one (a : G) : a * 1 = a := by
   rw [one_mul]
 
 Conclusion "This last message appears if the level is solved."
-
-/- Use these commands to add items to the game's inventory. -/
-
-NewTactic mul_one
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq

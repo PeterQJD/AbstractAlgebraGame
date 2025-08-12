@@ -12,8 +12,13 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variables {G : Type} [MyGroup G]
+variable {G : Type} [MyGroup G]
 open MyGroup
+
+/--
+This is some sample documentation - (test)
+-/
+TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Mul"
 
 Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
   constructor
@@ -30,9 +35,3 @@ Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
   rw [one_mul]
 
 Conclusion "This last message appears if the level is solved."
-
-/- Use these commands to add items to the game's inventory. -/
-
-NewTactic mul_left_eq_self
--- NewTheorem mul_left_eq_self
--- NewDefinition mul_left_eq_self
