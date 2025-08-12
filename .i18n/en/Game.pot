@@ -132,6 +132,10 @@ msgid "You will need to use all 3 Group Axioms!"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
+msgid "You will need to use all 3 Group Axioms!"
+msgstr ""
+
+#: Game.Levels.GroupWorld.L01_Hello
 msgid "This last message appears if the level is solved."
 msgstr ""
 
