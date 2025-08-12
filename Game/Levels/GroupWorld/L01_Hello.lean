@@ -19,19 +19,19 @@ open MyGroup -- for easy access to axioms
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Mul"
+TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
 /--
 Associativity is cool!
 -/
-TheoremDoc mul_assoc as "mul_assoc" in "Group Axioms"
+TheoremDoc MyGroup.mul_assoc as "mul_assoc" in "Axioms"
 /--
 Inverses are cool!
 -/
-TheoremDoc mul_left_inv as "mul_left_inv" in "Group Axioms"
+TheoremDoc MyGroup.mul_left_inv as "mul_left_inv" in "Axioms"
 /--
 Identitys are cool!
 -/
-TheoremDoc one_mul as "one_mul" in "Group Axioms"
+TheoremDoc MyGroup.one_mul as "one_mul" in "Axioms"
 
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
@@ -45,5 +45,7 @@ Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
 
 
 Conclusion "This last message appears if the level is solved."
+
+NewTheorem mygroup.mul_left_cancel
 
 end mygroup
