@@ -48,6 +48,8 @@ Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_left_cancel
+-- new theorem can only be used once per level but takes multiple arguments.
+-- only temporary as axioms should be added to inventory in earlier worlds
+NewTheorem mygroup.mul_left_cancel MyGroup.mul_left_inv MyGroup.mul_assoc MyGroup.one_mul
 
 end mygroup

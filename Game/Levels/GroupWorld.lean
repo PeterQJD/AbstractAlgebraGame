@@ -12,8 +12,16 @@ import Game.Levels.GroupWorld.L10_Hello
 World "GroupWorld"
 Title "Group World"
 
-Introduction "
-This introduction is shown before one enters level 1 of the demo world. Use markdown.
+Introduction
+"
+# Welcome to Group World!
 
-# Welcome to Group World, here we have yet more structure with 3 axioms!
+Just like the structures encountered in our previous worlds.
+Now we have went a step further with yet more 'structure', with three main axioms now at our disposal.
+Associativity (of the binary operation), existance of an identity element and existance of inverse elements.
+
+The tactics used will be predominatley `rw`, 'have' and 'constructor'.
+
+### click start to begin the first level!
+
 "
