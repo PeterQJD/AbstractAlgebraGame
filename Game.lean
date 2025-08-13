@@ -1,3 +1,6 @@
+import Game.Levels.SemiGroupWorld
+import Game.Levels.InverseSemiGroupWorld
+import Game.Levels.MonoidWorld
 import Game.Levels.GroupWorld
 
 -- Here's what we'll put on the title screen

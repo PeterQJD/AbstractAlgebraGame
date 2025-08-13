@@ -10,6 +10,7 @@ import Game.Levels.GroupWorld.L09_Hello
 import Game.Levels.GroupWorld.L10_Hello
 
 World "GroupWorld"
+
 Title "Group World"
 
 Introduction
