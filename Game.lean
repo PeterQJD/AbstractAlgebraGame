@@ -4,6 +4,7 @@ import Game.Levels.MonoidWorld
 import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.GroupWorld
+import Game.Levels.TutorialWorld
 
 -- Here's what we'll put on the title screen
 Title "Abstract Algebra Game"
