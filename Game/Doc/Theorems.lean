@@ -1,13 +1,21 @@
 import Game.Metadata
 
-/--
-add_comm: a + b = b + a
--/
-TheoremDoc Nat.add_comm as "add_comm" in "Add"
+--#################################
+-- Tutorial World
 
--- Group World Start
+/--
+rfl: closes goal if of form a = a
+-/
+TacticDoc rfl
+
+--#################################
+
+--#################################
+-- Group World
+
 /--
 mul_one: g * 1 = g
 -/
-TheoremDoc mygroup.mul_one as "mul_one" in "Mul"
--- Group World End
+TheoremDoc mygroup.mul_one as "mul_one" in "Group"
+-- Group World
+--#################################

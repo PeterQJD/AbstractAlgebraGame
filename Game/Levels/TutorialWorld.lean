@@ -1,4 +1,6 @@
-import Game.Levels.TutorialWorld.L01_HelloWorld
+import Game.Levels.TutorialWorld.L01_rfl
+import Game.Levels.TutorialWorld.L02_rw
+import Game.Levels.TutorialWorld.L03_induction
 
 World "TutorialWorld"
 Title "Tutorial World"

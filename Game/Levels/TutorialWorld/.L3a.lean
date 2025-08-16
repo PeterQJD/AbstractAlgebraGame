@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld.L01_HelloWorld
+import Game.Levels.TutorialWorld.L02_rw
 
 World "TutorialWorld"
 Level 3

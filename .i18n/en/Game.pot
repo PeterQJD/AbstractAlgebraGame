@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun Aug 10 14:25:22 2025\n"
+"POT-Creation-Date: Sat Aug 16 16:00:37 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -21,18 +21,18 @@ msgid "intermediate goal solved! 🎉"
 msgstr ""
 
 #: Game.Doc.Theorems
-msgid "add_comm: a + b = b + a"
+msgid "rfl: closes goal if of form a = a"
 msgstr ""
 
 #: Game.Doc.Theorems
 msgid "mul_one: g * 1 = g"
 msgstr ""
 
-#: Game.Levels.TutorialWorld.L01_HelloWorld
-msgid "Magmas"
+#: Game.Levels.TutorialWorld.L01_rfl
+msgid "Reflective Property"
 msgstr ""
 
-#: Game.Levels.TutorialWorld.L01_HelloWorld
+#: Game.Levels.TutorialWorld.L01_rfl
 msgid "To start we will be giving names to many\n"
 "structures you will have met before. The most basic of these\n"
 " is the magma which consists of a set with a binary operation on it.\n"
@@ -40,16 +40,54 @@ msgid "To start we will be giving names to many\n"
 " world you will be shown the basics of how to use leaa and some of the most\n"
 " important commands that you will need in order to progress in later stages.\n"
 "\n"
-" In this level we introduce the rewrite and rfl commands rewrite allows\n"
-" you to replace a term in the goal with anoter term it is definitionally equal to.\n"
+" In this level we introduce the rfl command it allows you to close a goal when both sides are equal.\n"
 " Say magma₁ := $(\\N, +)$ and magma₂ := $(\\N, +)$ prove they are equal. Using reflection."
 msgstr ""
 
-#: Game.Levels.TutorialWorld.L01_HelloWorld
+#: Game.Levels.TutorialWorld.L01_rfl
 msgid "They are definitionally equal."
 msgstr ""
 
-#: Game.Levels.TutorialWorld.L01_HelloWorld
+#: Game.Levels.TutorialWorld.L01_rfl
+msgid "Good Work!"
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L02_rw
+msgid "Magmas"
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L02_rw
+msgid "In this level we introduce the rewrite command rw allows\n"
+" you to replace a term in the goal with anoter term it is definitionally equal to.\n"
+" It then also applies rfl to the goal if they are equal this will close the goal."
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L02_rw
+msgid "Good Work!"
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L03_induction
+msgid "Indopent element"
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L03_induction
+msgid "We will now prove a simple result that if $e^{2} = e where e \\in \\N$\n"
+"then $e^{n} = e$.\n"
+"\n"
+"This will be the last level of the tutorial world where you will be introduced\n"
+"to the intro and induction tactics.\n"
+"\n"
+"intro is used when there is a expression of the form $∀ (x : t), u$ or $t → u$\n"
+"in the former intro x puts the variable (x : t) into the local context and\n"
+"makes the new subgoal u in the latter it puts (h : t) in the local context\n"
+"and makes u the new subgoal.\n"
+"\n"
+"induction is a tactic that will perform induction on a variable in the local context\n"
+"so two subgoals will be created one for the base case and one for the succesor of the\n"
+"genral case."
+msgstr ""
+
+#: Game.Levels.TutorialWorld.L03_induction
 msgid "Good Work!"
 msgstr ""
 
@@ -299,6 +337,7 @@ msgid "Here you can put additional information about the game. It is accessible\
 "Use markdown.\n"
 "Version:\n"
 "Credits:\n"
+"Christiansen, D et al. (2025) https://lean-lang.org/doc/reference/latest/\n"
 "Github:"
 msgstr ""
 
