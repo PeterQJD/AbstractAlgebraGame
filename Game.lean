@@ -25,6 +25,7 @@ For example: Game version, Credits, Link to Github and Zulip, etc.
 Use markdown.
 Version:
 Credits:
+Christiansen, D et al. (2025) https://lean-lang.org/doc/reference/latest/
 Github:
 
 "

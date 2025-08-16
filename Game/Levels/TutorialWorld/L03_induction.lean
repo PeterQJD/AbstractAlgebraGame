@@ -27,14 +27,12 @@ def power {α : Type u} (mul : α → α → α) (t : α) (n : Nat) : α :=
   | 0     => t
   | n + 1 => power mul (mul t t) n
 
-
 Statement {α : Type} (M : MyCommMagma α) (h₁ : mul e e = e) :
   ∀ n : Nat, power mul e n = e  := by
     intro n
 
     induction n
     rw [power]
-
     rw [power]
     rw [h₁]
     rw [n_ih]
