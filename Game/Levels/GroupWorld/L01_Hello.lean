@@ -60,6 +60,6 @@ Conclusion "This last message appears if the level is solved."
 
 -- new theorem can only be used once per level but takes multiple arguments.
 -- only temporary as axioms should be added to inventory in earlier worlds
-NewTheorem mygroup.mul_left_cancel MyGroup.mul_left_inv MyGroup.mul_assoc MyGroup.one_mul
+NewTheorem MyGroup.mul_left_inv MyGroup.mul_assoc MyGroup.one_mul
 
 end mygroup
