@@ -36,4 +36,4 @@ Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_left_eq_self
+NewTheorem mygroup.eq_mul_inv_of_mul_eq

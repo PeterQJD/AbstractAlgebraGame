@@ -29,4 +29,4 @@ Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := b
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_eq_of_eq_inv_mul
+NewTheorem mygroup.mul_left_cancel

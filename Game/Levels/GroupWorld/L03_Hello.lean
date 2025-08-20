@@ -32,4 +32,4 @@ Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_right_inv
+NewTheorem mygroup.mul_eq_of_eq_inv_mul

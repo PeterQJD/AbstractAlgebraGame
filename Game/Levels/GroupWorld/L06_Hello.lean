@@ -29,4 +29,4 @@ Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := b
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.eq_mul_inv_of_mul_eq
+NewTheorem mygroup.id_unique
