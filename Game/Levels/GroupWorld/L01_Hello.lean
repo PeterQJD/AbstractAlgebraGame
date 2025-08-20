@@ -1,5 +1,7 @@
+import GameServer
 import Game.Metadata
-import Game.CustomStructure.MyGroup
+import Game.Doc.Theorems
+import Game.Custom.MyGroup.Definition
 
 
 World "GroupWorld"
