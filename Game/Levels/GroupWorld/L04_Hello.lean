@@ -31,8 +31,4 @@ Conclusion "This last message appears if the level is solved."
 
 /- Use these commands to add items to the game's inventory. -/
 
-/- Use these commands to add items to the game's inventory. -/
-
-NewTactic mul_one
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
+NewTheorem mygroup.mul_right_inv

@@ -27,4 +27,4 @@ Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.id_unique
+NewTheorem mygroup.mul_one

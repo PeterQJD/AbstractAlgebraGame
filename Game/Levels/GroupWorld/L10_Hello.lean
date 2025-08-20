@@ -30,4 +30,4 @@ Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.inv_eq_of_mul_eq_one
+NewTheorem mygroup.inv_inv

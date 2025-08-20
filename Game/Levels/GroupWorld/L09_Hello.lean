@@ -29,4 +29,4 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.inv_inv
+NewTheorem mygroup.eq_inv_of_mul_eq_one
