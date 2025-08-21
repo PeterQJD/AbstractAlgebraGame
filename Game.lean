@@ -1,7 +1,7 @@
 import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.GroupWorld
-import Game.Levels.SemigroupWorld
+import Game.Levels.SemiGroupWorld
 import Game.Levels.InverseSemiGroupWorld
 import Game.Levels.MonoidWorld
 
