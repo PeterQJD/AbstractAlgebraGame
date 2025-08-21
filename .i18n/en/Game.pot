@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Aug 21 12:24:21 2025\n"
+"POT-Creation-Date: Thu Aug 21 12:32:15 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,345 +20,32 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Doc.Theorems
-msgid "rfl: closes goal if of form a = a"
-msgstr ""
-
-#: Game.Doc.Theorems
-msgid "mul_one: g * 1 = g"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L01_rfl
-msgid "Reflective Property"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L01_rfl
-msgid "To start we will be giving names to many\n"
-"structures you will have met before. The most basic of these\n"
-" is the magma which consists of a set with a binary operation on it.\n"
-" An example of this is the natural numbers and addition $(\\N, +)$. In this\n"
-" world you will be shown the basics of how to use leaa and some of the most\n"
-" important commands that you will need in order to progress in later stages.\n"
-"\n"
-" In this level we introduce the rfl command it allows you to close a goal when both sides are equal.\n"
-" Say magma₁ := $(\\N, +)$ and magma₂ := $(\\N, +)$ prove they are equal. Using reflection."
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L01_rfl
-msgid "They are definitionally equal."
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L01_rfl
-msgid "Good Work!"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L02_rw
-msgid "Magmas"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L02_rw
-msgid "In this level we introduce the rewrite command rw allows\n"
-" you to replace a term in the goal with anoter term it is definitionally equal to.\n"
-" It then also applies rfl to the goal if they are equal this will close the goal."
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L02_rw
-msgid "Good Work!"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L03_induction
-msgid "Indopent element"
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L03_induction
-msgid "We will now prove a simple result that if $e^{2} = e$ where $e \\in \\N$\n"
-"then $e^{n} = e$.\n"
-"\n"
-"This will be the last level of the tutorial world where you will be introduced\n"
-"to the intro and induction tactics.\n"
-"\n"
-"intro is used when there is a expression of the form $∀ (x : t), u$ or $t → u$\n"
-"in the former intro $x$ puts the variable $(x : t)$ into the local context and\n"
-"makes the new subgoal $u$ in the latter it puts $(h : t)$ in the local context\n"
-"and makes u the new subgoal.\n"
-"\n"
-"induction is a tactic that will perform induction on a variable in the local context\n"
-"so two subgoals will be created one for the base case and one for the succesor of the\n"
-"genral case."
-msgstr ""
-
-#: Game.Levels.TutorialWorld.L03_induction
-msgid "Good Work!"
-msgstr ""
-
-#: Game.Levels.TutorialWorld
-msgid "Tutorial World"
-msgstr ""
-
-#: Game.Levels.TutorialWorld
-msgid "In this tutorial world you will be introduced to the magma a basic structure we will build upon\n"
-" throught the game. You will also be introduced to Lean an interactive theorem prover as a way of\n"
-" proving theorems."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "Welcome to Group World - Getting to grips with the axioms"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x = y."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This Axiom states that our binary operation has the following property:\n"
-" $g * (h * k)  = (g * h) * k$ for all $g, h, k ∈ G$.\n"
-"Then we say that the binary operation * is associative"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$\n"
-"such that $g⁻¹ * g = e$ (where e is the identity element in G)\n"
-"\n"
-"## Important note\n"
-"This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This Axiom states that there exists an element $e ∈ G$ which has the following property:\n"
-"$e * g = g $ for all $g ∈ G$\n"
-"\n"
-"## Important note\n"
-"This element $e$ is denoted as $1$ in the editor"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "You will need to use all 3 Group Axioms!"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L02_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L02_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L02_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L02_Hello
-msgid "A previously proved theorem might be useful here"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L02_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L03_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L03_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L03_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L03_Hello
-msgid "using 'nth_rewrite' can allow for precision rewriting"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L03_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L04_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L04_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L04_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L04_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L05_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L05_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L05_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L05_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L06_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L06_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L06_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L06_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L07_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L07_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L07_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L07_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L08_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L08_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L08_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L08_Hello
-msgid "Try generating a new hypothesis from [«{h}»] using 'have'."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L08_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L09_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L09_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L09_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L09_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L10_Hello
-msgid "Welcome to Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L10_Hello
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.GroupWorld.L10_Hello
-msgid "This is some sample documentation - (test)"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L10_Hello
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.GroupWorld
-msgid "Group World"
-msgstr ""
-
-#: Game.Levels.GroupWorld
-msgid "# Welcome to Group World!\n"
-"\n"
-"Just like the structures encountered in our previous worlds.\n"
-"Now we have went a step further with yet more 'structure', with three main axioms now at our disposal.\n"
-"Associativity (of the binary operation), existance of an identity element and existance of inverse elements.\n"
-"\n"
-"The tactics used will be predominatley `rw`, 'have' and 'constructor'.\n"
-"\n"
-"### click start to begin the first level!\n"
-"\n"
-"Introduction"
-msgstr ""
-
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "Hello World"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "A message shown at the beginning of the level. Use it to explain any new concepts."
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
-msgid ""
+#: Game.Levels.SemigroupWorld.L01_Hello
+msgid "This axiom tells us that multiplication in a semigroup is associative."
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
+msgid "This theorem shows that associativity can be extended to a product of four elements."
+msgstr ""
+
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "The message shown when the level is completed"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld
-msgid "Semi-Group World"
+#: Game.Levels.SemigroupWorld
+msgid "Semigroup World"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld
-msgid "# Welcome to Semi-Group World!\n"
+#: Game.Levels.SemigroupWorld
+msgid "# Welcome to Semigroup World!\n"
 "\n"
 "The tactics used will be predominatley ... .\n"
 "\n"
