@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.CustomStructure.MyGroup
+import Game.Custom.MyGroup
 
 World "MonoidWorld"
 Level 1
