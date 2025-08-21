@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MySemigroup
+import Game.Custom.MySemigroup.Definition
 
 World "SemigroupWorld"
 Level 1
