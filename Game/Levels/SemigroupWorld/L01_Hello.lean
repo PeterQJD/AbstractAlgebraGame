@@ -1,5 +1,9 @@
 import Game.Metadata
+<<<<<<< HEAD:Game/Levels/SemigroupWorld/L01_Hello.lean
 import Game.Custom.MySemigroup.Definition
+=======
+import Game.Custom.MySemigroup
+>>>>>>> ebaac83 (structure rename):Game/Levels/SemiGroupWorld/L01_Hello.lean
 
 World "SemigroupWorld"
 Level 1
