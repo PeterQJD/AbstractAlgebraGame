@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Aug 14 11:45:07 2025\n"
+"POT-Creation-Date: Thu Aug 21 12:24:21 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -112,23 +112,29 @@ msgid "This text is shown as first message when the level is played.\n"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
-msgid "This is some sample documentation - (test)"
+msgid "This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x = y."
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
-msgid "Associativity is cool!"
+msgid "This Axiom states that our binary operation has the following property:\n"
+" $g * (h * k)  = (g * h) * k$ for all $g, h, k ∈ G$.\n"
+"Then we say that the binary operation * is associative"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
-msgid "Inverses are cool!"
+msgid "This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$\n"
+"such that $g⁻¹ * g = e$ (where e is the identity element in G)\n"
+"\n"
+"## Important note\n"
+"This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
-msgid "Identitys are cool!"
-msgstr ""
-
-#: Game.Levels.GroupWorld.L01_Hello
-msgid "You will need to use all 3 Group Axioms!"
+msgid "This Axiom states that there exists an element $e ∈ G$ which has the following property:\n"
+"$e * g = g $ for all $g ∈ G$\n"
+"\n"
+"## Important note\n"
+"This element $e$ is denoted as $1$ in the editor"
 msgstr ""
 
 #: Game.Levels.GroupWorld.L01_Hello
@@ -318,9 +324,101 @@ msgid "Group World"
 msgstr ""
 
 #: Game.Levels.GroupWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown.\n"
+msgid "# Welcome to Group World!\n"
 "\n"
-"# Welcome to Group World, here we have yet more structure with 3 axioms!"
+"Just like the structures encountered in our previous worlds.\n"
+"Now we have went a step further with yet more 'structure', with three main axioms now at our disposal.\n"
+"Associativity (of the binary operation), existance of an identity element and existance of inverse elements.\n"
+"\n"
+"The tactics used will be predominatley `rw`, 'have' and 'constructor'.\n"
+"\n"
+"### click start to begin the first level!\n"
+"\n"
+"Introduction"
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld.L01_Hello
+msgid "Hello World"
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld.L01_Hello
+msgid "A message shown at the beginning of the level. Use it to explain any new concepts."
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld.L01_Hello
+msgid ""
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld.L01_Hello
+msgid "The message shown when the level is completed"
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld
+msgid "Semi-Group World"
+msgstr ""
+
+#: Game.Levels.SemiGroupWorld
+msgid "# Welcome to Semi-Group World!\n"
+"\n"
+"The tactics used will be predominatley ... .\n"
+"\n"
+"### click start to begin the first level!"
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld.L01_Hello
+msgid "Hello World"
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld.L01_Hello
+msgid "A message shown at the beginning of the level. Use it to explain any new concepts."
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld.L01_Hello
+msgid "The exercise statement in natural language using latex: $\\iff$."
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld.L01_Hello
+msgid "The message shown when the level is completed"
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld
+msgid "Inverse Semi-Group World"
+msgstr ""
+
+#: Game.Levels.InverseSemiGroupWorld
+msgid "# Welcome to Inverse Semi-Group World!\n"
+"\n"
+"The tactics used will be predominatley ... .\n"
+"\n"
+"### click start to begin the first level!"
+msgstr ""
+
+#: Game.Levels.MonoidWorld.L01_Hello
+msgid "Hello World"
+msgstr ""
+
+#: Game.Levels.MonoidWorld.L01_Hello
+msgid "A message shown at the beginning of the level. Use it to explain any new concepts."
+msgstr ""
+
+#: Game.Levels.MonoidWorld.L01_Hello
+msgid "The exercise statement in natural language using latex: $\\iff$."
+msgstr ""
+
+#: Game.Levels.MonoidWorld.L01_Hello
+msgid "The message shown when the level is completed"
+msgstr ""
+
+#: Game.Levels.MonoidWorld
+msgid "Monoid World"
+msgstr ""
+
+#: Game.Levels.MonoidWorld
+msgid "# Welcome to Monoid World!\n"
+"\n"
+"The tactics used will be predominatley ... .\n"
+"\n"
+"### click start to begin the first level!"
 msgstr ""
 
 #: Game
