@@ -1,4 +1,4 @@
-import Game.Levels.SemiGroupWorld
+import Game.Levels.SemigroupWorld
 import Game.Levels.InverseSemiGroupWorld
 import Game.Levels.MonoidWorld
 import GameServer.Commands
