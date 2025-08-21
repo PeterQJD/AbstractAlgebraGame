@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MyGroup
+import Game.Custom.MyGroup.Definition
 
 World "InverseSemiGroupWorld"
 Level 1
