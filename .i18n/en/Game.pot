@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Aug 21 12:24:21 2025\n"
+"POT-Creation-Date: Thu Aug 21 12:34:59 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -337,28 +337,32 @@ msgid "# Welcome to Group World!\n"
 "Introduction"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "Hello World"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "A message shown at the beginning of the level. Use it to explain any new concepts."
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
-msgid ""
+#: Game.Levels.SemigroupWorld.L01_Hello
+msgid "This axiom tells us that multiplication in a semigroup is associative."
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld.L01_Hello
+#: Game.Levels.SemigroupWorld.L01_Hello
+msgid "This theorem shows that associativity can be extended to a product of four elements."
+msgstr ""
+
+#: Game.Levels.SemigroupWorld.L01_Hello
 msgid "The message shown when the level is completed"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld
-msgid "Semi-Group World"
+#: Game.Levels.SemigroupWorld
+msgid "Semigroup World"
 msgstr ""
 
-#: Game.Levels.SemiGroupWorld
-msgid "# Welcome to Semi-Group World!\n"
+#: Game.Levels.SemigroupWorld
+msgid "# Welcome to Semigroup World!\n"
 "\n"
 "The tactics used will be predominatley ... .\n"
 "\n"
