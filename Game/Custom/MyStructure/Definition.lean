@@ -1,6 +1,6 @@
 import Mathlib.Algebra.Group.Defs
 
-class MyStructure (G : Type u) extends Inv G, Mul G, One G :=
-(mul_assoc : ∀ a b c : G, a * b * c = a * (b * c))
-(one_mul : ∀ a : G, 1 * a = a)
-(mul_left_inv : ∀ a : G, a⁻¹ * a = 1)
+class MyStructure (S : Type u) extends Inv S, Mul S, One S :=
+(mul_assoc : ∀ a b c : S, a * b * c = a * (b * c))
+(one_mul : ∀ a : S, 1 * a = a)
+(mul_left_inv : ∀ a : S, a⁻¹ * a = 1)
