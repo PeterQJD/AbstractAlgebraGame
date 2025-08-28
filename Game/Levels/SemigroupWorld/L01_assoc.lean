@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MySemigroup.Definition
+import Game.Custom.MyStructure.Definition
 
 World "SemigroupWorld"
 Level 1
@@ -18,11 +18,11 @@ Check that the associative rule holds by writing `rewrite [mul_assoc]` followed 
 "
 namespace mysemigroup
 
-variable {S : Type} [MySemigroup S]
-open MySemigroup -- for easy access to axioms
+variable {S : Type} [MyStructure S]
+open MyStructure -- for easy access to axioms
 
 /--This axiom tells us that multiplication in a semigroup is associative.-/
-TheoremDoc MySemigroup.mul_assoc as "mul_assoc" in "Axioms"
+TheoremDoc MyStructure.mul_assoc as "mul_assoc" in "Axioms"
 
 Statement (a b c : S) : (a * b) * c = a * (b * c):= by
   rewrite [mul_assoc]

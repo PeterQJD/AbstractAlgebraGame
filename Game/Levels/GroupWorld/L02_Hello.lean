@@ -12,8 +12,8 @@ depending on the proof a user provides."
 
 namespace mygroup
 
-variable {G : Type} [MyGroup G]
-open MyGroup
+variable {G : Type} [MyStructure G]
+open MyStructure
 
 /--
 This is some sample documentation - (test)

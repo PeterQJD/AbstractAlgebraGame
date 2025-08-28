@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MyGroup.Definition
+import Game.Custom.MyStructure.Definition
 
 World "MonoidWorld"
 Level 1
@@ -8,6 +8,9 @@ Title "Hello World"
 Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.
 "
+
+variable {G : Type} [MyStructure G]
+open MyStructure
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
 Statement (n : Nat) : 0 + n = n := by
