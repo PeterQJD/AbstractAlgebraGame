@@ -1,4 +1,5 @@
 import Game.Levels.TutorialWorld.L02_rw
+import Init.Data.List.Basic
 
 World "TutorialWorld"
 Level 3
@@ -22,10 +23,9 @@ genral case.
 "
 universe u
 
-def power {α : Type u} (mul : α → α → α) (t : α) (n : Nat) : α :=
-  match n with
-  | 0     => t
-  | n + 1 => power mul (mul t t) n
+def ListProd {α : Type u} [Mul α] [OfNat α 1] : List α → α
+  | []        => 1
+  | x :: xs   => x * power xs
 
 
 Statement {α : Type} (M : MyCommMagma α) (h₁ : mul e e = e) :

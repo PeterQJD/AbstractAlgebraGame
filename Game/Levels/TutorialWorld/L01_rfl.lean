@@ -1,7 +1,7 @@
 import GameServer
 import Game.Metadata
 import Game.Doc.Theorems
-import Game.Custom.MyMagma.Definition
+import Game.Custom.MyNat.Definition
 
 World "TutorialWorld"
 Level 1
@@ -22,14 +22,7 @@ namespace L01
 
 namespace L01_hidden
 
-  def M₁ : MyCommMagma Nat :=
-    {
-      mul       := Nat.add
-      mul_comm  := Nat.add_comm
-    }
 
-  def M₂ : MyCommMagma Nat :=
-    M₁
 
 end L01_hidden
 
@@ -37,7 +30,7 @@ end L01
 
 open L01.L01_hidden
 
-Statement : M₁ = M₂ := by
+Statement (a : MyNat): a = a := by
   Hint "They are definitionally equal."
   rfl
 
