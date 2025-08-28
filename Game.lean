@@ -1,9 +1,10 @@
 import GameServer.Commands
 import Game.Levels.TutorialWorld
-import Game.Levels.GroupWorld
 import Game.Levels.SemigroupWorld
-import Game.Levels.InverseSemiGroupWorld
-import Game.Levels.MonoidWorld
+--import Game.Levels.MonoidWorld
+import Game.Levels.GroupWorld
+--import Game.Levels.InverseSemiGroupWorld
+
 
 -- Here's what we'll put on the title screen
 Title "Abstract Algebra Game"

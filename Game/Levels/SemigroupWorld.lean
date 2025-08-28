@@ -1,4 +1,5 @@
-import Game.Levels.SemigroupWorld.L01_Hello
+import Game.Levels.SemigroupWorld.L01_assoc
+import Game.Levels.SemigroupWorld.L02_assocprob1
 
 World "SemigroupWorld"
 
