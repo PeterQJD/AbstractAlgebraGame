@@ -9,13 +9,23 @@ Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.
 "
 
-variable {G : Type} [MyStructure G]
+variable {M : Type} [MyStructure M] -- M for monoid seems fitting.
 open MyStructure
 
+/--
+This Axiom states that there exists an element $e ∈ G$ which has the following property:
+$e * g = g $ for all $g ∈ G$
+
+### Important note
+This element $e$ is denoted as $1$ in the editor.
+-/
+TheoremDoc MyStructure.one_mul as "one_mul" in "Axioms"
+
 /-- The exercise statement in natural language using latex: $\iff$. -/
-Statement (n : Nat) : 0 + n = n := by
-  sorry
+Statement (a : M) : 1 * a = a := by
+  rw [one_mul]
 
 Conclusion "
 The message shown when the level is completed
 "
+NewTheorem MyStructure.one_mul

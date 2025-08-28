@@ -21,7 +21,11 @@ namespace mysemigroup
 variable {S : Type} [MyStructure S]
 open MyStructure -- for easy access to axioms
 
-/--This axiom tells us that multiplication in a semigroup is associative.-/
+/--
+This Axiom states that our binary operation has the following property:
+ $g * (h * k)  = (g * h) * k$ for all $g, h, k ∈ G$.
+Then we say that the binary operation * is associative
+-/
 TheoremDoc MyStructure.mul_assoc as "mul_assoc" in "Axioms"
 
 Statement (a b c : S) : (a * b) * c = a * (b * c):= by
@@ -31,3 +35,4 @@ Statement (a b c : S) : (a * b) * c = a * (b * c):= by
 Conclusion "
 Nice!
 "
+NewTheorem MyStructure.mul_assoc

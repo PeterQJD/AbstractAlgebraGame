@@ -22,12 +22,6 @@ This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x =
 -/
 TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
 /--
-This Axiom states that our binary operation has the following property:
- $g * (h * k)  = (g * h) * k$ for all $g, h, k ∈ G$.
-Then we say that the binary operation * is associative
--/
-TheoremDoc MyStructure.mul_assoc as "mul_assoc" in "Axioms"
-/--
 This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
 such that $g⁻¹ * g = e$ (where e is the identity element in G)
 q
@@ -35,14 +29,7 @@ q
 This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
 -/
 TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
-/--
-This Axiom states that there exists an element $e ∈ G$ which has the following property:
-$e * g = g $ for all $g ∈ G$
 
-## Important note
-This element $e$ is denoted as $1$ in the editor
--/
-TheoremDoc MyStructure.one_mul as "one_mul" in "Axioms"
 
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
@@ -59,6 +46,6 @@ Conclusion "This last message appears if the level is solved."
 
 -- new theorem can only be used once per level but takes multiple arguments.
 -- only temporary as axioms should be added to inventory in earlier worlds
-NewTheorem MyStructure.mul_left_inv MyStructure.mul_assoc MyStructure.one_mul
+NewTheorem MyStructure.mul_left_inv
 
 end mygroup
