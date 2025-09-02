@@ -1,5 +1,7 @@
 import GameServer
 import Game.Metadata
+import Game.Custom.MyNat.Definition
+import Game.Custom.MyNat.Addition
 import Game.Doc.Theorems
 
 World "TutorialWorld"
