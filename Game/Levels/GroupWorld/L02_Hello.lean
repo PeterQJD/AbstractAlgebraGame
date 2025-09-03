@@ -18,15 +18,16 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
+TheoremDoc mygroup.mul_one as "mul_one" in "Group"
 
-Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := by
-  rw [← one_mul x] at h
-  rw [← mul_left_inv a] at h
-  rw [mul_assoc] at h
-  Hint (hidden := true) "A previously proved theorem might be useful here"
-  exact mul_left_cancel a⁻¹ (a * x) y h
+Statement mul_one (a : G) : a * 1 = a := by
+  rw [← mul_left_inv a]
+  rw [← mul_assoc]
+  rw [mul_right_inv]
+  rw [one_mul]
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_left_cancel
+/- Use these commands to add items to the game's inventory. -/
+
+NewTheorem mygroup.mul_one

@@ -14,16 +14,19 @@ namespace mygroup
 
 variable {G : Type} [MyStructure G]
 open MyStructure
+
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.id_unique as "id_unique" in "Group"
+TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
 
-Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
-  have h1 : e * 1 = 1 := by rw[h]
+Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
+  have h1 : (a * c) * c⁻¹ = b * c⁻¹ := by rw[h]
+  rw [mul_assoc] at h1
+  rw [mul_right_inv] at h1
   rw [mul_one] at h1
   exact h1
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_one
+NewTheorem mygroup.eq_mul_inv_of_mul_eq

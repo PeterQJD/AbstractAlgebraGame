@@ -18,16 +18,13 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_one as "mul_one" in "Group"
+TheoremDoc mygroup.id_unique as "id_unique" in "Group"
 
-Statement mul_one (a : G) : a * 1 = a := by
-  rw [← mul_left_inv a]
-  rw [← mul_assoc]
-  rw [mul_right_inv]
-  rw [one_mul]
+Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
+  have h1 : e * 1 = 1 := by rw[h]
+  rw [mul_one] at h1
+  exact h1
 
 Conclusion "This last message appears if the level is solved."
 
-/- Use these commands to add items to the game's inventory. -/
-
-NewTheorem mygroup.mul_right_inv
+NewTheorem mygroup.id_unique

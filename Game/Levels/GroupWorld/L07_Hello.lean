@@ -18,22 +18,16 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
+TheoremDoc mygroup.eq_inv_of_mul_eq_one as "eq_inv_mul_eq_one" in "Group"
 
-Statement mul_left_eq_self {a b : G} : a * b = b ↔ a = 1 := by
-  constructor
-  -- proving forward implication
-  intro h
-  have h1 : a * b * b⁻¹ = b * b⁻¹ := by rw[h]
+Statement eq_inv_of_mul_eq_one {a b : G} (h : a * b = 1) : a = b⁻¹ := by
+  Hint (hidden := true) "Try generating a new hypothesis from [{h}] using 'have'."
+  have h1 : a * b * b⁻¹ = 1 * b⁻¹ := by rw[h]
   rw [mul_assoc] at h1
   rw [mul_right_inv] at h1
-  rw [mul_one] at h1
+  rw [mul_one, one_mul] at h1
   exact h1
-  -- proving backward implication
-  intro h2
-  rw [h2]
-  rw [one_mul]
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.eq_mul_inv_of_mul_eq
+NewTheorem mygroup.eq_inv_of_mul_eq_one

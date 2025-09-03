@@ -16,20 +16,18 @@ variable {G : Type} [MyStructure G]
 open MyStructure
 
 /--
-This is some sample documentation - (test)
+This theorem states that for an element $a ∈ G$,
+the inverse of the inverse element of a is equal to $a$
 -/
-TheoremDoc mygroup.mul_right_inv as "mul_right_inv" in "Group"
+TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 
-Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
-  Hint "using 'nth_rewrite' can allow for precision rewriting"
-  nth_rewrite 1 [← one_mul a]
-  nth_rewrite 1 [←mul_left_inv a⁻¹]
-  rw [mul_assoc (a⁻¹⁻¹) a⁻¹ a]
-  rw [mul_left_inv a]
+Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  rw [← one_mul a⁻¹⁻¹]
+  rw [← mul_right_inv a]
   rw [mul_assoc]
-  rw [one_mul]
-  rw [mul_left_inv]
+  rw [mul_right_inv]
+  rw [mul_one]
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_eq_of_eq_inv_mul
+NewTheorem mygroup.inv_inv

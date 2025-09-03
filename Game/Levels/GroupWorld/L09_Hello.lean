@@ -18,15 +18,20 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
+TheoremDoc mygroup.product_inv as "product_inv" in "Group"
 
-Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  rw [← one_mul a⁻¹⁻¹]
-  rw [← mul_right_inv a]
+Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
+  Hint "Applying a previous proven result might be the way to go"
+  apply inv_eq_of_mul_eq_one
   rw [mul_assoc]
+  rw [← mul_assoc b]
   rw [mul_right_inv]
-  rw [mul_one]
+  rw [one_mul]
+  rw [mul_right_inv]
+
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.eq_inv_of_mul_eq_one
+NewTheorem mygroup.product_inv
+
+end mygroup

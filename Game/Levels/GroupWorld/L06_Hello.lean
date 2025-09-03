@@ -18,10 +18,10 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
+TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
 
-Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
-  have h1 : (a * c) * c⁻¹ = b * c⁻¹ := by rw[h]
+Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
+  have h1 : a * b * b⁻¹ = b * b⁻¹ := by rw[h]
   rw [mul_assoc] at h1
   rw [mul_right_inv] at h1
   rw [mul_one] at h1
@@ -29,4 +29,4 @@ Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := b
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.id_unique
+NewTheorem mygroup.mul_left_eq_self
