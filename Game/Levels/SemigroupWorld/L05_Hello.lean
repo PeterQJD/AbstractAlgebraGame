@@ -23,10 +23,10 @@ open MyStructure -- for easy access to axioms
 
 /--This theorem shows how commutivity can be applied and when it is needed.-/
 Statement (a b c : S): a * (b * c) = c * a * b := by
-  rw [mul_comm b]
-  rw [← mul_assoc]
-  rw [mul_comm a]
-
+  rewrite [mul_comm b]
+  rewrite [← mul_assoc]
+  rewrite [mul_comm a]
+  rfl
 Conclusion "
 The message shown when the level is completed
 "

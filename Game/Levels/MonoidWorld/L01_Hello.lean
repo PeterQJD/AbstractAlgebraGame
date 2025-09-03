@@ -23,7 +23,8 @@ TheoremDoc MyStructure.one_mul as "one_mul" in "Axioms"
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
 Statement (a : M) : 1 * a = a := by
-  rw [one_mul]
+  rewrite [one_mul]
+  rfl
 
 Conclusion "
 The message shown when the level is completed

@@ -1,6 +1,4 @@
-import GameServer
-import Game.Metadata
-import Game.Doc.Theorems
+import Game.Levels.TutorialWorld.L05_intro
 
 World "TutorialWorld"
 Level 6

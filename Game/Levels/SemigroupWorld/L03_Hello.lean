@@ -25,7 +25,7 @@ variable {S : Type} [MyStructure S]
 open MyStructure -- for easy access to axioms
 
 Statement Idempotent_def (a : S): Idempotent (a) ↔ a * a = a := by
-  Hint "This result is true by definition so you only need to prompt lean to check"
+  Hint "This result is true by definition so you only need to prompt lean to check..."
   rfl
 
 Conclusion "
