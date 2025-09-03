@@ -47,4 +47,5 @@ Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
+DisabledTheorem MyStructure.mul_comm -- disabled commutivity and right inverse for now)
 NewTheorem mygroup.mul_right_inv MyStructure.mul_left_inv
