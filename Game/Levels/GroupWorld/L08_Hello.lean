@@ -21,12 +21,13 @@ This is some sample documentation - (test)
 TheoremDoc mygroup.inv_eq_of_mul_eq_one as "inv_eq_of_mul_eq_one" in "Group"
 
 Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
-  have h1 : a⁻¹ * (a * b) = a⁻¹ * 1 := by rw[h]
-  rw [← mul_assoc] at h1
-  rw [mul_left_inv] at h1
-  rw [one_mul, mul_one] at h1
-  symm at h1
-  exact h1
+  symm
+  rewrite [← one_mul b]
+  rewrite [← mul_left_inv a]
+  rewrite [mul_assoc]
+  rewrite [h]
+  rewrite [mul_one]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

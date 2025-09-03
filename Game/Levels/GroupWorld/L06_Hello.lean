@@ -21,11 +21,14 @@ This is some sample documentation - (test)
 TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
 
 Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
-  have h1 : a * b * b⁻¹ = b * b⁻¹ := by rw[h]
-  rw [mul_assoc] at h1
-  rw [mul_right_inv] at h1
-  rw [mul_one] at h1
-  exact h1
+  symm
+  rewrite [← mul_right_inv b]
+  symm at h
+  nth_rewrite 1 [h]
+  rewrite [mul_assoc]
+  rewrite [mul_right_inv]
+  rewrite [mul_one]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

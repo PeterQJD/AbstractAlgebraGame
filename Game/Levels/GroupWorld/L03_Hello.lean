@@ -22,11 +22,12 @@ the inverse of the inverse element of a is equal to $a$
 TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 
 Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  rw [← one_mul a⁻¹⁻¹]
-  rw [← mul_right_inv a]
-  rw [mul_assoc]
-  rw [mul_right_inv]
-  rw [mul_one]
+  rewrite [← one_mul a⁻¹⁻¹]
+  rewrite [← mul_right_inv a]
+  rewrite [mul_assoc]
+  rewrite [mul_right_inv]
+  rewrite [mul_one]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

@@ -22,14 +22,14 @@ TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
 
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
-  Hint "You can prove this using all 3 Group Axioms!"
-  have h1 : a⁻¹ * (a * x) = a⁻¹ * (a * y) := by rw [h]
-  rw [← mul_assoc] at h1
-  rw [mul_left_inv] at h1
-  rw [one_mul] at h1
-  rw [← mul_assoc,mul_left_inv, one_mul] at h1
-  exact h1
-
+  rewrite [← one_mul x]
+  rewrite [← mul_left_inv a]
+  rewrite [mul_assoc]
+  rewrite [h]
+  rewrite [← mul_assoc]
+  rewrite [mul_left_inv]
+  rewrite [one_mul]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

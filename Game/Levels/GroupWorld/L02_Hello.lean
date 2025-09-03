@@ -21,10 +21,11 @@ This is some sample documentation - (test)
 TheoremDoc mygroup.mul_one as "mul_one" in "Group"
 
 Statement mul_one (a : G) : a * 1 = a := by
-  rw [← mul_left_inv a]
-  rw [← mul_assoc]
-  rw [mul_right_inv]
-  rw [one_mul]
+  rewrite [← mul_left_inv a]
+  rewrite [← mul_assoc]
+  rewrite [mul_right_inv]
+  rewrite [one_mul]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

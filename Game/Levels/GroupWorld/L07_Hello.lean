@@ -21,12 +21,12 @@ This is some sample documentation - (test)
 TheoremDoc mygroup.eq_inv_of_mul_eq_one as "eq_inv_mul_eq_one" in "Group"
 
 Statement eq_inv_of_mul_eq_one {a b : G} (h : a * b = 1) : a = b⁻¹ := by
-  Hint (hidden := true) "Try generating a new hypothesis from [{h}] using 'have'."
-  have h1 : a * b * b⁻¹ = 1 * b⁻¹ := by rw[h]
-  rw [mul_assoc] at h1
-  rw [mul_right_inv] at h1
-  rw [mul_one, one_mul] at h1
-  exact h1
+  rewrite [← mul_one a]
+  rewrite [← mul_right_inv b]
+  rewrite [← mul_assoc]
+  rewrite [h]
+  rewrite [one_mul]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 

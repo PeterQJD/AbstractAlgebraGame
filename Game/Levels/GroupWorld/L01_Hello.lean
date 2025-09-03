@@ -38,12 +38,16 @@ Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
   Hint "You may find that you will need to use all three Axioms!!!"
   Hint "Using 'nth_rewrite' can allow for precision rewriting"
   nth_rewrite 1 [← one_mul a]
-  nth_rewrite 1 [←mul_left_inv a⁻¹]
-  rw [mul_assoc (a⁻¹⁻¹) a⁻¹ a]
-  rw [mul_left_inv a]
-  rw [mul_assoc]
-  rw [one_mul]
-  rw [mul_left_inv]
+  Hint "Try 'nth_rewrite 1 [← mul_left_inv a⁻¹]' "
+  nth_rewrite 1 [← mul_left_inv a⁻¹]
+  Hint "Try 'rewrite [mul_assoc (a⁻¹⁻¹) a⁻¹ a]' "
+  rewrite [mul_assoc (a⁻¹⁻¹) a⁻¹ a]
+  Hint "You have got the rest from here!"
+  rewrite [mul_left_inv a]
+  rewrite [mul_assoc]
+  rewrite [one_mul]
+  rewrite [mul_left_inv]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 
