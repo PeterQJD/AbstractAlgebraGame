@@ -1,9 +1,7 @@
-import GameServer
-import Game.Metadata
-import Game.Doc.Theorems
+import Game.Levels.TutorialWorld.L06_intro
 
 World "TutorialWorld"
-Level 6
+Level 7
 
 Title "The induction tactic."
 
