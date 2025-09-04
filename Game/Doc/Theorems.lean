@@ -16,6 +16,6 @@ TacticDoc rfl
 /--
 mul_one: g * 1 = g
 -/
-TheoremDoc mygroup.mul_one as "mul_one" in "Group"
+TheoremDoc MyStructure.mul_one as "mul_one" in "Group"
 
 --#################################

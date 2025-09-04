@@ -21,12 +21,22 @@ This element $e$ is denoted as $1$ in the editor.
 -/
 TheoremDoc MyStructure.one_mul as "one_mul" in "Axioms"
 
+/--
+This Axiom states that there exists an element $e ∈ G$ which has the following property:
+$g * e = g $ for all $g ∈ G$
+
+### Important note
+This element $e$ is denoted as $1$ in the editor.
+-/
+TheoremDoc MyStructure.mul_one as "mul_one" in "Axioms"
+
 /-- The exercise statement in natural language using latex: $\iff$. -/
-Statement (a : M) : 1 * a = a := by
+Statement (a : M) : 1 * a * 1 = a := by
   rewrite [one_mul]
+  rewrite [mul_one]
   rfl
 
 Conclusion "
 The message shown when the level is completed
 "
-NewTheorem MyStructure.one_mul
+NewTheorem MyStructure.one_mul MyStructure.mul_one

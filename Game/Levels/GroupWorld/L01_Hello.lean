@@ -1,6 +1,8 @@
 import Game.Metadata
 import Game.Doc.Theorems
 import Game.Custom.MyStructure.Definition
+--import Game.Levels.SemigroupWorld.L01_assoc
+--import game.Levels.MonoidWorld.L01_Hello
 
 World "GroupWorld"
 Level 1
@@ -17,6 +19,12 @@ variable {G : Type} [MyStructure G]
 open MyStructure
 
 /--
+This theorem states that for an element $a ∈ G$,
+the inverse of the inverse element of a is equal to $a$
+-/
+TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
+
+/--
 This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
 such that $g⁻¹ * g = e$ (where e is the identity element in G)
 q
@@ -25,6 +33,7 @@ This axiom specifiys that the inverse is applied multiplicativly on the LEFT, he
 -/
 TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
 
+
 /--
 This theorem states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
 such that $g * g^{-1} = e$ (where e is the identity element in G)
@@ -32,24 +41,17 @@ q
 ## Important note
 This result will allow us to apply inverses on the right as well as the left.
 -/
-TheoremDoc mygroup.mul_right_inv as "mul_right_inv" in "Group"
+TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Axioms"
 
-Statement mul_right_inv (a : G) : a * a⁻¹ = 1 := by
-  Hint "You may find that you will need to use all three Axioms!!!"
-  Hint "Using 'nth_rewrite' can allow for precision rewriting"
-  nth_rewrite 1 [← one_mul a]
-  Hint "Try 'nth_rewrite 1 [← mul_left_inv a⁻¹]' "
-  nth_rewrite 1 [← mul_left_inv a⁻¹]
-  Hint "Try 'rewrite [mul_assoc (a⁻¹⁻¹) a⁻¹ a]' "
-  rewrite [mul_assoc (a⁻¹⁻¹) a⁻¹ a]
-  Hint "You have got the rest from here!"
-  rewrite [mul_left_inv a]
+
+Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  rewrite [← one_mul a⁻¹⁻¹]
+  rewrite [← mul_right_inv a]
   rewrite [mul_assoc]
-  rewrite [one_mul]
-  rewrite [mul_left_inv]
+  rewrite [mul_right_inv]
+  rewrite [mul_one]
   rfl
 
 Conclusion "This last message appears if the level is solved."
 
-DisabledTheorem MyStructure.mul_comm -- disabled commutivity and right inverse for now)
-NewTheorem mygroup.mul_right_inv MyStructure.mul_left_inv
+NewTheorem MyStructure.mul_left_inv MyStructure.mul_right_inv mygroup.inv_inv

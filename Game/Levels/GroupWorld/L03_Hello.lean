@@ -16,14 +16,13 @@ variable {G : Type} [MyStructure G]
 open MyStructure
 
 /--
-This theorem states that for an element $a ∈ G$,
-the inverse of the inverse element of a is equal to $a$
+This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
+TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
 
-Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  rewrite [← one_mul a⁻¹⁻¹]
-  rewrite [← mul_right_inv a]
+Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
+  symm at h
+  rewrite [h]
   rewrite [mul_assoc]
   rewrite [mul_right_inv]
   rewrite [mul_one]
@@ -31,4 +30,4 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.inv_inv
+NewTheorem mygroup.eq_mul_inv_of_mul_eq
