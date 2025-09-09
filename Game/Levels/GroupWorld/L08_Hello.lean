@@ -4,7 +4,7 @@ import Game.Levels.GroupWorld.L07_Hello
 World "GroupWorld"
 Level 8
 
-Title " Welcome to Group World - Getting to grips with the axioms"
+Title " Welcome to Group World"
 
 Introduction "This text is shown as first message when the level is played.
 You can insert hints in the proof below. They will appear in this side panel
@@ -13,28 +13,20 @@ depending on the proof a user provides."
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
-open MyStructure -- for easy access to axioms
+open MyStructure
 
 /--
-This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x = y.
+This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
+TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
 
-
-Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
-  rewrite [← one_mul x]
-  rewrite [← mul_left_inv a]
-  rewrite [mul_assoc]
-  rewrite [h]
-  rewrite [← mul_assoc]
-  rewrite [mul_left_inv]
-  rewrite [one_mul]
-  rfl
+Statement mul_eq_of_eq_inv_mul {a x y : G} (h : x = a⁻¹ * y) : a * x = y := by
+  rewrite [← one_mul x] at h
+  rewrite [← mul_left_inv a] at h
+  rewrite [mul_assoc] at h
+  Hint (hidden := true) "A previously proved theorem might be useful here"
+  exact mul_left_cancel a⁻¹ (a * x) y h
 
 Conclusion "This last message appears if the level is solved."
 
--- new theorem can only be used once per level but takes multiple arguments.
--- only temporary as axioms should be added to inventory in earlier worlds
-NewTheorem mygroup.mul_left_cancel
-
-end mygroup
+NewTheorem mygroup.mul_eq_of_eq_inv_mul

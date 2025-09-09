@@ -18,18 +18,16 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
+TheoremDoc mygroup.eq_inv_of_mul_eq_one as "eq_inv_mul_eq_one" in "Group"
 
-Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
-  symm
+Statement eq_inv_of_mul_eq_one {a b : G} (h : a * b = 1) : a = b⁻¹ := by
+  rewrite [← mul_one a]
   rewrite [← mul_right_inv b]
-  symm at h
-  nth_rewrite 1 [h]
-  rewrite [mul_assoc]
-  rewrite [mul_right_inv]
-  rewrite [mul_one]
+  rewrite [← mul_assoc]
+  rewrite [h]
+  rewrite [one_mul]
   rfl
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_left_eq_self
+NewTheorem mygroup.eq_inv_of_mul_eq_one

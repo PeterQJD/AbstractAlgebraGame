@@ -18,14 +18,16 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.id_unique as "id_unique" in "Group"
+TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
 
-
-Statement id_unique {e : G} (h : ∀ a : G, e * a = a) : e = 1 := by
-  have h1 : e * 1 = 1 := by rw[h]
-  rewrite [mul_one] at h1
-  exact h1
+Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
+  symm at h
+  rewrite [h]
+  rewrite [mul_assoc]
+  rewrite [mul_right_inv]
+  rewrite [mul_one]
+  rfl
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.id_unique
+NewTheorem mygroup.eq_mul_inv_of_mul_eq
