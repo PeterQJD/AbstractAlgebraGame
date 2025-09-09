@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L05_forall
+import Game.Levels.TutorialWorld.L08_intro
 
 World "TutorialWorld"
-Level 6
+Level 9
 
 Title "The specialize tactic."
 
@@ -10,7 +10,11 @@ In the previous level we learnt how to use symmetry, now to end things off we wi
 learn a very hand tactic for when an assumption is a for all statement and you
 want to use a specific instance of the variable.
 "
-
+/--
+This result states that for all natural numbers $n$.
+n + 0 = n
+-/
+TheoremDoc Nat.add_zero as "Nat.add_zero" in "Nat"
 namespace tutorial
 
 /--
@@ -26,11 +30,14 @@ Statement (n : ℕ) (h : ∀ a, n + a = m + a ): n = m := by
    that includes zero, so we can use 'specialize h 0'
   to get that specific consequence of our assumption "
   specialize h 0
-  repeat rewrite [Nat.add_zero] at h
+  rewrite [Nat.add_zero] at h
+  rewrite [Nat.add_zero] at h
   exact h
 
 
-Conclusion "Good work!"
+Conclusion "Good work! To make life easier,
+ you can use repeat rewrite [Nat.add_zero] at h, to apply the result as many times
+ as it can be."
 
 NewTactic specialize
 NewTheorem Nat.add_zero

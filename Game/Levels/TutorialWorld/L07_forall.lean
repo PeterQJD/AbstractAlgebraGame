@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L04_exact
+import Game.Levels.TutorialWorld.L06_apply
 
 World "TutorialWorld"
-Level 5
+Level 7
 
 Title "Using a ∀ statement."
 

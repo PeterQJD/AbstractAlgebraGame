@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L07_intro
+import Game.Levels.TutorialWorld.L09_specialize
 
 World "TutorialWorld"
-Level 8
+Level 10
 
 Title "The induction tactic."
 
