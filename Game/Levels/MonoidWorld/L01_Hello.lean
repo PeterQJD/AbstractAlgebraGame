@@ -8,6 +8,7 @@ Title "Hello World"
 Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.
 "
+namespace mymonoid
 
 variable {M : Type} [MyStructure M] -- M for monoid seems fitting.
 open MyStructure
@@ -39,4 +40,4 @@ Statement (a : M) : 1 * a * 1 = a := by
 Conclusion "
 The message shown when the level is completed
 "
-NewTheorem MyStructure.one_mul MyStructure.mul_one
+NewTheorem MyStructure.mul_one MyStructure.one_mul

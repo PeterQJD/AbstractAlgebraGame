@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L05_intro
+import Game.Levels.TutorialWorld.L07_intro
 
 World "TutorialWorld"
-Level 6
+Level 8
 
 Title "The induction tactic."
 
@@ -39,4 +39,4 @@ Statement (n : ℕ) : 0 + n = n := by
 Conclusion "Good work!"
 
 NewTactic induction
-NewTheorem Nat.add_zero Nat.add_succ
+NewTheorem Nat.add_succ

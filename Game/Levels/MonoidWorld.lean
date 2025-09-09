@@ -1,4 +1,5 @@
 import Game.Levels.MonoidWorld.L01_Hello
+import Game.Levels.MonoidWorld.L02_Hello
 
 
 World "MonoidWorld"

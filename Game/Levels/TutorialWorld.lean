@@ -1,9 +1,12 @@
 import Game.Levels.TutorialWorld.L01_reflexive
-import Game.Levels.TutorialWorld.L02_rewrite
-import Game.Levels.TutorialWorld.L03_exact
-import Game.Levels.TutorialWorld.L04_forall
-import Game.Levels.TutorialWorld.L05_intro
-import Game.Levels.TutorialWorld.L06_induction
+import Game.Levels.TutorialWorld.L02_symmetry
+import Game.Levels.TutorialWorld.L03_rewrite
+import Game.Levels.TutorialWorld.L04_exact
+import Game.Levels.TutorialWorld.L05_forall
+import Game.Levels.TutorialWorld.L06_specialize
+import Game.Levels.TutorialWorld.L07_intro
+import Game.Levels.TutorialWorld.L08_induction
+
 
 World "TutorialWorld"
 Title "Tutorial World"

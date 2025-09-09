@@ -1,8 +1,6 @@
 import Game.Metadata
 import Game.Doc.Theorems
 import Game.Custom.MyStructure.Definition
---import Game.Levels.SemigroupWorld.L01_assoc
---import game.Levels.MonoidWorld.L01_Hello
 
 World "GroupWorld"
 Level 1
@@ -27,7 +25,7 @@ TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 /--
 This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
 such that $g⁻¹ * g = e$ (where e is the identity element in G)
-q
+
 ## Important note
 This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
 -/
