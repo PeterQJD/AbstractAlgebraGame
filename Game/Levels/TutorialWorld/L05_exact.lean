@@ -3,11 +3,12 @@ import Game.Levels.TutorialWorld.L04_nth_rewrite
 World "TutorialWorld"
 Level 5
 
+
 Title "The exact tactic"
 
-Introduction "Let's revisit our previous proof.
+Introduction "Let's revisit our proof from level 2.
 
-After the first `rewrite`, our goal is `y = z`.
+After the first `rewrite`, our goal was `y = z`.
 
 Instead of performing the second `rewrite` with `h₂`, we can immediately close the goal by writing `exact h₂`, i.e., the statement we wish to prove is *exactly* our assumption `h₂`.
 "

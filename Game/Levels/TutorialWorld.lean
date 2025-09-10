@@ -11,6 +11,9 @@ import Game.Levels.TutorialWorld.L10_induction
 import Game.Levels.TutorialWorld.L11_rcases
 
 
+import Game.Levels.TutorialWorld.L03_backrewrite
+import Game.Levels.TutorialWorld.L08_rw
+
 World "TutorialWorld"
 Title "Tutorial World"
 

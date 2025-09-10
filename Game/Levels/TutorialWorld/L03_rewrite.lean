@@ -24,14 +24,14 @@ Statement (x y z : Nat) (h₁ : x = y) (h₂ : y = z): x = z := by
   rewrite [h₁]
   Hint (hidden := true) "Now rewrite using `h₂`."
   rewrite [h₂]
-  Hint (hidden := true) "You can now use rfl."
+  Hint (hidden := true) "You can now use `rfl`."
   rfl
 
 Conclusion "Well done!
 
 You might be thinking why we bothered to perform a second rewrite when our goal was exactly the assumption `h₂`.
 
-The next level will show you how we can use assumptions to close the goal.
+We will soon see how we can use assumptions to close a goal, but before that we will learn about another feature of `rewrite`.
 "
 
 /- Use these commands to add items to the game's inventory. -/

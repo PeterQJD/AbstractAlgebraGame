@@ -1,7 +1,8 @@
-import Game.Levels.TutorialWorld.L07_forall
+import Game.Levels.TutorialWorld.L05_forall
 
 World "TutorialWorld"
-Level 8
+Level 6
+
 
 Title "The intro tactic."
 
