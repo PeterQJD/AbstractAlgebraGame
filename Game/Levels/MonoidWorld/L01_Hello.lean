@@ -20,7 +20,7 @@ $e * g = g $ for all $g ∈ G$
 ### Important note
 This element $e$ is denoted as $1$ in the editor.
 -/
-TheoremDoc MyStructure.one_mul as "one_mul" in "Axioms"
+TheoremDoc MyStructure.one_mul as "one_mul" in "Monoid"
 
 /--
 This Axiom states that there exists an element $e ∈ G$ which has the following property:
@@ -29,7 +29,7 @@ $g * e = g $ for all $g ∈ G$
 ### Important note
 This element $e$ is denoted as $1$ in the editor.
 -/
-TheoremDoc MyStructure.mul_one as "mul_one" in "Axioms"
+TheoremDoc MyStructure.mul_one as "mul_one" in "Monoid"
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
 Statement (a b : M) : 1 * (a * b) * 1 = a * b := by

@@ -23,7 +23,7 @@ weak_inverse x y meaning that the weak inverse of $x$ is $y$, is true if and onl
 $ x * y * x = x ∧ y * x * y = y $. This is a generalisation of how inverse
 are defined in a group, as there is no identity element in an inverse semi group
 -/
-TheoremDoc myinversesemigroup.weak_inverse_def as "weak_inverse_def" in "Inverse Semigroup"
+TheoremDoc myinversesemigroup.weak_inverse_def as "weak_inverse_def" in "ISG"
 
 
 

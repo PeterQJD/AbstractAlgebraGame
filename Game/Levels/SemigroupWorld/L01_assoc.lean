@@ -26,7 +26,7 @@ This Axiom states that our binary operation has the following property:
  $g * (h * k)  = (g * h) * k$ for all $g, h, k ∈ G$.
 Then we say that the binary operation * is associative
 -/
-TheoremDoc MyStructure.mul_assoc as "mul_assoc" in "Axioms"
+TheoremDoc MyStructure.mul_assoc as "mul_assoc" in "Semigroup"
 
 Statement (a b c : S) : (a * b) * c = a * (b * c):= by
   rewrite [mul_assoc]

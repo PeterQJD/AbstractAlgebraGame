@@ -5,7 +5,7 @@ import Game.Levels.InverseSemiGroupWorld.L03_Hello
 
 World "InverseSemiGroupWorld"
 
-Title "Inverse Semi-Group World"
+Title "Inverse Semigroup World"
 
 Introduction
 "
