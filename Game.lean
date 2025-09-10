@@ -11,8 +11,11 @@ import Game.Levels.GroupWorld
 Title "Abstract Algebra Game"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use markdown.
+Hi There! Welcome to the Abstract Algebra Game, you'll start off in tutorial world where
+you will pick up the tactics needed to solve the exercises in further worlds.
+
+The central idea is that we start with a very general and 'simple' structure with a Semigroup,
+then as we add axioms we can prove more and more results as we gain more and more 'structure'.
 "
 
 Info "

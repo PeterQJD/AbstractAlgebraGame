@@ -9,12 +9,14 @@ Title "Inverse Semigroup World"
 
 Introduction
 "
-# Welcome to Inverse Semi-Group World!
+## Welcome to Inverse Semi-Group World!
 
-Now an Inverse Semi-Group $S$ is simply a semigroup in which
-every element $x$ in $S$ has a unique inverse $y$ in $S$
+Now an Inverse semigroup $S$ is simply a semigroup in which
+every element $x$ in $S$ has a unique inverse $y$ in $S$.
 
-The tactics used will be predominatley rewrites
+As all Inverse semigroups are semigroups, we will have trusty associativity by our side!
+
+The tactics used will be predominatley rewrites.
 
 ### click start to begin the first level!
 

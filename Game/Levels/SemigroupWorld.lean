@@ -10,9 +10,12 @@ Title "Semigroup World"
 
 Introduction
 "
-# Welcome to Semigroup World!
+## Welcome to Semigroup World!
 
-The tactics used will be predominatley ... .
+A Semigroup is a set (unordered collection of objects with no duplicates) together with an
+associative binary operation, this world will introduce you to the idea of associativity and more!
+
+The tactics used will be predominatley rewrites.
 
 ### click start to begin the first level!
 
