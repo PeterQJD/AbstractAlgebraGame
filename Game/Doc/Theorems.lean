@@ -11,11 +11,3 @@ TacticDoc rfl
 --#################################
 
 --#################################
--- Group World
-
-/--
-mul_one: g * 1 = g
--/
-TheoremDoc MyStructure.mul_one as "mul_one" in "Group"
-
---#################################
