@@ -6,8 +6,8 @@ Level 9
 Title "The specialize tactic."
 
 Introduction "
-In the previous level we learnt how to use symmetry, now to end things off we will
-learn a very hand tactic for when an assumption is a for all statement and you
+In the previous level we learnt how to use symmetry, now we will
+learn a very handy tactic for when an assumption is a for-all statement and you
 want to use a specific instance of the variable.
 "
 /--

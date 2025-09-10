@@ -32,10 +32,12 @@ This element $e$ is denoted as $1$ in the editor.
 TheoremDoc MyStructure.mul_one as "mul_one" in "Axioms"
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
-Statement (a : M) : 1 * a * 1 = a := by
+Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
+  rewrite [← mul_assoc]
   rewrite [one_mul]
   rewrite [mul_one]
   rfl
+
 
 Conclusion "
 The message shown when the level is completed

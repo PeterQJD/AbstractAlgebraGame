@@ -9,7 +9,10 @@ Introduction
 "
 # Welcome to Inverse Semi-Group World!
 
-The tactics used will be predominatley ... .
+Now an Inverse Semi-Group $S$ is simply a semigroup in which
+every element $x$ in $S$ has a unique inverse $y$ in $S$
+
+The tactics used will be predominatley rewrites
 
 ### click start to begin the first level!
 
