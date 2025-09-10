@@ -51,6 +51,6 @@ Statement  (a : G) : a⁻¹ * a * a⁻¹ = a⁻¹ := by
 
 
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Good Work!"
 
 NewTheorem MyStructure.mul_right_inv MyStructure.mul_left_inv

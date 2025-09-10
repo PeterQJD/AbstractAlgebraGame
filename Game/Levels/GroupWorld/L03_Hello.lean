@@ -3,35 +3,17 @@ import Game.Levels.GroupWorld.L02_Hello
 World "GroupWorld"
 Level 3
 
-Title " Welcome to Group World"
+Title "inverse of an inverse"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "Now considering the previous two levels, recall
+that to write an inverse element it requires a forward-slash -1 next to the element.
+
+Now here is your first proper exercise! prove that the inverse of the inverse of {a} is equal to {a}"
 
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
 open MyStructure
-
-/--
-This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g⁻¹ * g = e$ (where e is the identity element in G)
-
-## Important note
-This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
--/
-TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
-
-
-/--
-This theorem states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g * g^{-1} = e$ (where e is the identity element in G)
-q
-## Important note
-This result will allow us to apply inverses on the right as well as the left.
--/
-TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Axioms"
 
 
 /--
@@ -42,13 +24,15 @@ TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 
 
 Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  Hint (hidden := true) "Try introducing the identity with ← backwriting, specifing a⁻¹⁻¹"
   rewrite [← one_mul a⁻¹⁻¹]
+  Hint (hidden := true) "Try using a similar approach from the last level with 'a'."
   rewrite [← mul_right_inv a]
   rewrite [mul_assoc]
   rewrite [mul_right_inv]
   rewrite [mul_one]
   rfl
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Great stuff!"
 
-NewTheorem mygroup.inv_inv MyStructure.mul_right_inv MyStructure.mul_left_inv
+NewTheorem mygroup.inv_inv

@@ -20,6 +20,7 @@ Statement  (a : G) : 1 = a * a⁻¹ := by
     rewrite [mul_right_inv]
     Hint "HALT! Instead of using mul_right_inv on the right hand side,
     try rewrite [← mul_right_inv a]"
+    rfl
 
   rewrite [← mul_right_inv a]
   rfl
