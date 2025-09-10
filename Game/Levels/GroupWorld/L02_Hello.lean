@@ -1,33 +1,31 @@
 import Game.Levels.GroupWorld.L01_Hello
 
-
 World "GroupWorld"
 Level 2
 
-Title " Welcome to Group World"
+Title "← back writing inverses"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction " Now here comes a useful trick that
+will help with some of the future exercises."
 
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
 open MyStructure
 
-/--
-This is some sample documentation - (test)
--/
-TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
 
-Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
-  symm at h
-  rewrite [h]
-  rewrite [mul_assoc]
-  rewrite [mul_right_inv]
-  rewrite [mul_one]
+/--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
+Statement  (a : G) : 1 = a * a⁻¹ := by
+  Branch
+    rewrite [mul_right_inv]
+    Hint "HALT! Instead of using mul_right_inv on the right hand side,
+    try rewrite [← mul_right_inv a]"
+
+  rewrite [← mul_right_inv a]
   rfl
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Nice! This approach will prove useful in future exercises,
+which you are now ready to tackle!
 
-NewTheorem mygroup.eq_mul_inv_of_mul_eq
+Note: the 'a' at the end of '← mul_right_inv a' specifies the element
+that constitutes the element * element_inverse pair (which is equal to the identity {1}) "

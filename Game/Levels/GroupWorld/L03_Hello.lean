@@ -1,6 +1,5 @@
 import Game.Levels.GroupWorld.L02_Hello
 
-
 World "GroupWorld"
 Level 3
 
@@ -16,15 +15,35 @@ variable {G : Type} [MyStructure G]
 open MyStructure
 
 /--
-This is some sample documentation - (test)
--/
-TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
+This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
+such that $g⁻¹ * g = e$ (where e is the identity element in G)
 
-Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
-  symm
-  rewrite [← mul_right_inv b]
-  symm at h
-  nth_rewrite 1 [h]
+## Important note
+This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
+-/
+TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
+
+
+/--
+This theorem states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
+such that $g * g^{-1} = e$ (where e is the identity element in G)
+q
+## Important note
+This result will allow us to apply inverses on the right as well as the left.
+-/
+TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Axioms"
+
+
+/--
+This theorem states that for an element $a ∈ G$,
+the inverse of the inverse element of a is equal to $a$
+-/
+TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
+
+
+Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  rewrite [← one_mul a⁻¹⁻¹]
+  rewrite [← mul_right_inv a]
   rewrite [mul_assoc]
   rewrite [mul_right_inv]
   rewrite [mul_one]
@@ -32,4 +51,4 @@ Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.mul_left_eq_self
+NewTheorem mygroup.inv_inv MyStructure.mul_right_inv MyStructure.mul_left_inv

@@ -7,9 +7,12 @@ Level 1
 
 Title " Welcome to Group World"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction " Now that we are working within a group $G$, we have associativity, a unique identity
+element and inverses, but the inverses elements in groups differ from the 'weak' inverses in inverse-semigroups.
+in a group, an inverse is characterised by the fact that when applied, it reduces it's corresponding element
+to the identity element (something we don't have in inverse-semigroups). inverse elements can be
+applied on the left and on the right, represented by the two axioms now unlocked, mul_left_inv and mul_right_inv
+respectivley. "
 
 namespace mygroup
 
@@ -17,11 +20,11 @@ variable {G : Type} [MyStructure G]
 open MyStructure
 
 /--
-This Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
+This Group Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
 such that $g⁻¹ * g = e$ (where e is the identity element in G)
 
 ## Important note
-This axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
+This Group Axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
 -/
 TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
 
@@ -31,26 +34,23 @@ This theorem states that for every element $g ∈ G$, there exists an inverse el
 such that $g * g^{-1} = e$ (where e is the identity element in G)
 q
 ## Important note
-This result will allow us to apply inverses on the right as well as the left.
+This result will allow us to apply inverses on the RIGHT.
 -/
 TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Axioms"
 
-
-/--
-This theorem states that for an element $a ∈ G$,
-the inverse of the inverse element of a is equal to $a$
--/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
-
-
-Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  rewrite [← one_mul a⁻¹⁻¹]
-  rewrite [← mul_right_inv a]
-  rewrite [mul_assoc]
-  rewrite [mul_right_inv]
-  rewrite [mul_one]
+/--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
+Statement  (a : G) : a⁻¹ * a * a⁻¹ = a⁻¹ := by
+  Branch
+    rewrite [mul_assoc]
+    rewrite [mul_right_inv]
+    rewrite [mul_one]
+    rfl
+  rewrite [mul_left_inv]
+  rewrite [one_mul]
   rfl
+
+
 
 Conclusion "This last message appears if the level is solved."
 
-NewTheorem mygroup.inv_inv MyStructure.mul_right_inv MyStructure.mul_left_inv
+NewTheorem MyStructure.mul_right_inv MyStructure.mul_left_inv
