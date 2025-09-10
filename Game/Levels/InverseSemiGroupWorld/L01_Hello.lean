@@ -34,5 +34,5 @@ Statement weak_inverse_def (x y : ISG) : weak_inverse x y ↔ x * y * x = x ∧ 
 Conclusion "
 The message shown when the level is completed
 "
-
+DisabledTheorem MyStructure.mul_one MyStructure.one_mul MyStructure.mul_comm
 NewTheorem  myinversesemigroup.weak_inverse_def

@@ -26,7 +26,7 @@ such that $g⁻¹ * g = e$ (where e is the identity element in G)
 ## Important note
 This Group Axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
 -/
-TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Axioms"
+TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Group"
 
 
 /--
@@ -36,7 +36,7 @@ q
 ## Important note
 This result will allow us to apply inverses on the RIGHT.
 -/
-TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Axioms"
+TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Group"
 
 /--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
 Statement  (a : G) : a⁻¹ * a * a⁻¹ = a⁻¹ := by
@@ -53,4 +53,5 @@ Statement  (a : G) : a⁻¹ * a * a⁻¹ = a⁻¹ := by
 
 Conclusion "Good Work!"
 
+DisabledTheorem MyStructure.mul_comm
 NewTheorem MyStructure.mul_right_inv MyStructure.mul_left_inv

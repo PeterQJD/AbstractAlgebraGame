@@ -30,4 +30,5 @@ Statement eq_inv_of_mul_eq_one {a b : G} (h : a * b = 1) : a = b⁻¹ := by
 
 Conclusion "This last message appears if the level is solved."
 
+DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.eq_inv_of_mul_eq_one

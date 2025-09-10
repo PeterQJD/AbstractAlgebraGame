@@ -33,6 +33,7 @@ Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
 
 Conclusion "This last message appears if the level is solved."
 
+DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.product_inv
 
 end mygroup

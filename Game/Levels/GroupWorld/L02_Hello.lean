@@ -30,3 +30,5 @@ which you are now ready to tackle!
 
 Note: the 'a' at the end of '← mul_right_inv a' specifies the element
 that constitutes the element * element_inverse pair (which is equal to the identity {1}) "
+
+DisabledTheorem MyStructure.mul_comm

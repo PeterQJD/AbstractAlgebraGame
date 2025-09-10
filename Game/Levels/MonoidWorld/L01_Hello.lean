@@ -42,4 +42,5 @@ Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
 Conclusion "
 The message shown when the level is completed
 "
+DisabledTheorem MyStructure.mul_comm
 NewTheorem MyStructure.mul_one MyStructure.one_mul

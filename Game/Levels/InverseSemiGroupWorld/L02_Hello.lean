@@ -26,3 +26,5 @@ Statement (a b : ISG) (h: weak_inverse a b): b  = b * a * b   := by
 Conclusion "
 The message shown when the level is completed
 "
+
+DisabledTheorem MyStructure.mul_one MyStructure.one_mul MyStructure.mul_comm

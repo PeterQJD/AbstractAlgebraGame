@@ -38,4 +38,5 @@ Statement id_unique {e₁ e₂ : M}
 Conclusion "
 The message shown when the level is completed
 "
+DisabledTheorem MyStructure.mul_comm
 NewTheorem mymonoid.id_unique

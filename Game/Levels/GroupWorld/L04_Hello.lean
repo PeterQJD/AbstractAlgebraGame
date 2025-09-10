@@ -32,4 +32,5 @@ Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
 
 Conclusion "This last message appears if the level is solved."
 
+DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.mul_left_eq_self

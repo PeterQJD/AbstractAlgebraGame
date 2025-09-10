@@ -35,3 +35,4 @@ into group would you will find the idea of an inverse changes, now an inverse of
 a group element a is denoted a⁻¹, and a * a⁻¹ = e = 1, where e is the identity element
 denoted as 1.
 "
+DisabledTheorem MyStructure.mul_one MyStructure.one_mul MyStructure.mul_comm

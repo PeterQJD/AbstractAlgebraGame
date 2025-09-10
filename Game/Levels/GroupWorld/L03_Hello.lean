@@ -35,4 +35,5 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
 
 Conclusion "Great stuff!"
 
+DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.inv_inv
