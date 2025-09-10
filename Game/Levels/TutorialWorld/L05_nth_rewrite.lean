@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L03_rewrite
+import Game.Levels.TutorialWorld.L04_backrewrite
 
 World "TutorialWorld"
-Level 4
+Level 5
 
 Title "The rewrite tactic"
 

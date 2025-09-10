@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L05_exact
+import Game.Levels.TutorialWorld.L07_exact
 
 World "TutorialWorld"
-Level 6
+Level 8
 
 Title "The apply tactic"
 

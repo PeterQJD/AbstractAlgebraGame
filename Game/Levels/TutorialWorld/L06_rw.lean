@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L07_induction
+import Game.Levels.TutorialWorld.L05_nth_rewrite
 
 World "TutorialWorld"
-Level 8
+Level 6
 
 Title "Even more on rewrite."
 

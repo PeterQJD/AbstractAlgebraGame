@@ -6,8 +6,8 @@ import Game.Levels.TutorialWorld.L05_nth_rewrite
 import Game.Levels.TutorialWorld.L06_rw
 import Game.Levels.TutorialWorld.L07_exact
 import Game.Levels.TutorialWorld.L08_apply
-import Game.Levels.TutorialWorld.L09_forall
-import Game.Levels.TutorialWorld.L10_intro
+import Game.Levels.TutorialWorld.L09_intro
+import Game.Levels.TutorialWorld.L10_forall
 import Game.Levels.TutorialWorld.L11_specialize
 import Game.Levels.TutorialWorld.L12_induction
 import Game.Levels.TutorialWorld.L13_rcases

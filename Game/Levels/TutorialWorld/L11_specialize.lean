@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L08_intro
+import Game.Levels.TutorialWorld.L10_forall
 
 World "TutorialWorld"
-Level 9
+Level 11
 
 Title "The specialize tactic."
 
