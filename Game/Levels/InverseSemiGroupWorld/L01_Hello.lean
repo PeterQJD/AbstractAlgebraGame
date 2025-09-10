@@ -9,20 +9,13 @@ Title "Hello World"
 Introduction "
 Now that we are working with an Inverse Semigroup, we have both associativity
 and the existance of inverse elements for every element in the set. This
-Exercise is just to introduce the idea of a 'weak_inverse'.
+Exercise is just to introduce the idea of 'weak_inverse'
 "
-
-/--An inverse of an element x in a semigroup S is some y ∈ S such that:-/
-def MyStructure.weak_inverse {S : Type u} [MyStructure S] (x y : S) : Prop :=
-x * y * x = x ∧ y * x * y = y
-
-
 
 namespace myinversesemigroup
 
 variable {ISG : Type} [MyStructure ISG]
 open MyStructure
-
 
 /--
 This result which is true by definition, states that the lean expression
@@ -30,7 +23,7 @@ weak_inverse x y meaning that the weak inverse of $x$ is $y$, is true if and onl
 $ x * y * x = x ∧ y * x * y = y $. This is a generalisation of how inverse
 are defined in a group, as there is no identity element in an inverse semi group
 -/
-TheoremDoc MyStructure.weak_inverse_def as "weak_inverse_def" in "Inverse Semigroup"
+TheoremDoc myinversesemigroup.weak_inverse_def as "weak_inverse_def" in "Inverse Semigroup"
 
 
 

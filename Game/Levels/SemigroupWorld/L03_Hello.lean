@@ -9,9 +9,6 @@ Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.
 "
 
-def MyStructure.Idempotent {S : Type u} [MyStructure S] (x : S) : Prop :=
-x * x = x
-
 namespace mysemigroup
 
 variable {S : Type} [MyStructure S]

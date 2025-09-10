@@ -2,7 +2,7 @@ import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.SemigroupWorld
 import Game.Levels.MonoidWorld
---import Game.Levels.InverseSemiGroupWorld
+import Game.Levels.InverseSemiGroupWorld
 import Game.Levels.GroupWorld
 
 
@@ -35,6 +35,9 @@ CaptionShort "Game Template"
 CaptionLong "You should use this game as a template for your own game and add your own levels."
 -- Prerequisites "" -- add this if your game depends on other games
 -- CoverImage "images/cover.png"
+
+-- Because we don't introduce inverses that reduce to an identity in ISGW.
+Dependency InverseSemiGroupWorld → GroupWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

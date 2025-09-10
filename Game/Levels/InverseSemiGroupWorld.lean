@@ -1,4 +1,6 @@
 import Game.Levels.InverseSemiGroupWorld.L01_Hello
+import Game.Levels.InverseSemiGroupWorld.L02_Hello
+import Game.Levels.InverseSemiGroupWorld.L03_Hello
 
 
 World "InverseSemiGroupWorld"
