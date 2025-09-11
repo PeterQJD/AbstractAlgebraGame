@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L04_Hello
+import Game.Levels.GroupWorld.L04_mul_left_eq_self
 
 
 World "GroupWorld"

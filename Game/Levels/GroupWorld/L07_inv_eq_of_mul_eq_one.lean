@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L06_Hello
+import Game.Levels.GroupWorld.L06_eq_inv_of_mul_eq_one
 
 
 World "GroupWorld"

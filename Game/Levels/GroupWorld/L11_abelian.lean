@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L10_Hello
+import Game.Levels.GroupWorld.L10_mul_eq_of_eq_inv_mul
 
 
 World "GroupWorld"
@@ -26,14 +26,15 @@ Statement order_of_all_two_abelian {a b x : G} (h : ∀ x, x * x = 1) : a * b = 
   nth_rewrite 1 [← mul_one a]
   nth_rewrite 1 [← mul_right_inv a]
   nth_rewrite 2 [← mul_assoc]
-  nth_rewrite 1 [h, one_mul]
-  nth_rewrite 1 [← mul_right_inv b]
-  nth_rewrite 2 [← mul_assoc]
-  nth_rewrite 1 [h, one_mul]
-  rw [← mul_inv]
-  apply inv_eq_of_mul_eq_one
-  rewrite [h]
-  rfl
+  sorry
+  --nth_rewrite 1 [h, one_mul]
+  --nth_rewrite 1 [← mul_right_inv b]
+  --nth_rewrite 2 [← mul_assoc]
+  --nth_rewrite 1 [h, one_mul]
+  --rw [← mul_inv]
+  --apply inv_eq_of_mul_eq_one
+  --rewrite [h]
+  --rfl
 
 
 

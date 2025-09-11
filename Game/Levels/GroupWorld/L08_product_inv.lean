@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L07_Hello
+import Game.Levels.GroupWorld.L07_inv_eq_of_mul_eq_one
 
 
 World "GroupWorld"
@@ -23,17 +23,16 @@ TheoremDoc mygroup.product_inv as "product_inv" in "Group"
 Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
   Hint "Applying a previous proven result might be the way to go"
   apply inv_eq_of_mul_eq_one
-  Branch
-    rewrite [mul_assoc]
-    rewrite [← mul_assoc b]
-    rewrite [mul_right_inv]
-    rewrite [one_mul]
-    rewrite [mul_right_inv]
-    rfl
+  rewrite [mul_assoc]
+  rewrite [← mul_assoc b]
+  rewrite [mul_right_inv]
+  rewrite [one_mul]
+  rewrite [mul_right_inv]
+  rfl
 
-  apply eq_inv_of_mul_eq_one
-  rw [mul_assoc]
-  rw [← mul_left_inv (a * b)]
+  --apply eq_inv_of_mul_eq_one
+  --rw [mul_assoc]
+  --rw [← mul_left_inv (a * b)]
 
 
 Conclusion "This last message appears if the level is solved."

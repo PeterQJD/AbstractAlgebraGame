@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L08_Hello
+import Game.Levels.GroupWorld.L08_product_inv
 
 
 World "GroupWorld"

@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L09_Hello
+import Game.Levels.GroupWorld.L09_mul_left_cancel
 
 World "GroupWorld"
 Level 10
