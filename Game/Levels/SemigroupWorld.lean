@@ -1,8 +1,8 @@
 import Game.Levels.SemigroupWorld.L01_assoc
 import Game.Levels.SemigroupWorld.L02_assocprob1
-import Game.Levels.SemigroupWorld.L03_Hello
-import Game.Levels.SemigroupWorld.L04_Hello
-import Game.Levels.SemigroupWorld.L05_Hello
+import Game.Levels.SemigroupWorld.L03_idempotent_def
+import Game.Levels.SemigroupWorld.L04_using_idempotence
+import Game.Levels.SemigroupWorld.L05_using_assoc
 
 World "SemigroupWorld"
 

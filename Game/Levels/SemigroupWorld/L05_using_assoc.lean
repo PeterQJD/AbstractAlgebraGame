@@ -1,4 +1,4 @@
-import Game.Levels.SemigroupWorld.L04_Hello
+import Game.Levels.SemigroupWorld.L04_using_idempotence
 
 
 World "SemigroupWorld"
