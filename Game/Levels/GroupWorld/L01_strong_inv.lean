@@ -1,7 +1,7 @@
 import Game.Metadata
 import Game.Doc.Theorems
 import Game.Custom.MyStructure.Definition
-import Game.Levels.InverseSemiGroupWorld.L01_Hello
+import Game.Levels.InverseSemiGroupWorld.L01_weak_inverse_def
 
 World "GroupWorld"
 Level 1
