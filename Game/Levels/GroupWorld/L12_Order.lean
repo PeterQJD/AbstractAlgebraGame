@@ -11,7 +11,6 @@ Introduction " In this level you will show that if $∀ x ∈ G, x * x = 1$ wher
 of the group then group G is abelian (commutative).
 
 "
-
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
@@ -22,7 +21,7 @@ This is some sample documentation - (test)
 -/
 TheoremDoc mygroup.order_of_all_two_abelian as "order_of_all_two_abelian" in "Group"
 
-Statement order_of_all_two_abelian {a b : G} (h : ∀ x : G, x * x = 1) : a * b = b * a := by
+Statement order_of_all_two_abelian {a b x : G} (h : ∀ x, x * x = 1) : a * b = b * a := by
   nth_rewrite 1 [← mul_one b]
   nth_rewrite 1 [← mul_one a]
   nth_rewrite 1 [← mul_right_inv a]
@@ -38,13 +37,4 @@ Statement order_of_all_two_abelian {a b : G} (h : ∀ x : G, x * x = 1) : a * b 
 
 
 
-
-
-
-
-
-
-
 Conclusion "Well Done."
-
-NewTactic mul_inv

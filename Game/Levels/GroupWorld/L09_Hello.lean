@@ -3,7 +3,7 @@ import Game.Levels.GroupWorld.L08_Hello
 World "GroupWorld"
 Level 9
 
-Title "← back writing inverses"
+Title "← back wri"
 
 Introduction " Now here comes a useful trick that
 will help with some of the future exercises."
