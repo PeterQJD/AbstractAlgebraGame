@@ -1,4 +1,4 @@
-import Game.Levels.MonoidWorld.L01_Hello
+import Game.Levels.MonoidWorld.L01_identities
 
 World "MonoidWorld"
 Level 2

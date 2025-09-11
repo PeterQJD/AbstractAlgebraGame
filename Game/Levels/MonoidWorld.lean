@@ -1,5 +1,5 @@
-import Game.Levels.MonoidWorld.L01_Hello
-import Game.Levels.MonoidWorld.L02_Hello
+import Game.Levels.MonoidWorld.L01_identities
+import Game.Levels.MonoidWorld.L02_id_unique
 import Game.Levels.MonoidWorld.L03_comm
 import Game.Levels.MonoidWorld.L04_assoc
 
