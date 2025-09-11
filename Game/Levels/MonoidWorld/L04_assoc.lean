@@ -36,4 +36,4 @@ Statement monoid_magma_assoc {a b c e : M} (h₁ : ∀ x : M, e * x = x)
 Conclusion "This last message appears if the level is solved."
 
 NewTactic symm
-NewTheorem monoid_magma_comm
+NewTheorem mymonoid.monoid_magma_comm
