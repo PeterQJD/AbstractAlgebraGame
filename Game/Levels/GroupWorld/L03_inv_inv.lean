@@ -1,7 +1,7 @@
-import Game.Levels.GroupWorld.L01_Hello
+import Game.Levels.GroupWorld.L02_inverse_trick
 
 World "GroupWorld"
-Level 2
+Level 3
 
 Title "inverse of an inverse"
 

@@ -1,8 +1,8 @@
-import Game.Levels.GroupWorld.L06_Hello
+import Game.Levels.GroupWorld.L07_Hello
 
 
 World "GroupWorld"
-Level 7
+Level 8
 
 Title " Welcome to Group World"
 

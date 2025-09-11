@@ -1,7 +1,7 @@
-import Game.Levels.GroupWorld.L08_Hello
+import Game.Levels.GroupWorld.L09_Hello
 
 World "GroupWorld"
-Level 9
+Level 10
 
 Title "← back wri"
 

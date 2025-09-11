@@ -1,6 +1,6 @@
-import Game.Levels.GroupWorld.L01_Hello
-import Game.Levels.GroupWorld.L02_Hello
-import Game.Levels.GroupWorld.L03_Hello
+import Game.Levels.GroupWorld.L01_strong_inv
+import Game.Levels.GroupWorld.L02_inverse_trick
+import Game.Levels.GroupWorld.L03_inv_inv
 import Game.Levels.GroupWorld.L04_Hello
 import Game.Levels.GroupWorld.L05_Hello
 import Game.Levels.GroupWorld.L06_Hello
@@ -8,8 +8,7 @@ import Game.Levels.GroupWorld.L07_Hello
 import Game.Levels.GroupWorld.L08_Hello
 import Game.Levels.GroupWorld.L09_Hello
 import Game.Levels.GroupWorld.L10_Hello
-import Game.Levels.GroupWorld.L11_mul_inv
-import Game.Levels.GroupWorld.L12_Order
+import Game.Levels.GroupWorld.L11_Order
 
 
 

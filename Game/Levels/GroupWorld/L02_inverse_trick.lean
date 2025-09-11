@@ -1,4 +1,4 @@
-import Game.Levels.GroupWorld.L01_Hello
+import Game.Levels.GroupWorld.L01_strong_inv
 
 World "GroupWorld"
 Level 2
