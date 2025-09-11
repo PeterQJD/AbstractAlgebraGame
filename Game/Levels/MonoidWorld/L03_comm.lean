@@ -17,7 +17,7 @@ variable {M : Type} [MyMagma M]
 /--
 The iverse of a multiple is the multiple of the inverses reversed
 -/
-TheoremDoc mymonoid.monoid_magma_comm as "monoid_magma_comm" in "Magma"
+TheoremDoc mymonoid.monoid_magma_comm as "monoid_magma_comm" in "Monoid"
 
 Statement monoid_magma_comm {a b e : M} (h₁ : ∀ x : M, e * x = x)
 (h₂ : ∀ x y z : M, x * (y * z) = (x * z) * y) :
