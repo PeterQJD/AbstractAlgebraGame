@@ -29,9 +29,4 @@ a * b = b * a := by
   rfl
 
 
-
-
 Conclusion "This last message appears if the level is solved."
-
-NewTactic nth_rewrite
-NewTheorem MyMonoid.mul_assoc MyMonoid.one_mul
