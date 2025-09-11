@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L16_induction
+import Game.Levels.TutorialWorld.L09_specialize
 
 World "TutorialWorld"
-Level 17
+Level 10
 
 Title "The rcases tactic."
 

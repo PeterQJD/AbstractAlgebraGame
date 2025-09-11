@@ -1,20 +1,14 @@
 import Game.Levels.TutorialWorld.L01_reflexive
 import Game.Levels.TutorialWorld.L02_rewrite
 import Game.Levels.TutorialWorld.L03_backrewrite
-import Game.Levels.TutorialWorld.L04_symmetry
-import Game.Levels.TutorialWorld.L05_pick_goal
-import Game.Levels.TutorialWorld.L06_forall
-import Game.Levels.TutorialWorld.L07_rw
-import Game.Levels.TutorialWorld.L08_exact
-import Game.Levels.TutorialWorld.L09_intro
-import Game.Levels.TutorialWorld.L10_nth_rewrite
-import Game.Levels.TutorialWorld.L11_apply
-import Game.Levels.TutorialWorld.L12_induction
-import Game.Levels.TutorialWorld.L13_intro
-import Game.Levels.TutorialWorld.L14_forall
-import Game.Levels.TutorialWorld.L15_specialize
-import Game.Levels.TutorialWorld.L16_induction
-import Game.Levels.TutorialWorld.L17_rcases
+import Game.Levels.TutorialWorld.L04_nth_rewrite
+import Game.Levels.TutorialWorld.L05_exact
+import Game.Levels.TutorialWorld.L06_symmetry
+import Game.Levels.TutorialWorld.L07_intro
+import Game.Levels.TutorialWorld.L08_apply
+import Game.Levels.TutorialWorld.L09_specialize
+import Game.Levels.TutorialWorld.L10_rcases
+import Game.Levels.TutorialWorld.L11_induction
 
 World "TutorialWorld"
 Title "Tutorial World"

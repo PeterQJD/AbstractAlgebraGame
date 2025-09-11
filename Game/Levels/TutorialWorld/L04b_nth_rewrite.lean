@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L09_intro
+import Game.Levels.TutorialWorld.L03_backrewrite
 
 World "TutorialWorld"
-Level 10
+Level 4
 
 Title "The nth_rewrite tactic"
 

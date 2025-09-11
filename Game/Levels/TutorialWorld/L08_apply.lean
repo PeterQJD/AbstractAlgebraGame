@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L10_nth_rewrite
+import Game.Levels.TutorialWorld.L07_intro
 
 World "TutorialWorld"
-Level 11
+Level 8
 
 Title "The apply tactic"
 

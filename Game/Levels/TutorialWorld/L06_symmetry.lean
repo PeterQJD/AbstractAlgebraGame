@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L03_backrewrite
+import Game.Levels.TutorialWorld.L05_exact
 
 World "TutorialWorld"
-Level 4
+Level 6
 
 Title "The symmetry tactic."
 
