@@ -1,4 +1,4 @@
-import Game.Levels.InverseSemiGroupWorld.L02_Hello
+import Game.Levels.InverseSemiGroupWorld.L02_using_weak_inverse
 import Game.Levels.SemigroupWorld.L03_Hello
 
 

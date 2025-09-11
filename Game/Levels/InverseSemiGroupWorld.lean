@@ -1,6 +1,6 @@
-import Game.Levels.InverseSemiGroupWorld.L01_Hello
-import Game.Levels.InverseSemiGroupWorld.L02_Hello
-import Game.Levels.InverseSemiGroupWorld.L03_Hello
+import Game.Levels.InverseSemiGroupWorld.L01_weak_inverse_def
+import Game.Levels.InverseSemiGroupWorld.L02_using_weak_inverse
+import Game.Levels.InverseSemiGroupWorld.L03_weak_inverse_idempotence
 
 
 World "InverseSemiGroupWorld"
