@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L10_forall
+import Game.Levels.TutorialWorld.L14_forall
 
 World "TutorialWorld"
-Level 11
+Level 15
 
 Title "The specialize tactic."
 

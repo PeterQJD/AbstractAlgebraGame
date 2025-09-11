@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L06_forall
+import Game.Levels.TutorialWorld.L12_induction
 
 World "TutorialWorld"
-Level 7
+Level 13
 
 Title "The intro tactic."
 

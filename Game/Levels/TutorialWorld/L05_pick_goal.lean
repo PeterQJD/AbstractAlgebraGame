@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld.L04_nth_rewrite
+import Game.Levels.TutorialWorld.L04_symmetry
 
 World "TutorialWorld"
 Level 5

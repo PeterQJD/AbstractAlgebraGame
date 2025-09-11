@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld.L11_specialize
+import Game.Levels.TutorialWorld.L11_apply
 
 World "TutorialWorld"
 Level 12

@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L01_reflexive
+import Game.Levels.TutorialWorld.L03_backrewrite
 
 World "TutorialWorld"
-Level 2
+Level 4
 
 Title "The symmetry tactic."
 

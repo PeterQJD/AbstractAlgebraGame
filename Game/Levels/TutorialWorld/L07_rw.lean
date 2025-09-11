@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L05_nth_rewrite
+import Game.Levels.TutorialWorld.L06_forall
 
 World "TutorialWorld"
-Level 6
+Level 7
 
 Title "Even more on rewrite."
 

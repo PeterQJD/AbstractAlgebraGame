@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L03_exact
+import Game.Levels.TutorialWorld.L09_intro
 
 World "TutorialWorld"
-Level 4
+Level 10
 
 Title "The nth_rewrite tactic"
 

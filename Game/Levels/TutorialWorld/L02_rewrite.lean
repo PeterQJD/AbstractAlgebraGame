@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L02_symmetry
+import Game.Levels.TutorialWorld.L01_reflexive
 
 World "TutorialWorld"
-Level 3
+Level 2
 
 Title "The rewrite tactic"
 
