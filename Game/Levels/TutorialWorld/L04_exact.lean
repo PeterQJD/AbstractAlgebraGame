@@ -1,7 +1,7 @@
-import Game.Levels.TutorialWorld.L04_nth_rewrite
+import Game.Levels.TutorialWorld.L03_backrewrite
 
 World "TutorialWorld"
-Level 5
+Level 4
 
 
 Title "The exact tactic"
