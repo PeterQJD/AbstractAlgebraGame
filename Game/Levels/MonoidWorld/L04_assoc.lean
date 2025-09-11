@@ -1,8 +1,8 @@
-import Game.Levels.MonoidWorld.L02_comm
+import Game.Levels.MonoidWorld.L03_comm
 
 
 World "MonoidWorld"
-Level 3
+Level 4
 
 Title "Abelian monoid"
 

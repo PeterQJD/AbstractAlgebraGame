@@ -3,28 +3,37 @@ import Game.Levels.GroupWorld.L01_Hello
 World "GroupWorld"
 Level 2
 
-Title "← back writing inverses"
+Title "inverse of an inverse"
 
-Introduction " Now here comes a useful trick that
-will help with some of the future exercises."
+Introduction "Now considering the previous two levels, recall
+that to write an inverse element it requires a forward-slash -1 next to the element.
+
+Now here is your first proper exercise! prove that the inverse of the inverse of {a} is equal to {a}"
 
 namespace mygroup
 
-variable {G : Type} [MyGroup G]
-open MyGroup
+variable {G : Type} [MyStructure G]
+open MyStructure
+
 
 /--
-This is some sample documentation - (test)
+This theorem states that for an element $a ∈ G$,
+the inverse of the inverse element of a is equal to $a$
 -/
-TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
+TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
 
-Statement mul_eq_of_eq_inv_mul (a x y : G) (h : x = a⁻¹ * y) : a * x = y := by
-  rw [← one_mul x] at h
-  rw [← mul_left_inv a] at h
-  rw [mul_assoc] at h
-  Hint (hidden := true) "A previously proved theorem might be useful here"
-  exact mul_left_cancel a⁻¹ (a * x) y h
 
-Conclusion "This last message appears if the level is solved."
+Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
+  Hint (hidden := true) "Try introducing the identity with ← backwriting, specifing a⁻¹⁻¹"
+  rewrite [← one_mul a⁻¹⁻¹]
+  Hint (hidden := true) "Try using a similar approach from the last level with 'a'."
+  rewrite [← mul_right_inv a]
+  rewrite [mul_assoc]
+  rewrite [mul_right_inv]
+  rewrite [mul_one]
+  rfl
 
-NewTheorem mygroup.mul_left_cancel
+Conclusion "Great stuff!"
+
+DisabledTheorem MyStructure.mul_comm
+NewTheorem mygroup.inv_inv

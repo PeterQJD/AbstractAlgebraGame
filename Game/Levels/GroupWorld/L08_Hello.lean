@@ -4,7 +4,7 @@ import Game.Levels.GroupWorld.L07_Hello
 World "GroupWorld"
 Level 8
 
-Title " Welcome to Group World"
+Title " Welcome to Group World - Getting to grips with the axioms"
 
 Introduction "This text is shown as first message when the level is played.
 You can insert hints in the proof below. They will appear in this side panel
@@ -13,27 +13,27 @@ depending on the proof a user provides."
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
-open MyStructure
+open MyStructure -- for easy access to axioms
 
 /--
-This is some sample documentation - (test)
+This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x = y.
 -/
-TheoremDoc mygroup.product_inv as "product_inv" in "Group"
+TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
 
-Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
-  Hint "Applying a previous proven result might be the way to go"
-  apply inv_eq_of_mul_eq_one
+
+Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
+  rewrite [← one_mul x]
+  rewrite [← mul_left_inv a]
   rewrite [mul_assoc]
-  rewrite [← mul_assoc b]
-  rewrite [mul_right_inv]
+  rewrite [h]
+  rewrite [← mul_assoc]
+  rewrite [mul_left_inv]
   rewrite [one_mul]
-  rewrite [mul_right_inv]
   rfl
-
 
 Conclusion "This last message appears if the level is solved."
 
 DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.product_inv
+NewTheorem mygroup.mul_left_cancel
 
 end mygroup

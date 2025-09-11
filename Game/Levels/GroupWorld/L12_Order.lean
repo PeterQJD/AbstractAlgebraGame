@@ -14,8 +14,8 @@ of the group then group G is abelian (commutative).
 
 namespace mygroup
 
-variable {G : Type} [MyGroup G]
-open MyGroup
+variable {G : Type} [MyStructure G]
+open MyStructure
 
 /--
 This is some sample documentation - (test)

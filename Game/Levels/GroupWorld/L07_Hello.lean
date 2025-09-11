@@ -18,18 +18,22 @@ open MyStructure
 /--
 This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.inv_eq_of_mul_eq_one as "inv_eq_of_mul_eq_one" in "Group"
+TheoremDoc mygroup.product_inv as "product_inv" in "Group"
 
-Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
-  symm
-  rewrite [← one_mul b]
-  rewrite [← mul_left_inv a]
+Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
+  Hint "Applying a previous proven result might be the way to go"
+  apply inv_eq_of_mul_eq_one
   rewrite [mul_assoc]
-  rewrite [h]
-  rewrite [mul_one]
+  rewrite [← mul_assoc b]
+  rewrite [mul_right_inv]
+  rewrite [one_mul]
+  rewrite [mul_right_inv]
   rfl
+
 
 Conclusion "This last message appears if the level is solved."
 
 DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.inv_eq_of_mul_eq_one
+NewTheorem mygroup.product_inv
+
+end mygroup

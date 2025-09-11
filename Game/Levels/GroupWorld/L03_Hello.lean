@@ -1,39 +1,36 @@
 import Game.Levels.GroupWorld.L02_Hello
 
+
 World "GroupWorld"
 Level 3
 
-Title "inverse of an inverse"
+Title " Welcome to Group World"
 
-Introduction "Now considering the previous two levels, recall
-that to write an inverse element it requires a forward-slash -1 next to the element.
-
-Now here is your first proper exercise! prove that the inverse of the inverse of {a} is equal to {a}"
+Introduction "This text is shown as first message when the level is played.
+You can insert hints in the proof below. They will appear in this side panel
+depending on the proof a user provides."
 
 namespace mygroup
 
 variable {G : Type} [MyStructure G]
 open MyStructure
 
-
 /--
-This theorem states that for an element $a ∈ G$,
-the inverse of the inverse element of a is equal to $a$
+This is some sample documentation - (test)
 -/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
+TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
 
-
-Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  Hint (hidden := true) "Try introducing the identity with ← backwriting, specifing a⁻¹⁻¹"
-  rewrite [← one_mul a⁻¹⁻¹]
-  Hint (hidden := true) "Try using a similar approach from the last level with 'a'."
-  rewrite [← mul_right_inv a]
+Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
+  symm
+  rewrite [← mul_right_inv b]
+  symm at h
+  nth_rewrite 1 [h]
   rewrite [mul_assoc]
   rewrite [mul_right_inv]
   rewrite [mul_one]
   rfl
 
-Conclusion "Great stuff!"
+Conclusion "This last message appears if the level is solved."
 
 DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.inv_inv
+NewTheorem mygroup.mul_left_eq_self
