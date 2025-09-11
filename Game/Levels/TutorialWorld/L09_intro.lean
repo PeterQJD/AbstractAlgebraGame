@@ -1,15 +1,7 @@
-<<<<<<<< HEAD:Game/Levels/TutorialWorld/L09_intro.lean
 import Game.Levels.TutorialWorld.L08_apply
 
 World "TutorialWorld"
 Level 9
-
-========
-import Game.Levels.TutorialWorld.L06_forall
-
-World "TutorialWorld"
-Level 7
->>>>>>>> b97a32a (final group level):Game/Levels/TutorialWorld/L07_intro.lean
 
 Title "The intro tactic."
 

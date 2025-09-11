@@ -1,11 +1,7 @@
 import Game.Levels.TutorialWorld.L11_specialize
 
 World "TutorialWorld"
-<<<<<<<< HEAD:Game/Levels/TutorialWorld/L12_induction.lean
 Level 12
-========
-Level 8
->>>>>>>> b97a32a (final group level):Game/Levels/TutorialWorld/L08_induction.lean
 
 Title "The induction tactic."
 

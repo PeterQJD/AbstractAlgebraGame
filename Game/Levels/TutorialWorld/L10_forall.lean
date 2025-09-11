@@ -1,14 +1,7 @@
-<<<<<<<< HEAD:Game/Levels/TutorialWorld/L10_forall.lean
 import Game.Levels.TutorialWorld.L09_intro
 
 World "TutorialWorld"
 Level 10
-========
-import Game.Levels.TutorialWorld.L05_pick_goal
-
-World "TutorialWorld"
-Level 6
->>>>>>>> b97a32a (final group level):Game/Levels/TutorialWorld/L06_forall.lean
 
 Title "Using a ∀ statement."
 
