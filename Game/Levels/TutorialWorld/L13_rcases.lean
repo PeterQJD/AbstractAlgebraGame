@@ -14,11 +14,13 @@ use left and right specifically.
 "
 namespace tutorial
 
-Statement (n m : ℕ) (h : n = m ∧ n > 1 ): n > 1:= by
+Statement (n m : ℕ) (h : n = m ∧ n > 1 ): m > 1:= by
   Hint "we need the statement on the right side of the ∧,
   use rcases to split the AND statement into it's components"
   rcases h
+  rewrite [left] at right
   exact right
+
 
 Conclusion "Good work!"
 

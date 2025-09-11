@@ -17,14 +17,14 @@ variable {ISG : Type} [MyStructure ISG]
 open MyStructure
 
 
-/-- This statement states that the weak inverse of x is y, if and only if -/
+/-- Assuming the weak inverse of $a$ is $b$, prove $b$ equals $b * a * b$ -/
 Statement (a b : ISG) (h: weak_inverse a b): b  = b * a * b   := by
   rewrite [weak_inverse_def] at h
   rcases h
   rewrite [right]
   rfl
 Conclusion "
-The message shown when the level is completed
+Good Work!
 "
 
 DisabledTheorem MyStructure.mul_one MyStructure.one_mul MyStructure.mul_comm

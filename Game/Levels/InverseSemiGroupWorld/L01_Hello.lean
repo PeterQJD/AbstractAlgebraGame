@@ -27,7 +27,7 @@ TheoremDoc myinversesemigroup.weak_inverse_def as "weak_inverse_def" in "ISG"
 
 
 
-/-- This statement states that the weak inverse of x is y, if and only if -/
+/-- This statement states that the weak inverse of x is y, if and only if $x * y * x = x$ AND $y * x * y = y$ -/
 Statement weak_inverse_def (x y : ISG) : weak_inverse x y ↔ x * y * x = x ∧ y * x * y = y  := by
   rfl
 
