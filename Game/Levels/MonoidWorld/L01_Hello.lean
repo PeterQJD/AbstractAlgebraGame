@@ -1,5 +1,6 @@
 import Game.Metadata
-import Game.Custom.MyStructure.Definition
+import Game.Custom.MyMagma.Definition
+import Game.Custom.MyMonoid.Definition
 
 World "MonoidWorld"
 Level 1

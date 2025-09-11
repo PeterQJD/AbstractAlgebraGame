@@ -15,7 +15,7 @@ We can then perform a second rewrite, using assumption `h₂` to replace `y` wit
 
 Our goal is now `z = z`, which can be closed using `rfl`.
 
-Try it out. If you need a hint, click the Show more help! button when it appears.
+Try it out. If you need a hint, click the Hint button when it appears.
 "
 
 namespace tutorial

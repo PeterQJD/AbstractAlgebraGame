@@ -10,25 +10,21 @@ will help with some of the future exercises."
 
 namespace mygroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
+open MyGroup
 
+/--
+This is some sample documentation - (test)
+-/
+TheoremDoc mygroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
 
-/--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
-Statement  (a : G) : 1 = a * a⁻¹ := by
-  Branch
-    rewrite [mul_right_inv]
-    Hint "HALT! Instead of using mul_right_inv on the right hand side,
-    try rewrite [← mul_right_inv a]"
-    rfl
+Statement mul_eq_of_eq_inv_mul (a x y : G) (h : x = a⁻¹ * y) : a * x = y := by
+  rw [← one_mul x] at h
+  rw [← mul_left_inv a] at h
+  rw [mul_assoc] at h
+  Hint (hidden := true) "A previously proved theorem might be useful here"
+  exact mul_left_cancel a⁻¹ (a * x) y h
 
-  rewrite [← mul_right_inv a]
-  rfl
+Conclusion "This last message appears if the level is solved."
 
-Conclusion "Nice! This approach will prove useful in future exercises,
-which you are now ready to tackle!
-
-Note: the 'a' at the end of '← mul_right_inv a' specifies the element
-that constitutes the element * element_inverse pair (which is equal to the identity {1}) "
-
-DisabledTheorem MyStructure.mul_comm
+NewTheorem mygroup.mul_left_cancel

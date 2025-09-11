@@ -8,6 +8,8 @@ import Game.Levels.GroupWorld.L07_Hello
 import Game.Levels.GroupWorld.L08_Hello
 import Game.Levels.GroupWorld.L09_Hello
 import Game.Levels.GroupWorld.L10_Hello
+import Game.Levels.GroupWorld.L11_mul_inv
+import Game.Levels.GroupWorld.L12_Order
 
 
 
