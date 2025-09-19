@@ -4,11 +4,11 @@ import Game.Levels.GroupWorld.L06_eq_inv_of_mul_eq_one
 World "GroupWorld"
 Level 7
 
-Title " Welcome to Group World"
+Title "Product is Identity 2"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "Carrying on from the previous level you will need to show
+that if you have a group $G$ and $a, b ∈ G$ with $a * b = 1$ then $a^{-1}$
+must be equal to $b$"
 
 namespace mygroup
 
@@ -23,13 +23,15 @@ TheoremDoc mygroup.inv_eq_of_mul_eq_one as "inv_eq_of_mul_eq_one" in "Group"
 Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
   symm
   rewrite [← one_mul b]
+  Hint (hidden := true) "A previous result could prove useful here."
+  Hint (hidden := true) "remember you can rewrite an equation to the left as well"
   rewrite [← mul_left_inv a]
   rewrite [mul_assoc]
   rewrite [h]
   rewrite [mul_one]
   rfl
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done!"
 
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.inv_eq_of_mul_eq_one

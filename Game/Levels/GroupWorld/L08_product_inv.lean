@@ -4,11 +4,11 @@ import Game.Levels.GroupWorld.L07_inv_eq_of_mul_eq_one
 World "GroupWorld"
 Level 8
 
-Title " Welcome to Group World"
+Title "Product Inverse"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "In this level you will show that given a group $G$ and $a, b ∈ G$ then
+$(a * b)^{-1} = b^{-1} * a^{-1}. This result will prove useful in upcoming levels$
+"
 
 namespace mygroup
 
@@ -39,7 +39,7 @@ Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
 
 
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done!"
 
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.product_inv

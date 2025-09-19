@@ -3,7 +3,7 @@ import Game.Levels.GroupWorld.L01_strong_inv
 World "GroupWorld"
 Level 2
 
-Title "← back writing inverses"
+Title "identity is equal to element multiplied by inverse"
 
 Introduction " Now here comes a useful trick that
 will help with some of the future exercises."
@@ -12,7 +12,6 @@ namespace mygroup
 
 variable {G : Type} [MyStructure G]
 open MyStructure
-
 
 /--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
 Statement  (a : G) : 1 = a * a⁻¹ := by

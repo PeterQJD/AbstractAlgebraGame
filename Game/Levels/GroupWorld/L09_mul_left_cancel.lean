@@ -4,11 +4,11 @@ import Game.Levels.GroupWorld.L08_product_inv
 World "GroupWorld"
 Level 9
 
-Title " Welcome to Group World - Getting to grips with the axioms"
+Title "Left Cancel"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "As the name of the level implies you will hve to show that given
+$a * x = a * y$ implies $x = y$.
+"
 
 namespace mygroup
 
@@ -23,6 +23,7 @@ TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
   rewrite [← one_mul x]
+  Hint (hidden := true) "A previous result could be of use here."
   rewrite [← mul_left_inv a]
   rewrite [mul_assoc]
   rewrite [h]
@@ -31,7 +32,7 @@ Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
   rewrite [one_mul]
   rfl
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done! Now lets see what we can prove with our new result."
 
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.mul_left_cancel
