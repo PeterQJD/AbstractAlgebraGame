@@ -20,7 +20,7 @@ The Active goal is `0 + Nat.zero = 0`, which can be closed using `Nat.add_zero` 
 
 Our Active goal is now `0 + Nat.succ n_1 = Nat.succ n_1`. Notice that we have a new assumption `n_ih : 0 + n_1 = n_1`. This is our induction hypothesis.
 
-We want to use `n_in` and we can do so by firsy apply the theorem `Nat.add_succ` with a `rewrite`.
+We want to use `n_in` and we can do so by first applying the theorem `Nat.add_succ` with a `rewrite`.
 
 Now we can use the inductive hypothesis with another `rewrite`.
 

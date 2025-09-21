@@ -4,11 +4,11 @@ import Game.Levels.MonoidWorld.L02_id_unique
 World "MonoidWorld"
 Level 3
 
-Title "Abelian monoid"
+Title "Commutative Monoid 1"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "In this level we will show that given the set of assumptions presented in the statement
+we can show that the magma is commutative.
+"
 
 namespace mymonoid
 
@@ -29,4 +29,4 @@ a * b = b * a := by
   rfl
 
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done. The next level will build on top of this one."

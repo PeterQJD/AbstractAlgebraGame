@@ -3,7 +3,7 @@ import Game.Levels.SemigroupWorld.L03_idempotent_def
 
 World "SemigroupWorld"
 Level 4
-Title "Semigroup World."
+Title "Associativity with Idempotent Element"
 
 Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.

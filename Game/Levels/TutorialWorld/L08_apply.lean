@@ -11,12 +11,12 @@ as if we can prove 'a' then via h we have proved 'g'. "
 
 namespace tutorial
 
-Statement (x y z : Nat) (h1 : c = 0) (h2 : c = 0 → a = b): a = b := by
+Statement (x y z : Nat) (h₁ : c = 0) (h₂ : c = 0 → a = b): a = b := by
   Branch
-    apply h2
-    exact h1
-  apply h2 at h1
-  exact h1
+    apply h₂
+    exact h₁
+  apply h₂ at h₁
+  exact h₁
 
 Conclusion "Good Work!"
 

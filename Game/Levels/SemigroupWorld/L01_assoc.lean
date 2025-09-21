@@ -3,7 +3,7 @@ import Game.Custom.MyStructure.Definition
 
 World "SemigroupWorld"
 Level 1
-Title "Semigroup World."
+Title "Associativity in a Semigroup"
 
 Introduction "
 Our first example of an algebraic structure is a **semigroup**. A semigroup `S` is a set on which an associative binary operation `*` has been defined.

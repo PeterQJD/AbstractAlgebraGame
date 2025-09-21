@@ -3,10 +3,10 @@ import Game.Levels.SemigroupWorld.L04_using_idempotence
 
 World "SemigroupWorld"
 Level 5
-Title "Semigroup World."
+Title "Commutivity in a Semigroup"
 
 Introduction "
-A message shown at the beginning of the level. Use it to explain any new concepts.
+This level will show how commutivity can be used in Lean to prove a theorem.
 "
 
 

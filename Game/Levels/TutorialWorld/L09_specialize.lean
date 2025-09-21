@@ -10,11 +10,7 @@ In the previous level we learnt how to use symmetry, now we will
 learn a very handy tactic for when an assumption is a for-all statement and you
 want to use a specific instance of the variable.
 "
-/--
-This result states that for all natural numbers $n$.
-n + 0 = n
--/
-TheoremDoc Nat.add_zero as "Nat.add_zero" in "Nat"
+
 namespace tutorial
 
 /--
@@ -40,4 +36,3 @@ Conclusion "Good work! To make life easier,
  as it can be."
 
 NewTactic specialize
-NewTheorem Nat.add_zero
