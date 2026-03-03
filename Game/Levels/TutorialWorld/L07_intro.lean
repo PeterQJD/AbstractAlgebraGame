@@ -28,5 +28,6 @@ Of course, we could have written `exact Nat.add_zero` to immediately close the g
 But if you're faced with a for all statement and you don't know what to do, `intro _` will always make progress."
 
 NewTactic intro
+NewTheorem Nat.add_zero
 
 /- Use these commands to add items to the game's inventory. -/
