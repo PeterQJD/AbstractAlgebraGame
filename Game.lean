@@ -8,34 +8,50 @@ import Game.Levels.GroupWorld
 
 
 -- Here's what we'll put on the title screen
-Title "Abstract Algebra Game"
+Title "The Abstract Algebra Game"
 Introduction
 "
-Hi There! Welcome to the Abstract Algebra Game, you'll start off in tutorial world where
-you will pick up the tactics needed to solve the exercises in further worlds.
+Welcome to **The Abstract Algebra Game**!
 
-The central idea is that we start with a very general and 'simple' structure with a Semigroup,
-then as we add axioms we can prove more and more results as we gain more and more 'structure'.
+This is a game about proving basic propositions in different algebraic structures. Its primary aim is to get students who are unfamiliar with this type of mathematics comfortable in using the basic techniques of the subject.
+
+The game also provides a gentle introduction to the world of mathematical formalisation and, in particular, the interactive proof assistant Lean.
+
+Lean is a programming language and in order to play the game, we will need to learn some of its basic syntax. This syntax is introduced in **Tuotrial World**, so let's start there by clicking on the title of the world.
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
+*Game version: 0.1*
 
-For example: Game version, Credits, Link to Github and Zulip, etc.
+*Recent additions: bug fixes*
 
-Use markdown.
-Version:
-Credits:
-Christiansen, D et al. (2025) https://lean-lang.org/doc/reference/latest/
-Github:
+## Progress saving
 
+The game stores your progress in your local browser storage.
+If you delete it, your progress will be lost!
+
+Warning: In most browsers, deleting cookies will also clear the local storage
+(or \"local site data\"). Make sure to download your game progress first!
+
+## Credits
+
+* **Creators:** Peter Davidson, Alexander Brown, Adam Kennedy
+* **Game Engine:** Alexander Bentkamp, Jon Eugster, Patrick Massot
+
+## Problems?
+
+If you experience issues / bugs, please open github issues:
+
+* For issues with the game engine, please open an
+[issue at the lean4game](https://github.com/leanprover-community/lean4game/issues) repo.
+* For issues about the game's content, please open an
+[issue at the Abstract Algebra Game](https://github.com/PeterQJD/AbstractAlgebraGame/issues) repo.
 "
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "English"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
+Languages "en"
+CaptionShort "A game for students new to abstract algebra."
+CaptionLong "In this game you will prove basic propositions in different algebraic structures. You will also learn a little bit about the interactice proof assistant Lean."
 -- Prerequisites "" -- add this if your game depends on other games
 -- CoverImage "images/cover.png"
 

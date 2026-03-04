@@ -14,15 +14,11 @@ World "TutorialWorld"
 Title "Tutorial World"
 
 Introduction "
-In this game we will learn how to prove basic facts about different algebraic structures.
+The individual syntax that we're going to learn in this tutorial are all examples of what are called **tactics** in Lean.
 
-These facts (and the game itself) are written in a programming language called Lean. This language is special because it can be used as a **formal proof assistant**.
+Tactics are used to write proofs of theorems. You can think of the finished proof as a programme. If Lean accepts the programme without any errors, then we can be very sure that our proof of the theorem is correct. This, in short, is what formalising mathematics is all about.
 
-This means that it accepts precise mathematical statements and it will tell you if a proof of such a statement is correct.
-
-One way we can construct proofs in Lean is by using **tactics**.
-
-In the first world of our game, we will learn how to use some of these tactics.
+Many of the tactics used in Lean are based on very familiar mathematical concepts (like induction) while others have been introduced to simplify and speeed up the writing process in Lean.
 
 Let's dive in!
 "

@@ -3,35 +3,33 @@ import Game.Levels.TutorialWorld.L01_reflexive
 World "TutorialWorld"
 Level 2
 
-Title "The rewrite tactic"
+Title "REWRITE"
 
-Introduction "Next, we are going to prove that if `x = y` and `y = z` then `x = z`.
+Introduction "The `rewrite` tactic allows us to use a basic hypothesis like `x=y` in our proof.
 
-The statements `x = y` and `y = z` appear as assumptions `h₁` and `h₂`, respectively.
+If we write `rewrite [h1]`, where `h1` is the hypothesis `x=y`, then Lean will look for the first occurence of `x` in the current goal statement and replace it with `y`.
 
-We will first use the `rewrite` tactic to replace `x` with `y`, thus updating our goal to `y = z`. We do this by writing `rewrite [h₁]`. Note that you have to type h and then backslash 1 to get `h₁`.
+Try this out now.
 
-We can then perform a second rewrite, using assumption `h₂` to replace `y` with `z`.
+Notice that the goal has updated and we now need to prove that `y=z`. We can use hypothesis to `h2` to rewrite the goal a second time.
 
-Our goal is now `z = z`, which can be closed using `rfl`.
-
-Try it out. If you need a hint, click the Hint button when it appears.
+You should now be able to use `rfl` to close the goal.
 "
 
 namespace tutorial
 
-Statement (x y z : Nat) (h₁ : x = y) (h₂ : y = z): x = z := by
-  rewrite [h₁]
-  Hint (hidden := true) "Now rewrite using `h₂`."
-  rewrite [h₂]
+Statement (x y z : Nat) (h1 : x = y) (h2 : y = z): x = z := by
+  rewrite [h1]
+  Hint (hidden := true) "Now rewrite using `h2`."
+  rewrite [h2]
   Hint (hidden := true) "You can now use `rfl`."
   rfl
 
 Conclusion "Well done!
 
-You might be thinking why we bothered to perform a second rewrite when our goal was exactly the assumption `h₂`.
+You might be wondering why we bothered to perform a second rewrite when our goal was exactly the assumption `h2`.
 
-We will soon see how we can use assumptions to close a goal, but before that we will learn about another feature of `rewrite`.
+We will soon see how we can use assumptions to close a goal, but before that we will inbtroduce a few more rewrite features.
 "
 
 /- Use these commands to add items to the game's inventory. -/
