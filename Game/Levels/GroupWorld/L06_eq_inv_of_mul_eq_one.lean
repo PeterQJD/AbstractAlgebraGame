@@ -4,11 +4,11 @@ import Game.Levels.GroupWorld.L05_eq_mul_inv_of_mul_eq
 World "GroupWorld"
 Level 6
 
-Title " Welcome to Group World"
+Title "Product is Identity 1"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "Another result that will be required is that if you have a group $G$
+and $a, b ∈ G$ with $a * b = 1$ then $a$ must be the inverse of $b$
+"
 
 namespace mygroup
 
@@ -28,7 +28,7 @@ Statement eq_inv_of_mul_eq_one {a b : G} (h : a * b = 1) : a = b⁻¹ := by
   rewrite [one_mul]
   rfl
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done!"
 
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.eq_inv_of_mul_eq_one

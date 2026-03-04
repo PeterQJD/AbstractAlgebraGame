@@ -3,10 +3,10 @@ import Game.Levels.SemigroupWorld.L01_assoc
 
 World "SemigroupWorld"
 Level 2
-Title "Semigroup World."
+Title "Extending associativity to four elements"
 
 Introduction "
-A message shown at the beginning of the level. Use it to explain any new concepts.
+This level will extend the axiom of associativity of Semigroups to four elements.
 "
 
 namespace mysemigroup

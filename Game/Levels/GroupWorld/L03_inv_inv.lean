@@ -33,7 +33,7 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   rewrite [mul_one]
   rfl
 
-Conclusion "Great stuff!"
+Conclusion "Well done!"
 
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mygroup.inv_inv

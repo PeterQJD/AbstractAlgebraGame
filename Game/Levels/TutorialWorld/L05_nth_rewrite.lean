@@ -13,10 +13,12 @@ provided the substitution is valid."
 
 namespace tutorial
 
-Statement (x y z : Nat) (h₁ : x = y) (h₂ : x * x * y = x * y * z) : x * y * y = x * y * z := by
+Statement (x y z : Nat) (h₁ : y = x) (h₂ : x * y * y = x * y * z) : x * x * y = x * y * z := by
   Hint "Try nth_rewriting (using a specific index) at h₂"
-  nth_rewrite 2 [h₁] at h₂
+  nth_rewrite 2 [← h₁]
   exact h₂
+
+
 
 Conclusion "Well done!
 

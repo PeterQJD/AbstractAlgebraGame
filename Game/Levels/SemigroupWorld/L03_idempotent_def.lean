@@ -3,10 +3,11 @@ import Game.Levels.SemigroupWorld.L02_assocprob1
 
 World "SemigroupWorld"
 Level 3
-Title "Semigroup World."
+Title "Definitions in Lean"
 
 Introduction "
-A message shown at the beginning of the level. Use it to explain any new concepts.
+Here you will be shown how you can use the fact that a definition is equialent to a statement
+to prove a theorem.
 "
 
 namespace mysemigroup
