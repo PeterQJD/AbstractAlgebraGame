@@ -31,4 +31,7 @@ The **Goal** is the current state of our proof. In this case, we immediately *cl
 
 /- Use these commands to add items to the game's inventory. -/
 
+/-- The `rfl` tactic closes goals of the form `x = x`. -/
+TacticDoc rfl
+
 NewTactic rfl

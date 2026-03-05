@@ -13,7 +13,7 @@ Try it out and then complete the proof."
 
 namespace tutorial
 
-Statement (x y : Nat) (h : x = z) : x * x * y = x * z * y := by
+Statement (x y z: Nat) (h : x = z) : x * x * y = x * z * y := by
   nth_rewrite 2 [h]
   rfl
 

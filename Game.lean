@@ -6,7 +6,7 @@ import Game.Levels.InverseSemiGroupWorld
 import Game.Levels.GroupWorld
 
 
-
+Game "MyGame"
 -- Here's what we'll put on the title screen
 Title "The Abstract Algebra Game"
 Introduction
