@@ -7,7 +7,7 @@ import Game.Doc.Theorems
 World "TutorialWorld"
 Level 1
 
-Title "RFL"
+Title "The rfl tactic"
 
 Introduction "The most basic propositions we need to be able to prove are those of the form `x=x`.
 

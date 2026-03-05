@@ -1,23 +1,22 @@
-import Game.Levels.TutorialWorld.L03_backrewrite
+import Game.Levels.TutorialWorld.L03_nth_rewrite
 
 World "TutorialWorld"
 Level 4
 
-
 Title "The exact tactic"
 
-Introduction "Let's revisit our proof from level 2.
+Introduction "A hypothesis can be used to rewrite a goal. It can also be used to close a goal if the current goal state matches the hypothesis exactly.
 
-After the first `rewrite`, our goal was `y = z`.
+The `exact` tactic does precisely this job. The syntax is `exact h`, where `h` is the hypothesis that matches the goal.
 
-Instead of performing the second `rewrite` with `h₂`, we can immediately close the goal by writing `exact h₂`, i.e., the statement we wish to prove is *exactly* our assumption `h₂`.
+Use a single `rewrite` and `exact` to prove that `x=z` whenever `x=y` and `y=z`.
 "
 
 namespace tutorial
 
-Statement (x y z : Nat) (h₁ : x = y) (h₂ : y = z): x = z := by
-  rewrite [h₁]
-  exact h₂
+Statement (x y z : Nat) (h1 : x = y) (h2 : y = z): x = z := by
+  rewrite [h1]
+  exact h2
 
 Conclusion "Good Work!"
 

@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld.L05_nth_rewrite
+import Game.Levels.TutorialWorld.L05_exact
 
 World "TutorialWorld"
 Level 6
