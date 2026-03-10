@@ -8,7 +8,10 @@ USER node
 
 WORKDIR /home/node
 
-RUN export LEAN_VERSION="$(cat /lean-toolchain | grep -oE '[^:]+$')" && git clone --depth 1 --branch $LEAN_VERSION https://github.com/leanprover-community/lean4game.git
+RUN git clone --depth 1 https://github.com/leanprover-community/lean4game.git
+
+WORKDIR /home/node/lean4game
+RUN npm install
 
 WORKDIR /
 
