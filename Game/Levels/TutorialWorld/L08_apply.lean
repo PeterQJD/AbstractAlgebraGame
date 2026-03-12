@@ -5,21 +5,17 @@ Level 8
 
 Title "The apply tactic"
 
-Introduction " The apply tactic is used when we have an assumption that is an implication,
-if we have a goal g, and a hypothesis h : a → g, then using apply h will change the goal to a,
-as if we can prove 'a' then via h we have proved 'g'. "
+Introduction "Suppose we want to prove the proposition `q`. If we have a hypothesis `h` that says `p → q` (i.e., `p` implies `q`) then it's sufficient to give a proof of the proposition `p` because we can then use modus ponens to deduce `q`.
 
-namespace tutorial
+In Lean, the corresponding tactic is `apply`: `apply h` will transform the goal from `q` to `p`.
 
-Statement (x y z : Nat) (h₁ : c = 0) (h₂ : c = 0 → a = b): a = b := by
-  Branch
-    apply h₂
-    exact h₁
-  apply h₂ at h₁
-  exact h₁
-
-Conclusion "Good Work!"
-
-/- Use these commands to add items to the game's inventory. -/
+Try it now for the current goal."
 
 NewTactic apply
+
+Statement (a b : MyNat) (h1 : b = 0) (h2 : b = 0 → a + b = a): a + b = a := by
+  apply h2
+  Hint (hidden := false) "Notice we now have to prove that `b = 0`. Perhaps `h1` will help..."
+  exact h1
+
+Conclusion "Good work!"

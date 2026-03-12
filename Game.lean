@@ -1,9 +1,5 @@
 import GameServer.Commands
 import Game.Levels.TutorialWorld
-import Game.Levels.SemigroupWorld
-import Game.Levels.MonoidWorld
-import Game.Levels.InverseSemiGroupWorld
-import Game.Levels.GroupWorld
 
 
 Game "MyGame"
@@ -23,7 +19,7 @@ Lean is a programming language and in order to play the game, we will need to le
 Info "
 *Game version: 0.1*
 
-*Recent additions: bug fixes*
+*Recent additions: new levels to Tutorial World*
 
 ## Progress saving
 
@@ -56,7 +52,7 @@ CaptionLong "In this game you will prove basic propositions in different algebra
 -- CoverImage "images/cover.png"
 
 -- Because we don't introduce inverses that reduce to an identity in ISGW.
-Dependency InverseSemiGroupWorld → GroupWorld
+-- Dependency InverseSemiGroupWorld → GroupWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

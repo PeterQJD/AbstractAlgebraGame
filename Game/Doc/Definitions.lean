@@ -1,5 +1,7 @@
 import GameServer.Commands
 
+/--The natural numbers. These are used in Tutorial World to demonstrate certain tactics.-/
+DefinitionDoc MyNat as "ℕ"
 
 -- DefinitionDoc MyGroup as "G" "
 -- A **Group** is a set \( G \) equipped with an operation \( * \)

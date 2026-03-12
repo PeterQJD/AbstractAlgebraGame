@@ -1,4 +1,4 @@
-import Game.Levels.TutorialWorld.L05_exact
+import Game.Levels.TutorialWorld.L05_theorems
 
 World "TutorialWorld"
 Level 6
@@ -6,19 +6,29 @@ Level 6
 Title "The symmetry tactic."
 
 Introduction "
-In the previous level we learnt how to use induction, now we are going to learna comparatively simpler tactic,
-applying symmetry with 'symm' to an equation simply flips it the other way round.
+The `symm` tactic will rewrite the current goal from `m = n` to `n = m`.
 
- This can be used on the goal with simply 'symm',or applied to a hypothesis 'h' with 'symm at h'. this is useful for helping leans
-pattern matching when trying to perform rewrites.
-"
+We can also apply this to the hypothesis `h` by writing `symm at h`.
 
-namespace tutorial
-
-Statement (n m : ℕ) (h : n = m): m = n := by
-  symm
-  exact h
-
-Conclusion "Good work!"
+Try either approach to close the current goal."
 
 NewTactic symm
+
+-- I don't know how to stop both hints from appearing at the same time. I want only one to appear depending on which route the user has taken: symm or symm at h.
+
+Statement (n m : ℕ) (h : n = m): m = n := by
+  Branch
+    symm
+    Hint (hidden := false) "The `exact` tactic will help."
+    exact h
+
+  symm at h
+  Branch
+    Hint (hidden := false) "You can now use the `exact` tactic."
+    exact h
+
+  exact h
+
+Conclusion "Well done!
+
+The `at` syntax also works for the `rewrite` tactic: `rewrite g at h` will rewrite `h` using `g`."

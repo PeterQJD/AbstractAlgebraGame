@@ -3,36 +3,26 @@ import Game.Levels.TutorialWorld.L08_apply
 World "TutorialWorld"
 Level 9
 
-Title "The specialize tactic."
+Title "The specialize tactic"
 
-Introduction "
-In the previous level we learnt how to use symmetry, now we will
-learn a very handy tactic for when an assumption is a for-all statement and you
-want to use a specific instance of the variable.
-"
+Introduction "In level 7 we learned how to prove a for all statement using the `intro` tactic (checkout the **Tactics** tab for a reminder).
 
-namespace tutorial
+In this level we will learn how to *use* a for all statement.
 
-/--
-This tactic allows us to have specific consequences of assumptions that are 'for all' statements as
-hypothesis, where the variable in the statement with $∀$ quantifier gets replaced with what you input.
+Hypothesis `h` states that `∀ a, n + a = m + a`. In particular, `n + a = m + a` holds for the specific case `a = 0`.
 
-The format is: specialize hypothesis_name desired_variable_value
--/
-TacticDoc specialize
+In Lean, we express this as `specialize h 0`. Give it a go."
 
-Statement (n : ℕ) (h : ∀ a, n + a = m + a ): n = m := by
-  Hint "To prove the following, as 'h' holds for all a,
-   that includes zero, so we can use 'specialize h 0'
-  to get that specific consequence of our assumption "
-  specialize h 0
-  rewrite [Nat.add_zero] at h
-  rewrite [Nat.add_zero] at h
-  exact h
-
-
-Conclusion "Good work! To make life easier,
- you can use repeat rewrite [Nat.add_zero] at h, to apply the result as many times
- as it can be."
+namespace MyNat
 
 NewTactic specialize
+
+Statement (m n : ℕ) (h : ∀ a, m + a = n + a): m = n := by
+  specialize h 0
+  Hint (hidden := false) "We can rewrite `h` to transform it into the goal."
+  rewrite [add_zero] at h
+  rewrite [add_zero] at h
+  Hint (hidden := false) "Almost there."
+  exact h
+
+Conclusion "Good work!"

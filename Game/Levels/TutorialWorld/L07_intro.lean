@@ -6,33 +6,26 @@ Level 7
 Title "The intro tactic."
 
 Introduction "
-In the previous level we learned how to use a forall statement to close our goal. In this level, we will learn how to prove a for all statement.
+In level 5 we proved that for a given `m ∈ ℕ`, `m + 0 = m`. In this level we will prove the more general statement `∀ m ∈ ℕ, m + 0 = m`.
 
-Suppose we wish to prove that for all natural numbers `n`, `n + 0 =n`. We can do this by first introducing an arbitrary natural number by writing `intro n`.
+In a *pen & paper* proof, the first thing we'd write would be: Let $m ∈ ℕ$ ... . The corresponding tactic in Lean is `intro m`.
 
-Next, we can `rewrite` the left-hand side using the theorem `Nat.add_zero`, which states that `n + 0 = n`.
-
-Finally, we can close the goal with `rfl`. Try it for yourself.
+Try it now.
 "
-namespace tutorial
 
-Statement : ∀ n : ℕ, n + 0 = n := by
-  intro n
-  rewrite [Nat.add_zero]
-  rfl
-
-Conclusion "Good Work!
-
-Of course, we could have written `exact Nat.add_zero` to immediately close the goal.
-
-But if you're faced with a for all statement and you don't know what to do, `intro _` will always make progress."
-
-/--
-Result showing that $∀ n ∈ ℕ, n + 0 = n$
--/
-TheoremDoc Nat.add_zero as "add_zero" in "Nat"
+namespace MyNat
 
 NewTactic intro
-NewTheorem Nat.add_zero
 
-/- Use these commands to add items to the game's inventory. -/
+Statement : ∀ m : MyNat, m + 0 = m := by
+  intro m
+  Hint (hidden := false) "We can now use a theorem introduced in level 5. Click the **Theorems** tab for a reminder or the **Show more help!** button for a hint."
+  Hint (hidden := true) "`rewrite [add_zero]` will make progress."
+  rewrite [add_zero]
+  rfl
+
+Conclusion "Excellent!
+
+We could have written `exact add_zero` to immediately close the goal, but our slightly contrived approach was designed to highlight how the `intro` tactic works.
+
+Whenever you're faced with a for all statement and you don't know what to do, `intro _` will always make progress."

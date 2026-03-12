@@ -3,6 +3,8 @@ import Game.Metadata
 import Game.Custom.MyNat.Definition
 import Game.Custom.MyNat.Addition
 import Game.Doc.Theorems
+import Game.Doc.Tactics
+import Game.Doc.Definitions
 
 World "TutorialWorld"
 Level 1
@@ -15,7 +17,8 @@ The `rfl` tactic is designed for precisly this prupose.
 
 Try it out by typing `rfl` in the dialogue box and clicking **Execute** (or hitting enter on your keyboard).
 "
-namespace tutorial
+
+NewTactic rfl
 
 Statement (x : Nat): x = x := by
   rfl
@@ -28,10 +31,3 @@ Under **Objects**, we see `x : ℕ`. This means that `x` is a natural number. Th
 
 The **Goal** is the current state of our proof. In this case, we immediately *closed the goal* by using the `rfl` tactic, but in general we will update the goal using local assumptions or known theorems before closing it and thus completing the proof.
 "
-
-/- Use these commands to add items to the game's inventory. -/
-
-/-- The `rfl` tactic closes goals of the form `x = x`. -/
-TacticDoc rfl
-
-NewTactic rfl

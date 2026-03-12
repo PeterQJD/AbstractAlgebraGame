@@ -3,6 +3,12 @@ import Game.Levels.TutorialWorld.L02_rewrite
 import Game.Levels.TutorialWorld.L03_nth_rewrite
 import Game.Levels.TutorialWorld.L04_exact
 import Game.Levels.TutorialWorld.L05_theorems
+import Game.Levels.TutorialWorld.L06_symmetry
+import Game.Levels.TutorialWorld.L07_intro
+import Game.Levels.TutorialWorld.L08_apply
+import Game.Levels.TutorialWorld.L09_specialize
+import Game.Levels.TutorialWorld.L10_constructor
+import Game.Levels.TutorialWorld.L11_rcases
 
 World "TutorialWorld"
 Title "Tutorial World"
