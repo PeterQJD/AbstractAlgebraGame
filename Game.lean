@@ -1,6 +1,10 @@
 import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.SemigroupWorld
+--import Game.Levels.MonoidWorld
+--import Game.Levels.InverseSemiGroupWorld
+--import Game.Levels.GroupWorld
+
 import I18n
 
 Game "MyGame"
