@@ -17,7 +17,7 @@ if and only if $a * a = a$.
 DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
 
 /--
-A **commutative semigroup** is a semigroup that has a commuatitive binary operation.
+A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements `a, b` in the semigroup, we have `a * b = b * a`.
 -/
 DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
 
