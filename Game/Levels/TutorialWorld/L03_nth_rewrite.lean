@@ -5,14 +5,17 @@ Level 3
 
 Title "The nth_rewrite tactic"
 
-Introduction "The `nth_rewrite` tactic allows you to rewrite one particular occurence of a variable.
+Introduction "
+The `nth_rewrite` tactic allows you to rewrite one particular occurence of a variable.
 
 For example, in the current goal we can replace the second occurence of `x` with `y` by entering `nth_rewrite 2 [h]`.
 
-Try it out and then complete the proof."
+Try it out and then complete the proof.
+"
 
 NewTactic nth_rewrite
 
+/--If $x$, $y$, and $z$ are natural numbers, and $x = z$, then $x * x * y = x * z * y$.-/
 Statement (x y z: Nat) (h : x = z) : x * x * y = x * z * y := by
   Branch
     rewrite [h]
@@ -22,6 +25,8 @@ Statement (x y z: Nat) (h : x = z) : x * x * y = x * z * y := by
   nth_rewrite 2 [h]
   rfl
 
-Conclusion "Well done!
+Conclusion "
+Well done!
 
-As you may have guessed, we can use the `←` notation inside an `nth_rewrite`. E.g., `nth_rewrite 2 [← h]`."
+As you may have guessed, we can use the `←` notation inside an `nth_rewrite`. E.g., `nth_rewrite 2 [← h]`.
+"

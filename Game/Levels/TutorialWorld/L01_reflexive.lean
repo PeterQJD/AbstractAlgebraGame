@@ -11,19 +11,23 @@ Level 1
 
 Title "The rfl tactic"
 
-Introduction "The most basic propositions we need to be able to prove are those of the form `x=x`.
+Introduction "
+The most basic propositions we need to be able to prove are those of the form `x=x`.
 
-The `rfl` tactic is designed for precisly this prupose.
+The `rfl` tactic proves such propositions.
 
 Try it out by typing `rfl` in the dialogue box and clicking **Execute** (or hitting enter on your keyboard).
 "
 
+NewDefinition MyNat
 NewTactic rfl
 
-Statement (x : Nat): x = x := by
+/--If $x$ is a natural number, then $x = x$.-/
+Statement (x : MyNat): x = x := by
   rfl
 
-Conclusion "Well done!
+Conclusion "
+Well done!
 
 Before we move on to the next level, let's take a moment to understand what we've just done, as all future levels will look similar to this one.
 

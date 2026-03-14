@@ -1,9 +1,10 @@
 import GameServer.Commands
 import Game.Levels.TutorialWorld
-
+import Game.Levels.SemigroupWorld
+import I18n
 
 Game "MyGame"
--- Here's what we'll put on the title screen
+
 Title "The Abstract Algebra Game"
 Introduction
 "
@@ -13,7 +14,7 @@ This is a game about proving basic propositions in different algebraic structure
 
 The game also provides a gentle introduction to the world of mathematical formalisation and, in particular, the interactive proof assistant Lean.
 
-Lean is a programming language and in order to play the game, we will need to learn some of its basic syntax. This syntax is introduced in **Tuotrial World**, so let's start there by clicking on the title of the world.
+Lean is a programming language and in order to play the game, we will need to learn some of its basic syntax. This syntax is introduced in **Tutorial World**, so let's start there by clicking on the title of the world.
 "
 
 Info "
@@ -55,4 +56,5 @@ CaptionLong "In this game you will prove basic propositions in different algebra
 -- Dependency InverseSemiGroupWorld → GroupWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
+
 MakeGame

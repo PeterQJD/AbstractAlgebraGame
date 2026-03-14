@@ -16,6 +16,7 @@ NewTactic symm
 
 -- I don't know how to stop both hints from appearing at the same time. I want only one to appear depending on which route the user has taken: symm or symm at h.
 
+/--If $n$ and $m$ are natural numbers, and $n = m$, then $m = n$.-/
 Statement (n m : ℕ) (h : n = m): m = n := by
   Branch
     symm
@@ -29,6 +30,8 @@ Statement (n m : ℕ) (h : n = m): m = n := by
 
   exact h
 
-Conclusion "Well done!
+Conclusion "
+Well done!
 
-The `at` syntax also works for the `rewrite` tactic: `rewrite g at h` will rewrite `h` using `g`."
+The `at` syntax also works for the `rewrite` tactic: `rewrite g at h` will rewrite `h` using `g`.
+"

@@ -1,42 +1,36 @@
-import Game.Levels.TutorialWorld.L10_rcases
+import Game.Levels.TutorialWorld.L11_rcases
 
 World "TutorialWorld"
-Level 11
+Level 12
 
 Title "The induction tactic."
 
 Introduction "
-In the previous level we used the theorem `Nat.add_zero`, which states that for all natural numbers `n`, `n + 0 = n`.
+In this level, we will use the `induction` tactic to prove that `0 + a = a` for any natural number `a`. Note that we can't simply use our theorem `add_zero` because we don't have a theorem that says that addition of natural numbers is commutative.
 
-In this level, we will use induction to prove that `0 + n = n`. Note that we **won't** use the fact that addition of natural numbers is commutatative at any point in our proof.
-
-When we want to use induction on a variable `n`, we write `induction n`.
-
-This gives us **two** new goals. The case where `n = 0` and the case where `n = n_1 + 1`.
-
-You can view the two goals by clicking on the Active Goal and the Goal 2 buttons. Notice that `0` appears as `Nat.zero` and `n_1 + 1` appears as `Nat.succ n_1`.
-
-The Active goal is `0 + Nat.zero = 0`, which can be closed using `Nat.add_zero` either by writing `rewrite Nat.add_zero` and then rfl or by writing `exact Nat.add_zero 0`.
-
-Our Active goal is now `0 + Nat.succ n_1 = Nat.succ n_1`. Notice that we have a new assumption `n_ih : 0 + n_1 = n_1`. This is our induction hypothesis.
-
-We want to use `n_in` and we can do so by first applying the theorem `Nat.add_succ` with a `rewrite`.
-
-Now we can use the inductive hypothesis with another `rewrite`.
-
-Can you see how to close the goal now?
+To start the induction, we enter `induction a`. Try it now.
 "
-namespace tutorial
 
-Statement (n : ℕ) : 0 + n = n := by
-  induction n
-  rewrite [Nat.add_zero]
-  rfl
-  rewrite [Nat.add_succ]
-  rewrite [n_ih]
-  rfl
-
-Conclusion "Good work!"
+open MyNat
 
 NewTactic induction
-NewTheorem Nat.add_succ
+NewTheorem MyNat.zero_eq_0 MyNat.add_succ
+
+/-- For a natural number $a$, $0 + a = a$.-/
+Statement (a : MyNat) : 0 + a = a := by
+  induction a
+  Hint (hidden := false) "We now have two goals: one for the zero case and one for the inductive step. First, let's tidy things up: enter `rewrite [zero_eq_0]` to simplify the active goal."
+  rewrite [zero_eq_0] --How can we avoid using this theorem?!
+  Hint (hidden := false) "Good. Now we *can* use the theorem `add_zero` to close the current goal."
+  rewrite [add_zero]
+  rfl
+  Hint (hidden := false) "Notice that we have a new assumption: `a_ih`. This is the inductive hypothesis. Use the theorem `add_succ` to rewrite the left-hand side of the goal so that we can use the inductive hypothesis."
+  Hint (hidden := true) "Try `rewrite [add_succ]`"
+  rewrite [add_succ]
+  Hint (hidden := false) "Now use the inductive hypothesis."
+  rewrite [a_ih]
+  rfl
+
+Conclusion "Excellent work! You now have now completed **Tutorial World**.
+
+Let's move on to our first algebraic structure in **Semigroup World**."

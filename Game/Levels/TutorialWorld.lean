@@ -9,6 +9,7 @@ import Game.Levels.TutorialWorld.L08_apply
 import Game.Levels.TutorialWorld.L09_specialize
 import Game.Levels.TutorialWorld.L10_constructor
 import Game.Levels.TutorialWorld.L11_rcases
+import Game.Levels.TutorialWorld.L12_induction
 
 World "TutorialWorld"
 Title "Tutorial World"

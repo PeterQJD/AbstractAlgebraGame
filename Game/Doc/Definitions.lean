@@ -1,7 +1,25 @@
 import GameServer.Commands
 
-/--The natural numbers. These are used in Tutorial World to demonstrate certain tactics.-/
-DefinitionDoc MyNat as "ℕ"
+/--
+The natural numbers. These are used in Tutorial World to demonstrate certain tactics.
+-/
+DefinitionDoc MyNat as "ℕ" in "Tutorial"
+
+/--
+A **semigroup** is a set equipped with an associative binary operation. The binary operation is denoted by `*` and the associativity axiom states that for all elements `a, b, c` in the semigroup, we have `(a * b) * c = a * (b * c)`.
+-/
+DefinitionDoc MySemigroup as "Semigroup" in "Semigroup"
+
+/--
+Let $S$ be a semigroup and let $a ∈ S$. Then $a$ is an **idempotent**
+if and only if $a * a = a$.
+-/
+DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
+
+/--
+A **commutative semigroup** is a semigroup that has a commuatitive binary operation.
+-/
+DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
 
 -- DefinitionDoc MyGroup as "G" "
 -- A **Group** is a set \( G \) equipped with an operation \( * \)

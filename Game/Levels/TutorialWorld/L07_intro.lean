@@ -13,10 +13,11 @@ In a *pen & paper* proof, the first thing we'd write would be: Let $m ∈ ℕ$ .
 Try it now.
 "
 
-namespace MyNat
+open MyNat
 
 NewTactic intro
 
+/--For all natural numbers `m`, we have `m + 0 = m`.-/
 Statement : ∀ m : MyNat, m + 0 = m := by
   intro m
   Hint (hidden := false) "We can now use a theorem introduced in level 5. Click the **Theorems** tab for a reminder or the **Show more help!** button for a hint."
@@ -24,8 +25,10 @@ Statement : ∀ m : MyNat, m + 0 = m := by
   rewrite [add_zero]
   rfl
 
-Conclusion "Excellent!
+Conclusion "
+Excellent!
 
 We could have written `exact add_zero` to immediately close the goal, but our slightly contrived approach was designed to highlight how the `intro` tactic works.
 
-Whenever you're faced with a for all statement and you don't know what to do, `intro _` will always make progress."
+Whenever you're faced with a for all statement and you don't know what to do, `intro _` will always make progress.
+"

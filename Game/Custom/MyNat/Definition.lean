@@ -1,5 +1,6 @@
 import Game.Custom.Tactics.LabelAttr
 
+/--The natural numbers. These are used in Tutorial World to demonstrate certain tactics.-/
 inductive MyNat where
 | zero : MyNat
 | succ : MyNat → MyNat
@@ -37,3 +38,5 @@ instance : ToString MyNat where
 theorem zero_eq_0 : MyNat.zero = 0 := rfl
 
 def one : MyNat := MyNat.succ 0
+
+end MyNat

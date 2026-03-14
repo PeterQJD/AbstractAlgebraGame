@@ -5,14 +5,17 @@ Level 2
 
 Title "The rewrite tactic"
 
-Introduction "The `rewrite` tactic allows us to use a basic hypothesis like `x=y` in our proof.
+Introduction "
+The `rewrite` tactic allows us to use a basic hypothesis like `x=y` in our proof.
 
 If we enter `rewrite [h1]`, where `h1` is the hypothesis `x=y`, then Lean will look for all occurences of `x` in the current goal and it will replace them with `y`.
 
-Try this out now."
+Try this out now.
+"
 
 NewTactic rewrite
 
+/--If $x$, $y$, and $z$ are natural numbers, and $x = y$ and $y = z$, then $x * x = y * z$.-/
 Statement (x y z : Nat) (h1 : x = y) (h2 : y = z): x * x = y * z := by
   rewrite [h1]
   Hint (hidden := false) "If we next use `rewrite [h2]` then the goal will be updated to `z * z = z * z`. Alternatively, we can replace `z` with `y` to reach the state `y * y = y * y`. This is achieved by entering `rewrite [← h2]`.
