@@ -1,11 +1,19 @@
-# Game Skeleton
+# The Abstract Algebra Game
 
-This is a template for creating a game with [lean4game](https://github.com/leanprover-community/lean4game/). It contains a single Level plus the files needed for a local development setup.
+The Abstract Algebra Game has been developed by Peter Davidson, Alexander Brown and Adam Kennedy at the University of Strathclyde. It uses the [Lean4 Game Engine](https://github.com/leanprover-community/lean4game) and once fully developed will run live at [adam.math.hhu.de](https://adam.math.hhu.de).
 
-The documentation about how to use this template are at the [lean4game repository](https://github.com/leanprover-community/lean4game/):
+## Getting Started
 
-* [Creating a new game](https://github.com/leanprover-community/lean4game/blob/main/doc/create_game.md)
-  * [Updating an existing game](https://github.com/leanprover-community/lean4game/blob/main/doc/update_game.md)
-  * [Running a game locally](https://github.com/leanprover-community/lean4game/blob/main/doc/running_locally.md)
+You can develop the game as any lean project and use `lake build` to build it.
 
+Moreover, there are multiple ways to run the game while developing it, which are described in
+[Running Games Locally](https://github.com/leanprover-community/lean4game/blob/main/doc/running_locally.md)
 
+## Contributing
+
+PRs/Issues fixing typos, inconsistencies, missing hints, etc. are very welcome!
+
+## Documentation
+
+See [Creating a Game](https://github.com/leanprover-community/lean4game/blob/main/doc/create_game.md) at
+the [lean4game repo](https://github.com/leanprover-community/lean4game) for a detailed explanation.
