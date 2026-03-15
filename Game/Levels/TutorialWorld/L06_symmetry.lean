@@ -18,16 +18,14 @@ NewTactic symm
 
 /--If $n$ and $m$ are natural numbers, and $n = m$, then $m = n$.-/
 Statement (n m : ℕ) (h : n = m): m = n := by
+  Hint (hidden := false) "The `exact` tactic will help."
   Branch
     symm
     Hint (hidden := false) "The `exact` tactic will help."
     exact h
 
   symm at h
-  Branch
-    Hint (hidden := false) "You can now use the `exact` tactic."
-    exact h
-
+  Hint (hidden := false) "You can now use the `exact` tactic."
   exact h
 
 Conclusion "
