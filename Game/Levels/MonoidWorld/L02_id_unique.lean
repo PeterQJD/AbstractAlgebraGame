@@ -36,7 +36,7 @@ Statement id_unique {e₁ e₂ : M}
    rfl
 
 Conclusion "
-The message shown when the level is completed
+Well Done!
 "
 DisabledTheorem MyStructure.mul_comm
 NewTheorem mymonoid.id_unique

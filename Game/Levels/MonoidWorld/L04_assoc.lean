@@ -30,6 +30,6 @@ Statement monoid_magma_assoc {a b c e : M} (h₁ : ∀ x : M, e * x = x)
   exact h₂ a c b
 
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "Congradulations on completing this level as well as Monoid World"
 
 NewTheorem mymonoid.monoid_magma_comm

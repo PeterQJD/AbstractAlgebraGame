@@ -8,7 +8,7 @@ Title "The nth_rewrite tactic"
 Introduction "
 The `nth_rewrite` tactic allows you to rewrite one particular occurence of a variable.
 
-For example, in the current goal we can replace the second occurence of `x` with `y` by entering `nth_rewrite 2 [h]`.
+For example, in the current goal we can replace the second occurence of `x` with `z` by entering `nth_rewrite 2 [h]`.
 
 Try it out and then complete the proof.
 "
