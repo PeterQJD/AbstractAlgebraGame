@@ -58,7 +58,7 @@ CaptionLong "In this game you will prove basic propositions in different algebra
 
 -- Because we don't introduce inverses that reduce to an identity in ISGW.
 -- Dependency InverseSemiGroupWorld → GroupWorld
-Dependency SemigroupWorld -> MonoidWorld
+Dependency SemigroupWorld → MonoidWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 
