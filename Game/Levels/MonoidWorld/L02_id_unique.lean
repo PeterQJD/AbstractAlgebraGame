@@ -2,26 +2,22 @@ import Game.Levels.MonoidWorld.L01_identities
 
 World "MonoidWorld"
 Level 2
-Title "Hello World"
+Title "Proving the identity element is unique"
 
 Introduction "
-A message shown at the beginning of the level. Use it to explain any new concepts.
-"
-namespace mymonoid
+Now we are going to prove that the identity element of the monoid is unique.
 
-variable (M : Type) [MyStructure M] -- M for monoid seems fitting.
-open MyStructure
+To do so we will prove that, given two identity elements e₁ , e₂, with their relevant properties listed as assumptions.
+We show that e₁ must be equal to e₂.
 
-/--
-This result is to illustrate that if there is two elements of a monoid that have the identity property
-, then those elements are equal, and hence the identity is unique.
-
-### Please note:
-Only the left and right aspect (h1 , h2) respectivley of  $e₁$ and $e₂$'s identityness is included (for simplicity)
+Only the left and right aspect (h1 , h2) respectivley of  e₁ and e₂'s identityness is included (for simplicity)
 as assumptions, because that is all that is required to prove that they are the equal.
+"
+namespace MyMonoid
 
--/
-TheoremDoc mymonoid.id_unique as "id_unique" in "Monoid"
+variable (M : Type) [MyMonoid M] -- M for monoid seems fitting.
+
+open MyMonoid
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
 Statement id_unique {e₁ e₂ : M}
@@ -36,7 +32,6 @@ Statement id_unique {e₁ e₂ : M}
    rfl
 
 Conclusion "
-The message shown when the level is completed
+Great stuff, you can sleep easy knowing that there is only one identity element in a monoid!
 "
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mymonoid.id_unique
+NewTheorem MyMonoid.id_unique

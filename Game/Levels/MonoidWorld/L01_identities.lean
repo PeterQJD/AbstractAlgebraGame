@@ -1,5 +1,4 @@
 import Game.Metadata
-import Game.Custom.MyMagma.Definition -- for use in level 4
 import Game.Custom.MySemigroup.Definitions -- for looking back
 import Game.Custom.MyMonoid.Definition
 import Game.Doc.Theorems
@@ -8,10 +7,11 @@ import Game.Doc.Definitions
 
 World "MonoidWorld"
 Level 1
-Title "Hello World"
+Title "The identity element"
 
 Introduction "
-A message shown at the beginning of the level. Use it to explain any new concepts.
+A Monoid is a semigroup with the adittional property of having an identity element (a 'do nothing' element).
+This level is just to get you aquainted with using the identity element. You are not proving any theorems, yet!
 "
 namespace MyMonoid
 
@@ -33,5 +33,5 @@ Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
 
 
 Conclusion "
-The message shown when the level is completed
+Great job! we can apply the identity on the left and on the right. Which is not neccessarily the case for other elements in our monoid.
 "

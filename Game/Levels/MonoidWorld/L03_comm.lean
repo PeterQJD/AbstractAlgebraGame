@@ -1,23 +1,20 @@
 import Game.Levels.MonoidWorld.L02_id_unique
-
+import Game.Custom.MyMagma.Definition
 
 World "MonoidWorld"
 Level 3
 
-Title "Commutative Monoid 1"
+Title "Magma with an identity element"
 
-Introduction "In this level we will show that given the set of assumptions presented in the statement
-we can show that the magma is commutative.
+Introduction "In this level we will show that: given a magma (no associativity), equip with an identity element and
+and an extra assumption. We can show that the magma is commutative.
 "
 
-namespace mymonoid
+namespace MyMonoid
 
 variable {M : Type} [MyMagma M]
 
-/--
-The iverse of a multiple is the multiple of the inverses reversed
--/
-TheoremDoc mymonoid.monoid_magma_comm as "monoid_magma_comm" in "Monoid"
+open MyMonoid
 
 Statement monoid_magma_comm {a b e : M} (h₁ : ∀ x : M, e * x = x)
 (h₂ : ∀ x y z : M, x * (y * z) = (x * z) * y) :
@@ -30,3 +27,5 @@ a * b = b * a := by
 
 
 Conclusion "Well done. The next level will build on top of this one."
+
+NewTheorem MyMonoid.monoid_magma_comm

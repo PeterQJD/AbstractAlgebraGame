@@ -48,3 +48,21 @@ $g * e = g $ for all $g ∈ G$
 This element $e$ is denoted as $1$ in the editor.
 -/
 TheoremDoc MyMonoid.mul_one as "mul_one" in "Monoid"
+
+/--
+This result is to illustrate that if there is two elements of a monoid that have the identity property
+, then those elements are equal, and hence the identity is unique.
+-/
+TheoremDoc MyMonoid.id_unique as "id_unique" in "Monoid"
+
+/--
+A binary operation of a magma with the following properties...
+is associative.
+-/
+TheoremDoc MyMonoid.monoid_magma_comm as "monoid_magma_comm" in "Monoid"
+
+/--
+The binary operation of a magma with the following properties...
+is commutative.
+-/
+TheoremDoc MyMonoid.monoid_magma_assoc as "monoid_magma_assoc" in "Monoid"
