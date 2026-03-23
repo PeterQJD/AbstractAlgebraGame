@@ -13,7 +13,7 @@ namespace mygroup
 variable {G : Type} [MyStructure G]
 open MyStructure
 
-/--This task is designed to show how the idea of a weak inverse trickles down to a group inverse-/
+/---/
 Statement  (a : G) : 1 = a * a⁻¹ := by
   Branch
     rewrite [mul_right_inv]

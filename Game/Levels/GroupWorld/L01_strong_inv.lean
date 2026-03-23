@@ -1,6 +1,8 @@
 import Game.Metadata
+import Game.Custom.MyGroup.Definition
 import Game.Doc.Theorems
-import Game.Custom.MyStructure.Definition
+import Game.Doc.Tactics
+import Game.Doc.Definitions
 import Game.Levels.InverseSemiGroupWorld.L01_weak_inverse_def
 
 World "GroupWorld"
@@ -18,29 +20,14 @@ respectivley.
 This task is designed to show that the idea of a weak_inverse applies to group inverse elements, which
 have special notation (group inverses are denoted with the power -1) "
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure myinversesemigroup
+NewTheorem MyGroup.mul_right_inv MyGroup.mul_left_inv
 
-/--
-This Group Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g⁻¹ * g = e$ (where e is the identity element in G)
+variable {G : Type} [MyGroup G]
 
-## Important note
-This Group Axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
--/
-TheoremDoc MyStructure.mul_left_inv as "mul_left_inv" in "Group"
+open MyGroup myinversesemigroup
 
-
-/--
-This theorem states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g * g^{-1} = e$ (where e is the identity element in G)
-q
-## Important note
-This result will allow us to apply inverses on the RIGHT.
--/
-TheoremDoc MyStructure.mul_right_inv as "mul_right_inv" in "Group"
 
 /--Prove that the weak inverse of a is a⁻¹ (a⁻¹ is the the group inverse)-/
 Statement  (a : G) : weak_inverse a a⁻¹ := by
@@ -59,5 +46,3 @@ Conclusion "Good Work! Now it should be apparent that the idea of a weak_inverse
 an extension of the idea of a group inverse."
 
 NewHiddenTactic constructor
-DisabledTheorem MyStructure.mul_comm
-NewTheorem MyStructure.mul_right_inv MyStructure.mul_left_inv

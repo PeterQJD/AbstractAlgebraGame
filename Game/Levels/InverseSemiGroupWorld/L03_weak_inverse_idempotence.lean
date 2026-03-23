@@ -1,29 +1,29 @@
 import Game.Levels.InverseSemiGroupWorld.L02_using_weak_inverse
-import Game.Levels.SemigroupWorld.L03_idempotent_def
 
 
 World "InverseSemiGroupWorld"
 Level 3
-Title "Hello World"
+Title "Weak inverses and idempotance"
 
 Introduction "
-Now that we are working with an Inverse Semigroup, we have both associativity
-and the existance of inverse elements for every element in the set. This
-Exercise is to illustrate the connection between idempotence and weak inverses.
+This exercise is to illustrate the connection between idempotence and weak inverses.
+
+As before you will need to use the defintions of a weak inverse and off an idempotent element
 "
 
-namespace myinversesemigroup
+namespace MyInverseSemigroup
 
-variable {ISG : Type} [MyStructure ISG]
-open MyStructure mysemigroup
+NewDefinition MyInverseSemigroup.Idempotent
 
+variable {ISG : Type} [MyInverseSemigroup ISG]
 
+open MyInverseSemigroup
 
-/-- This statement states that if the weak inverse of a is b, then a * b is idempotent -/
-Statement (a b : ISG) (h: weak_inverse a b) : Idempotent (a * b) := by
+/-- This statement states that if the weak inverse of $a$ is $b$, then $a * b$ is idempotent -/
+Statement (a b : ISG) (h: Weak_inverse a b) : Idempotent (a * b) := by
   Hint (hidden := true) "You may want to rewrite using the definitions"
-  rewrite [Idempotent_def]
-  rewrite [weak_inverse_def] at h
+  rewrite [Idempotent]
+  rewrite [Weak_inverse] at h
   rewrite [← mul_assoc]
   rcases h
   rewrite [left]
@@ -36,4 +36,3 @@ into group world you will find the idea of an inverse changes, now an inverse of
 a group element a is denoted a⁻¹, and a * a⁻¹ = a⁻¹ * a = e = 1, where e is the identity element
 denoted as 1.
 "
-DisabledTheorem MyStructure.mul_one MyStructure.one_mul MyStructure.mul_comm

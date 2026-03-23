@@ -2,7 +2,7 @@ import GameServer.Commands
 import Game.Levels.TutorialWorld
 import Game.Levels.SemigroupWorld
 import Game.Levels.MonoidWorld
---import Game.Levels.InverseSemiGroupWorld
+import Game.Levels.InverseSemiGroupWorld
 --import Game.Levels.GroupWorld
 
 import I18n
@@ -58,6 +58,7 @@ CaptionLong "In this game you will prove basic propositions in different algebra
 
 -- Because we don't introduce inverses that reduce to an identity in ISGW.
 -- Dependency InverseSemiGroupWorld → GroupWorld
+Dependency SemigroupWorld -> MonoidWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 

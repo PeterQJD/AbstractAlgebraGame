@@ -50,8 +50,8 @@ This element $e$ is denoted as $1$ in the editor.
 TheoremDoc MyMonoid.mul_one as "mul_one" in "Monoid"
 
 /--
-This result is to illustrate that if there is two elements of a monoid that have the identity property
-, then those elements are equal, and hence the identity is unique.
+This result states that if there are two elements of a monoid that have the identity property
+, then those elements are equal, and hence the identity element is unique.
 -/
 TheoremDoc MyMonoid.id_unique as "id_unique" in "Monoid"
 
@@ -66,3 +66,23 @@ The binary operation of a magma with the following properties...
 is commutative.
 -/
 TheoremDoc MyMonoid.monoid_magma_assoc as "monoid_magma_assoc" in "Monoid"
+
+-- ~~~ GROUP THEOREMS ~~~
+
+/--
+This Group Axiom states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
+such that $g⁻¹ * g = e$ (where e is the identity element in G)
+
+## Important note
+This Group Axiom specifiys that the inverse is applied multiplicativly on the LEFT, hence mul_left_inv
+-/
+TheoremDoc MyGroup.mul_left_inv as "mul_left_inv" in "Group"
+
+/--
+This theorem states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
+such that $g * g^{-1} = e$ (where e is the identity element in G)
+q
+## Important note
+This result will allow us to apply inverses on the RIGHT.
+-/
+TheoremDoc MyGroup.mul_right_inv as "mul_right_inv" in "Group"

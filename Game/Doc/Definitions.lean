@@ -23,6 +23,25 @@ A **commutative semigroup** is a semigroup that has a commuatitive binary operat
 -/
 DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
 
+-- ~~~ INVERSE SEMIGROUP DEFINITIONS ~~~
+
+/--
+An inverse-semigroup $S$, is a semigroup that also has the following property:
+for all elements $x ∈ S$, there exists an element $y ∈ S$. Such that  $x * y * x = x ∧ y * x * y = y$
+-/
+DefinitionDoc MyInverseSemigroup as "Inverse Semigroup" in "Inverse Semigroup"
+
+/--
+A weak inverse of an element $x$ in a semigroup $S$ is some $y ∈ S$ such that $x * y * x = x ∧ y * x * y = y$.
+-/
+DefinitionDoc MyInverseSemigroup.Weak_inverse as "Weak inverse" in "Inverse Semigroup"
+
+/--
+Let $S$ be an inverse-semigroup and let $a ∈ S$. Then $a$ is an **idempotent**
+if and only if $a * a = a$.
+-/
+DefinitionDoc MyInverseSemigroup.Idempotent as "Idempotent" in "Inverse Semigroup"
+
 -- ~~~ MONOID DEFNITIONS ~~~
 
 /--

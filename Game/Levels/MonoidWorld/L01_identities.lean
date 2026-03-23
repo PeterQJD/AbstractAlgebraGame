@@ -1,5 +1,4 @@
 import Game.Metadata
-import Game.Custom.MySemigroup.Definitions -- for looking back
 import Game.Custom.MyMonoid.Definition
 import Game.Doc.Theorems
 import Game.Doc.Tactics
