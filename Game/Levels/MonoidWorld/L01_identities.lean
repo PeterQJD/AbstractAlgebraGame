@@ -1,7 +1,10 @@
 import Game.Metadata
-import Game.Custom.MyStructure.Definition
-import Game.Custom.MyMagma.Definition
+import Game.Custom.MyMagma.Definition -- for use in level 4
+import Game.Custom.MySemigroup.Definitions -- for looking back
 import Game.Custom.MyMonoid.Definition
+import Game.Doc.Theorems
+import Game.Doc.Tactics
+import Game.Doc.Definitions
 
 World "MonoidWorld"
 Level 1
@@ -10,28 +13,16 @@ Title "Hello World"
 Introduction "
 A message shown at the beginning of the level. Use it to explain any new concepts.
 "
-namespace mymonoid
+namespace MyMonoid
 
-variable {M : Type} [MyStructure M] -- M for monoid seems fitting.
-open MyStructure
+NewDefinition MyMonoid
 
-/--
-This Axiom states that there exists an element $e ∈ G$ which has the following property:
-$e * g = g $ for all $g ∈ G$
+NewTheorem MyMonoid.mul_one MyMonoid.one_mul
 
-### Important note
-This element $e$ is denoted as $1$ in the editor.
--/
-TheoremDoc MyStructure.one_mul as "one_mul" in "Monoid"
+variable {M : Type} [MyMonoid M] -- M for monoid seems fitting.
 
-/--
-This Axiom states that there exists an element $e ∈ G$ which has the following property:
-$g * e = g $ for all $g ∈ G$
+open MyMonoid
 
-### Important note
-This element $e$ is denoted as $1$ in the editor.
--/
-TheoremDoc MyStructure.mul_one as "mul_one" in "Monoid"
 
 /-- The exercise statement in natural language using latex: $\iff$. -/
 Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
@@ -44,5 +35,3 @@ Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
 Conclusion "
 The message shown when the level is completed
 "
-DisabledTheorem MyStructure.mul_comm
-NewTheorem MyStructure.mul_one MyStructure.one_mul

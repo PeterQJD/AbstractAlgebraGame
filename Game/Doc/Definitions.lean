@@ -5,6 +5,8 @@ The natural numbers. These are used in Tutorial World to demonstrate certain tac
 -/
 DefinitionDoc MyNat as "ℕ" in "Tutorial"
 
+-- ~~~ SEMIGROUP DEFINTIONS ~~~
+
 /--
 A **semigroup** is a set equipped with an associative binary operation. The binary operation is denoted by `*` and the associativity axiom states that for all elements `a, b, c` in the semigroup, we have `(a * b) * c = a * (b * c)`.
 -/
@@ -20,6 +22,19 @@ DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
 A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements `a, b` in the semigroup, we have `a * b = b * a`.
 -/
 DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
+
+-- ~~~ MONOID DEFNITIONS ~~~
+
+/--
+A Monoid is a semigroup with the additional property of having an identity element,
+the identity element `e` is such that when applied to any element `a` of the monoid,
+we have `e * a = a * e = a`.
+
+The identity element is denoted as `1`. Which can be applied on the left aswell as the right.
+-/
+DefinitionDoc MyMonoid as "Monoid" in "Monoid"
+
+-- ~~~ GROUP DEFINITIONS ~~~
 
 -- DefinitionDoc MyGroup as "G" "
 -- A **Group** is a set \( G \) equipped with an operation \( * \)
