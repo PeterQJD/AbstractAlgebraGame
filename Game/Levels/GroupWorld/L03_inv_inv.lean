@@ -10,18 +10,11 @@ that to write an inverse element it requires a forward-slash -1 next to the elem
 
 Now here is your first proper exercise! prove that the inverse of the inverse of {a} is equal to {a}"
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
 
-
-/--
-This theorem states that for an element $a ∈ G$,
-the inverse of the inverse element of a is equal to $a$
--/
-TheoremDoc mygroup.inv_inv as "inv_inv" in "Group"
-
+open MyGroup
 
 Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   Hint (hidden := true) "Try introducing the identity with ← backwriting, specifing a⁻¹⁻¹"
@@ -33,7 +26,6 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   rewrite [mul_one]
   rfl
 
-Conclusion "Well done!"
+Conclusion "Well done, you have proved your first theorem in group world!"
 
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.inv_inv
+NewTheorem MyGroup.inv_inv

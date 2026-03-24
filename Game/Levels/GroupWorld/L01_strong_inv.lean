@@ -3,7 +3,6 @@ import Game.Custom.MyGroup.Definition
 import Game.Doc.Theorems
 import Game.Doc.Tactics
 import Game.Doc.Definitions
-import Game.Levels.InverseSemiGroupWorld.L01_weak_inverse_def
 
 World "GroupWorld"
 Level 1
@@ -22,16 +21,17 @@ have special notation (group inverses are denoted with the power -1) "
 
 namespace MyGroup
 
-NewTheorem MyGroup.mul_right_inv MyGroup.mul_left_inv
+NewDefinition MyGroup MyGroup.Weak_inverse
+
+NewTheorem MyGroup.mul_right_inv MyGroup.mul_left_inv MyGroup.mul_assoc MyGroup.one_mul MyGroup.mul_one
 
 variable {G : Type} [MyGroup G]
 
-open MyGroup myinversesemigroup
+open MyGroup
 
-
-/--Prove that the weak inverse of a is a⁻¹ (a⁻¹ is the the group inverse)-/
-Statement  (a : G) : weak_inverse a a⁻¹ := by
-  rewrite [weak_inverse_def]
+/--Prove that the weak inverse of a is a⁻¹ (a⁻¹ is the group inverse)-/
+Statement  (a : G) : Weak_inverse a a⁻¹ := by
+  rewrite [Weak_inverse]
   Hint "type constructor to split the goal into two sub goals, first we solve the lefthand side
   as our active goal, and then the right hand side of the $∧$"
   constructor

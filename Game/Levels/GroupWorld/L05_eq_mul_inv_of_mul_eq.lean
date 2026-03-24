@@ -4,21 +4,17 @@ import Game.Levels.GroupWorld.L04_mul_left_eq_self
 World "GroupWorld"
 Level 5
 
-Title "Multiply on Right"
+Title "Multiply on the right"
 
 Introduction "Now in this level you will show that given $a * c = b$ you know
-$a = b * c^{-1}. This level isn't particularly long so take your time.$
+$a = b * c^{-1}$. This level isn't particularly long so take your time.$
 "
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
 
-/--
-
--/
-TheoremDoc mygroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
+open MyGroup
 
 Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := by
   symm at h
@@ -32,5 +28,4 @@ Statement eq_mul_inv_of_mul_eq {a b c : G} (h : a * c = b) : a = b * c⁻¹ := b
 
 Conclusion "Well done!"
 
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.eq_mul_inv_of_mul_eq
+NewTheorem MyGroup.eq_mul_inv_of_mul_eq

@@ -9,7 +9,8 @@ class MyGroup (S : Type u) extends Inv S, Mul S, One S :=
   (mul_left_inv : ∀ a : S, a⁻¹ * a = 1)
   (mul_right_inv : ∀ a : S, a * a⁻¹ = 1)
 
-def MyGroup.Idempotent {S : Type u} [MyGroup S] (x : S) :  Prop := x * x = x
+def MyGroup.Weak_inverse {S : Type u} [MyGroup S] (x y : S) : Prop :=
+x * y * x = x ∧ y * x * y = y
 
 class MyCommGroup (S : Type u) extends Inv S, Mul S, One S :=
   (mul_assoc : ∀ a b c : S, a * b * c = a * (b * c))

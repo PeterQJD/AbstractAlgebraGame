@@ -8,12 +8,13 @@ Title "identity is equal to element multiplied by inverse"
 Introduction " Now here comes a useful trick that
 will help with some of the future exercises."
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
 
-/---/
+open MyGroup
+
+
 Statement  (a : G) : 1 = a * a⁻¹ := by
   Branch
     rewrite [mul_right_inv]
@@ -29,5 +30,3 @@ which you are now ready to tackle!
 
 Note: the 'a' at the end of '← mul_right_inv a' specifies the element
 that constitutes the element * element_inverse pair (which is equal to the identity {1}) "
-
-DisabledTheorem MyStructure.mul_comm

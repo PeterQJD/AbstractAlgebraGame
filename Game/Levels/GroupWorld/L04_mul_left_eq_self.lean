@@ -11,16 +11,11 @@ In this level you will prove that $a * b = b$ implies $a = 1$. To do this you wi
 axioms. If you need any help you can press the Help button at the bottom left.
 "
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
 
-/--
-Shows that given a group $G$ and $a, b ∈ G$ then if $a * b = b$ then $a = 1$ where $1$ is the
-identity in $G$
--/
-TheoremDoc mygroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
+open MyGroup
 
 Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
   symm
@@ -36,5 +31,4 @@ Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = 1 := by
 
 Conclusion "Well done!"
 
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.mul_left_eq_self
+NewTheorem MyGroup.mul_left_eq_self

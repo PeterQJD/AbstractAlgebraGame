@@ -12,7 +12,8 @@ Title "Introducing weak inverses"
 Introduction "
 Now that we are working with an Inverse Semigroup, we have both associativity
 and the existance of inverse elements for every element in the set. This
-Exercise is just to introduce the idea of 'weak_inverse'.
+exercise is just to introduce the definition of a 'weak_inverse'. Which you shall see, differs from the
+notion of inverse within a 'group'.
 "
 
 namespace MyInverseSemigroup
@@ -26,9 +27,11 @@ open MyInverseSemigroup
 
 /-- This statement states that the weak inverse of x is y, if and only if $x * y * x = x$ AND $y * x * y = y$ -/
 Statement (x y : ISG) : Weak_inverse x y ↔ x * y * x = x ∧ y * x * y = y  := by
+  Hint "This is true by definition"
   rfl
 
 
 Conclusion "
-Great stuff!
+Great stuff, rewriting expression by their definition is very handy.
+We will certainly need it going forward!
 "

@@ -6,20 +6,14 @@ Level 9
 
 Title "Left Cancel"
 
-Introduction "As the name of the level implies you will hve to show that given
-$a * x = a * y$ implies $x = y$.
+Introduction "As the name of the level implies, your task is to show for $a,x,y ∈ G$. If $a * x = a * y$,
+ then $x = y$.
 "
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure -- for easy access to axioms
-
-/--
-This result states that for elements $a, x, y ∈ G $, if a * x = a * y then x = y.
--/
-TheoremDoc mygroup.mul_left_cancel as "mul_left_cancel" in "Group"
-
+variable {G : Type} [MyGroup G]
+open MyGroup
 
 Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
   rewrite [← one_mul x]
@@ -34,7 +28,4 @@ Statement mul_left_cancel (a x y : G) (h : a * x = a * y) : x = y := by
 
 Conclusion "Well done! Now lets see what we can prove with our new result."
 
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.mul_left_cancel
-
-end mygroup
+NewTheorem MyGroup.mul_left_cancel

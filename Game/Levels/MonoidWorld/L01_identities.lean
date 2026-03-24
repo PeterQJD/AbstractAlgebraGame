@@ -16,7 +16,7 @@ namespace MyMonoid
 
 NewDefinition MyMonoid
 
-NewTheorem MyMonoid.mul_one MyMonoid.one_mul
+NewTheorem MyMonoid.mul_one MyMonoid.one_mul MyMonoid.mul_assoc
 
 variable {M : Type} [MyMonoid M] -- M for monoid seems fitting.
 

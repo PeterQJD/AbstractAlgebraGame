@@ -8,12 +8,15 @@ Title "Weak inverses and idempotance"
 Introduction "
 This exercise is to illustrate the connection between idempotence and weak inverses.
 
-As before you will need to use the defintions of a weak inverse and off an idempotent element
+As before you will need to use the defintion of a weak inverse and the definiton of idempotent element.
+Associtivity will be useful as well.
 "
 
 namespace MyInverseSemigroup
 
 NewDefinition MyInverseSemigroup.Idempotent
+
+NewTheorem MyInverseSemigroup.mul_assoc
 
 variable {ISG : Type} [MyInverseSemigroup ISG]
 

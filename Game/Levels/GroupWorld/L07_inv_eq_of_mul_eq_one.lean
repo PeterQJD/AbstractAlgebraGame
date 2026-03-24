@@ -10,15 +10,11 @@ Introduction "Carrying on from the previous level you will need to show
 that if you have a group $G$ and $a, b ∈ G$ with $a * b = 1$ then $a^{-1}$
 must be equal to $b$"
 
-namespace mygroup
+namespace MyGroup
 
-variable {G : Type} [MyStructure G]
-open MyStructure
+variable {G : Type} [MyGroup G]
 
-/--
-This is some sample documentation - (test)
--/
-TheoremDoc mygroup.inv_eq_of_mul_eq_one as "inv_eq_of_mul_eq_one" in "Group"
+open MyGroup
 
 Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
   symm
@@ -33,5 +29,4 @@ Statement inv_eq_of_mul_eq_one {a b : G} (h : a * b = 1) : a⁻¹ = b := by
 
 Conclusion "Well done!"
 
-DisabledTheorem MyStructure.mul_comm
-NewTheorem mygroup.inv_eq_of_mul_eq_one
+NewTheorem MyGroup.inv_eq_of_mul_eq_one
