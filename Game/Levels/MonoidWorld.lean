@@ -8,19 +8,12 @@ World "MonoidWorld"
 
 Title "Monoid World"
 
-Introduction
-"
-## Welcome to Monoid World!
+Introduction "Welcome to **Monoid World**!
 
-A monoid is a semigroup with the added axiom of an identity element,
-which is an element of the set which when applied to any element of the set,
-leaves it unchanged, it is effectivley the 'do nothing' element.
+A monoid `M` is a semigroup with a distinguished element `1` that has the property that `∀ a ∈ M,
+1 * a = a = a * 1`. We call this element an **identity element**. Note that it is common to denote
+such elements by `e`.
 
-Please note that because all monoids are semigroups, therefore all monoids have an associative binary operation,
-hence we can use mul_assoc when we please.
-
-The tactics used will be predominatley rewrites.
-
-### click start to begin the first level!
-
+Since all monoids are semigroups we know that the binary operation is associative and so we can use
+`mul_assoc` whener we wish.
 "

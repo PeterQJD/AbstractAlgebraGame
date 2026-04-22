@@ -9,8 +9,10 @@ Level 1
 Title "The identity element"
 
 Introduction "
-A Monoid is a semigroup with the adittional property of having an identity element (a 'do nothing' element).
-This level is just to get you aquainted with using the identity element. You are not proving any theorems, yet!
+The theorems `one_mul` and `mul_one` state that `∀ a ∈ M, 1 * a = a` and `∀ a ∈ M, a * 1 = a`. We
+need both because we can't assume that the binary operation is commutative.
+
+Use both to close the goal.
 "
 namespace MyMonoid
 
@@ -18,19 +20,15 @@ NewDefinition MyMonoid
 
 NewTheorem MyMonoid.mul_one MyMonoid.one_mul MyMonoid.mul_assoc
 
-variable {M : Type} [MyMonoid M] -- M for monoid seems fitting.
+variable {M : Type} -- M for monoid seems fitting.
 
 open MyMonoid
 
-
-/-- The exercise statement in natural language using latex: $\iff$. -/
-Statement (a b : M) : 1 * (a * b) * 1 = a * b := by
-  rewrite [← mul_assoc]
+/-- In a monoid $M$, $∀ a ∈ M, 1 * a * 1 = a$. -/
+Statement [inst : MyMonoid M] (a : M) : 1 * a * 1 = a := by
   rewrite [one_mul]
-  rewrite [mul_one]
-  rfl
-
+  exact mul_one a
 
 Conclusion "
-Great job! we can apply the identity on the left and on the right. Which is not neccessarily the case for other elements in our monoid.
+Great, we now have access to both `one_mul` and `mul_one` in our inventory.
 "

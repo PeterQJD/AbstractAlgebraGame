@@ -29,7 +29,7 @@ variable {S : Type}
 open MySemigroup
 
 /-- Let $S$ be a semigroup. Then $*$ is associative: $∀ a, b, c \in S, (a * b) * c = a * (b * c)$ -/
-Statement (a b c : S) [inst : MySemigroup S] : (a * b) * c = a * (b * c):= by
+Statement [inst : MySemigroup S] (a b c : S) : (a * b) * c = a * (b * c):= by
   rewrite [mul_assoc]
   rfl
 
