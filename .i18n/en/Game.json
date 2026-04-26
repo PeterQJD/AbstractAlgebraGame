@@ -1,1 +1,26 @@
-{}
+{
+ "level completed! 🎉": "level completed! 🎉",
+ "level completed with warnings… 🎭": "level completed with warnings… 🎭",
+ "intermediate goal solved! 🎉": "intermediate goal solved! 🎉",
+ "You should use this game as a template for your own game and add your own levels.": "You should use this game as a template for your own game and add your own levels.",
+ "You should use `«{h}»` now.": "You should use `«{h}»` now.",
+ "You should use `«{g}»` now.": "You should use `«{g}»` now.",
+ "You can either start using `«{h}»` or `«{g}»`.": "You can either start using `«{h}»` or `«{g}»`.",
+ "This text is shown as first message when the level is played.\nYou can insert hints in the proof below. They will appear in this side panel\ndepending on the proof a user provides.": "This text is shown as first message when the level is played.\nYou can insert hints in the proof below. They will appear in this side panel\ndepending on the proof a user provides.",
+ "This text appears on the starting page where one selects the world/level to play.\nYou can use markdown.": "This text appears on the starting page where one selects the world/level to play.\nYou can use markdown.",
+ "This last message appears if the level is solved.": "This last message appears if the level is solved.",
+ "This introduction is shown before one enters level 1 of the demo world. Use markdown.": "This introduction is shown before one enters level 1 of the demo world. Use markdown.",
+ "Here you can put additional information about the game. It is accessible\nfrom the starting through the drop-down menu.\n\nFor example: Game version, Credits, Link to Github and Zulip, etc.\n\nUse markdown.": "Here you can put additional information about the game. It is accessible\nfrom the starting through the drop-down menu.\n\nFor example: Game version, Credits, Link to Github and Zulip, etc.\n\nUse markdown.",
+ "Hello World Game": "Hello World Game",
+ "Hello World": "Hello World",
+ "Game Template": "Game Template",
+ "Demo World": "Demo World",
+ "A game for students new to abstract algebra.": "A game for students new to abstract algebra.",
+ "In this game you will prove basic propositions in different algebraic structures. You will also learn a little bit about the interactice proof assistant Lean.": "In this game you will prove basic propositions in different algebraic structures. You will also learn a little bit about the interactice proof assistant Lean.",
+ "For all natural numbers §0, §1.": "For all natural numbers §0, §1.",
+ "For all natural numbers §0 and §1, §2.": "For all natural numbers §0 and §1, §2.",
+ "This matches the MyNat zero with the literal 0.": "This matches the MyNat zero with the literal 0.",
+ "Multiplication (i.e., the binary operation) is **associative** if for all §0, we have §1.": "Multiplication (i.e., the binary operation) is **associative** if for all §0, we have §1.",
+ "Multiplication (i.e., the binary operation) is **commutative** if for all §0, we have §1.": "Multiplication (i.e., the binary operation) is **commutative** if for all §0, we have §1.",
+ "For all elements §0 in a monoid §1, §2, where §3 is the **identity element**.": "For all elements §0 in a monoid §1, §2, where §3 is the **identity element**."
+}

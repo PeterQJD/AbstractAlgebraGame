@@ -9,26 +9,29 @@ Level 1
 Title "The identity element"
 
 Introduction "
-The theorems `one_mul` and `mul_one` state that `∀ a ∈ M, 1 * a = a` and `∀ a ∈ M, a * 1 = a`. We
+The theorems `id_mul` and `mul_id` state that `∀ a ∈ M, e * a = a` and `∀ a ∈ M, a * e = a`. We
 need both because we can't assume that the binary operation is commutative.
 
-Use both to close the goal.
+Use `id_mul` and `mul_id` to close the goal.
 "
 namespace MyMonoid
 
 NewDefinition MyMonoid
 
-NewTheorem MyMonoid.mul_one MyMonoid.one_mul MyMonoid.mul_assoc
+NewTheorem MyMonoid.id_mul MyMonoid.mul_id MyMonoid.mul_assoc
 
 variable {M : Type} -- M for monoid seems fitting.
 
 open MyMonoid
 
-/-- In a monoid $M$, $∀ a ∈ M, 1 * a * 1 = a$. -/
-Statement [inst : MyMonoid M] (a : M) : 1 * a * 1 = a := by
-  rewrite [one_mul]
-  exact mul_one a
+/-- In a monoid $M$, $∀ a ∈ M, e * a * e = a$. -/
+Statement [inst : MyMonoid M] (a : M) : e * a = a * e := by
+  rewrite [id_mul]
+  rewrite [mul_id]
+  rfl
 
 Conclusion "
-Great, we now have access to both `one_mul` and `mul_one` in our inventory.
+Great, we now have access to `id_mul` and `mul_id` in our inventory.
+
+You may have already picked up on this, but notice that where `id` appears in the name of the theorems `id_mul` and `mul_id` matches where the identity element `e` appears in the corresponding statements.
 "

@@ -8,7 +8,7 @@ DefinitionDoc MyNat as "ℕ" in "Tutorial"
 -- ~~~ SEMIGROUP DEFINTIONS ~~~
 
 /--
-A **semigroup** is a set equipped with an associative binary operation. The binary operation is denoted by `*` and the associativity axiom states that for all elements `a, b, c` in the semigroup, we have `(a * b) * c = a * (b * c)`.
+A **semigroup** is a set equipped with an associative binary operation. The binary operation is denoted by $*$ and the associativity axiom states that for all elements $a, b, c$ in the semigroup, we have $(a * b) * c = a * (b * c)$.
 -/
 DefinitionDoc MySemigroup as "Semigroup" in "Semigroup"
 
@@ -19,7 +19,7 @@ if and only if $a * a = a$.
 DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
 
 /--
-A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements `a, b` in the semigroup, we have `a * b = b * a`.
+A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements $a, b$ in the semigroup, we have $a * b = b * a$.
 -/
 DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
 
@@ -46,16 +46,11 @@ DefinitionDoc MyInverseSemigroup.Idempotent as "Idempotent" in "Inverse Semigrou
 -- ~~~ MONOID DEFNITIONS ~~~
 
 /--
-A **Monoid** is a semigroup with the additional property of having an `identity element`,
-the identity element `$e$` is such that when applied to any element $a$ of the monoid,
-we have that `$e * a = a * e = a$`.
-
-Please note that LEAN denotes the identity element as `1`.
+A **monoid** is a semigroup with the additional property of having an **identity element**. An identity element $e$ is such that for all elements $a$ in the monoid, $e * a = a$ and $a * e = a$.
 -/
 DefinitionDoc MyMonoid as "Monoid" in "Monoid"
 
 -- ~~~ GROUP DEFINITIONS ~~~
-
 
 /--
 A **Group** is a set \( G \) equipped with an operation \( * \)

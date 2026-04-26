@@ -1,5 +1,7 @@
 import Game.Metadata
 
+-- ~~~ MYNAT THEOREMS ~~~
+
 /--
 For all natural numbers $a$, $a + 0 = a$.
 -/
@@ -20,41 +22,29 @@ TheoremDoc MyNat.zero_eq_0 as "zero_eq_0" in "Tutorial"
 -- ~~~ SEMIGROUP THEOREMS ~~~
 
 /--
-Multiplication (i.e., the binary operation) is `associative` if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
+Multiplication (i.e., the binary operation) is **associative** if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
 -/
 TheoremDoc MySemigroup.mul_assoc as "mul_assoc" in "Semigroup"
 
 /--
-Multiplication (i.e., the binary operation) is `commutative` if for all $a, b$, we have $a * b = b * a$.
+Multiplication (i.e., the binary operation) is **commutative** if for all $a, b$, we have $a * b = b * a$.
 -/
 TheoremDoc MySemigroup.mul_comm as "mul_comm" in "Semigroup"
 
 -- ~~~ MONOID THEOREMS ~~~
 
 /--
-This **Monoid axiom** states that there exists an element $e ∈ M$ which has the following property:
-$e * m = m $ for all $m ∈ M$
-
-In practice this is used to apply the identity on the left.
-
-### Important note
-The identity element $e$ is denoted as $1$ in the editor.
+For all elements $a$ in a monoid $M$, $e * a = a$, where $e$ is the **identity element**.
 -/
-TheoremDoc MyMonoid.one_mul as "one_mul" in "Monoid"
+TheoremDoc MyMonoid.id_mul as "id_mul" in "Monoid"
 
 /--
-This **Monoid Axiom** states that there exists an element $e ∈ M$ which has the following property:
-$m * e = m $ for all $m ∈ M$
-
-In practice this is used to apply the identity on the right.
-
-### Important note
-This element $e$ is denoted as $1$ in the editor.
+For all elements $a$ in a monoid $M$, $a * e = a$, where $e$ is the **identity element**.
 -/
-TheoremDoc MyMonoid.mul_one as "mul_one" in "Monoid"
+TheoremDoc MyMonoid.mul_id as "mul_id" in "Monoid"
 
 /--
-Multiplication (i.e., the binary operation) is `associative` if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
+Multiplication (i.e., the binary operation) is **associative** if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
 -/
 TheoremDoc MyMonoid.mul_assoc as "mul_assoc" in "Monoid"
 
