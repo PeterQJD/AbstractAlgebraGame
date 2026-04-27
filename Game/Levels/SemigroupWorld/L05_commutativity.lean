@@ -5,7 +5,7 @@ Level 5
 Title "Commutativity"
 
 Introduction "
-Multiplication is commutative if for all `a` and `b` we have `a * b = b * a`.
+Multiplication is commutative if for all $a$ and $b$ we have $a * b = b * a$.
 
 A **commutative semigroup** is a semigroup that also satisfies the commutativity axiom.
 

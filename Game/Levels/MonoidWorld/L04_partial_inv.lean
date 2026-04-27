@@ -5,7 +5,7 @@ Level 4
 Title "Partial inverses"
 
 Introduction "
-Intro
+You will need to use `mul_assoc` at least once in your proof.
 "
 namespace MyMonoid
 
@@ -25,3 +25,5 @@ Statement [inst : MyMonoid M] (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b 
 Conclusion "
 Good work!
 "
+
+end MyMonoid

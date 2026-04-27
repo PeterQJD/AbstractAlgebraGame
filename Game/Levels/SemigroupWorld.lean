@@ -17,7 +17,7 @@ A semigroup is an example of an algeraic structure, meaning that we have a set t
 Different algebraic structures satisfy different axioms. In the case of a semigroup, the multiplication is associative.
 In this world, we will introduce you to the idea of associativity and more.
 
-The more formal way to refer to the multiplication is as a **binary operation**. We will use the terms *binary operation* and *multiplication* interchangeably throughout this game, and both will be donated by `*`. So, `a * b` is the result of multiplying `a` and `b`.
+The more formal way to refer to the multiplication is as a **binary operation**. We will use the terms *binary operation* and *multiplication* interchangeably throughout this game, and both will be donated by 4*4. So, $a * b$ is the result of multiplying $a$ and $b$.
 
 Most of the levels in this world can be completed with the `rewrite` and `rfl` tactics.
 

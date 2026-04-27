@@ -23,3 +23,5 @@ Statement [inst : MyMonoid M] (a b : M) : e * a * b * e = a * b := by
 Conclusion "
 Nice!
 "
+
+end MyMonoid

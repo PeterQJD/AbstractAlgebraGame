@@ -50,6 +50,11 @@ A **monoid** is a semigroup with the additional property of having an **identity
 -/
 DefinitionDoc MyMonoid as "Monoid" in "Monoid"
 
+/--
+A **commutative monoid** is a monoid that has a commuatitive binary operation: for all elements $a, b$ in the monoid, we have $a * b = b * a$.
+-/
+DefinitionDoc MyCommMonoid as "Commutative Monoid" in "Monoid"
+
 -- ~~~ GROUP DEFINITIONS ~~~
 
 /--

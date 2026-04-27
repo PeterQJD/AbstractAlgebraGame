@@ -5,7 +5,7 @@ Level 3
 Title "Idempotents"
 
 Introduction "
-An element `a` of a semigroup `S` is called an idempotent if and only if `a * a = a`.
+An element $a$ of a semigroup $S$ is called an idempotent if and only if $a * a = a$.
 
 The current goal can be closed with the `rfl` tactic, showing that the statement `Idempotent (a)` is *definitionally* equal to the statement `a * a = a`.
 "

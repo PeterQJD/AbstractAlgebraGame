@@ -49,6 +49,11 @@ Multiplication (i.e., the binary operation) is **associative** if for all $a, b,
 TheoremDoc MyMonoid.mul_assoc as "mul_assoc" in "Monoid"
 
 /--
+Multiplication (i.e., the binary operation) is **commutative** if for all $a, b$, we have $a * b = b * a$.
+-/
+TheoremDoc MyMonoid.mul_comm as "mul_comm" in "Monoid"
+
+/--
 This theorem states that: if a monoid contains two elements $e₁$ and $e₂$ that have the identity property.
 Then those elements are equal, hence the `identity element` within a monoid is `unique`.
 -/

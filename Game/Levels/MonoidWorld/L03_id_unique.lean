@@ -22,3 +22,5 @@ Statement [inst : MyMonoid M] (f : M) (h1 : ∀ a, f * a = a) (h2 : ∀ a, a * f
 Conclusion "
 Good work!
 "
+
+end MyMonoid

@@ -5,7 +5,7 @@ Level 4
 Title "Idempotent Products"
 
 Introduction "
-In this level, you'll prove that a product of two elements `a` and `b` is an idempotent if `a * b * a = a`.
+In this level, you'll prove that a product of two elements $a$ and $b$ is an idempotent if $a * b * a = a$.
 "
 
 variable {S : Type}

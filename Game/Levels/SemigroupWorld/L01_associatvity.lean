@@ -9,9 +9,9 @@ Level 1
 Title "Associativity"
 
 Introduction "
-A binary operation is **associative** if for all `a, b, c`, we have `(a * b) * c = a * (b * c)`.
+A binary operation is **associative** if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
 
-Note that Lean will display `(a * b) * c` as `a * b * c`.
+Note that Lean will display $(a * b) * c$ as $a * b * c$.
 
 A **semigroup** is a set together with an associative multiplication.
 
