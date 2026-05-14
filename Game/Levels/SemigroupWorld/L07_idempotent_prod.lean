@@ -10,12 +10,10 @@ In this, the final level of Semigroup World, you'll prove that in a commutative 
 
 variable {S : Type}
 
-namespace MySemigroup
-
-open MySemigroup
+open MyCommSemigroup
 
 /--Let $S$ be a commutative semigroup and let $a, b ∈ S$. If $a$ and $b$ are idempotents then so is $a * b$.-/
-Statement (a b : S) [inst : MySemigroup S] (ha : Idempotent a) (hb : Idempotent b) : Idempotent (a * b) := by
+Statement (a b : S) [inst : MyCommSemigroup S] (ha : Idempotent a) (hb : Idempotent b) : Idempotent (a * b) := by
   rewrite [Idempotent]
   rewrite [← mul_assoc]
   rewrite [mul_assoc a b a]
@@ -27,5 +25,3 @@ Statement (a b : S) [inst : MySemigroup S] (ha : Idempotent a) (hb : Idempotent 
   rfl
 
 Conclusion "Well done! You've conquered Semigroup World!"
-
-end MySemigroup
