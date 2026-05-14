@@ -16,7 +16,7 @@ DefinitionDoc MySemigroup as "Semigroup" in "Semigroup"
 Let $S$ be a semigroup and let $a ∈ S$. Then $a$ is an **idempotent**
 if and only if $a * a = a$.
 -/
-DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
+DefinitionDoc Idempotent as "Idempotent" in "Semigroup"
 
 /--
 A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements $a, b$ in the semigroup, we have $a * b = b * a$.

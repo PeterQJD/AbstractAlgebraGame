@@ -10,7 +10,7 @@ In this level, you'll prove that a product of two elements $a$ and $b$ is an ide
 
 variable {S : Type}
 
-namespace MySemigroup
+
 
 open MySemigroup
 
@@ -23,5 +23,3 @@ Statement (a b: S) [inst : MySemigroup S] (h : a * b * a = a) : Idempotent (a * 
   rfl
 
 Conclusion "Nice work!"
-
-end MySemigroup

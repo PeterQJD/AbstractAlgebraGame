@@ -9,9 +9,6 @@ The training wheels are now off; we have our first proper level.
 
 Use `mul_assoc` and other tactics to close the goal.
 "
-
-namespace MySemigroup
-
 open MySemigroup
 
 variable {S : Type}
@@ -31,5 +28,3 @@ Statement (a b c d : S) [inst : MySemigroup S] : (a * (b * c)) * d = (a * b ) * 
   rfl
 
 Conclusion "Very well done!"
-
-end MySemigroup

@@ -18,8 +18,6 @@ A **semigroup** is a set together with an associative multiplication.
 Check that the associative rule holds by writing `rewrite [mul_assoc]` followed by `rfl`.
 "
 
-namespace MySemigroup
-
 NewDefinition MySemigroup
 
 NewTheorem MySemigroup.mul_assoc
@@ -34,5 +32,3 @@ Statement [inst : MySemigroup S] (a b c : S) : (a * b) * c = a * (b * c):= by
   rfl
 
 Conclusion "Nice! We now have access to the associative rule."
-
-end MySemigroup
