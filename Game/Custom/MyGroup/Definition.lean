@@ -1,6 +1,6 @@
-import Mathlib.Algebra.Group.Defs
+-- import Mathlib.Algebra.Group.Defs
 
-universe u
+/- universe u
 
 class MyGroup (S : Type u) extends Inv S, Mul S, One S :=
   (mul_assoc : ∀ a b c : S, a * b * c = a * (b * c))
@@ -18,4 +18,4 @@ class MyCommGroup (S : Type u) extends Inv S, Mul S, One S :=
   (one_mul : ∀ a : S, 1 * a = a)
   (mul_one : ∀ a : S, a * 1 = a)
   (mul_left_inv : ∀ a : S, a⁻¹ * a = 1)
-  (mul_right_inv : ∀ a : S, a * a⁻¹ = 1)
+  (mul_right_inv : ∀ a : S, a * a⁻¹ = 1) -/

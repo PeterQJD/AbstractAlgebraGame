@@ -8,13 +8,12 @@ Title "A simple identity."
 Introduction "
 The order in which you use `id_mul` and `mul_id` shouldn't matter.
 "
-namespace MyMonoid
-
-variable {M : Type}
 
 open MyMonoid
 
-/-- For all $a, b$, $e * a * b * e = a * b$. -/
+variable {M : Type}
+
+/-- For all $a, b ∈ M$, $e * a * b * e = a * b$. -/
 Statement [inst : MyMonoid M] (a b : M) : e * a * b * e = a * b := by
   rewrite [id_mul]
   rewrite [mul_id]
@@ -23,5 +22,3 @@ Statement [inst : MyMonoid M] (a b : M) : e * a * b * e = a * b := by
 Conclusion "
 Nice!
 "
-
-end MyMonoid

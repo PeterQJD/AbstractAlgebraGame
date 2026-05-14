@@ -29,7 +29,7 @@ TheoremDoc MySemigroup.mul_assoc as "mul_assoc" in "Semigroup"
 /--
 Multiplication (i.e., the binary operation) is **commutative** if for all $a, b$, we have $a * b = b * a$.
 -/
-TheoremDoc MySemigroup.mul_comm as "mul_comm" in "Semigroup"
+TheoremDoc MyCommSemigroup.mul_comm as "mul_comm" in "Semigroup"
 
 -- ~~~ MONOID THEOREMS ~~~
 

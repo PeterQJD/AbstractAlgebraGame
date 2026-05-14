@@ -8,11 +8,10 @@ Introduction "
 In this, the final level of Semigroup World, you'll prove that in a commutative semigroup the product of two idempotents is an idempotent.
 "
 
-variable {S : Type}
-
-namespace MySemigroup
-
+open MySemigroup
 open MyCommSemigroup
+
+variable {S : Type}
 
 /--Let $S$ be a commutative semigroup and let $a, b ∈ S$. If $a$ and $b$ are idempotents then so is $a * b$.-/
 Statement (a b : S) [inst : MyCommSemigroup S] (ha : Idempotent a) (hb : Idempotent b) : Idempotent (a * b) := by
@@ -27,5 +26,3 @@ Statement (a b : S) [inst : MyCommSemigroup S] (ha : Idempotent a) (hb : Idempot
   rfl
 
 Conclusion "Well done! You've conquered Semigroup World!"
-
-end MySemigroup

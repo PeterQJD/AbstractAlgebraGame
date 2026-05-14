@@ -11,17 +11,13 @@ A **commutative semigroup** is a semigroup that also satisfies the commutativity
 
 Check that the commutative rule holds by writing `rewrite [mul_comm]` followed by `rfl`.
 "
-namespace MySemigroup
+open MyCommSemigroup
 
 NewDefinition MyCommSemigroup
 
 NewTheorem MyCommSemigroup.mul_comm
 
--- NewTheorem MySemigroup.mul_comm
-
 variable {S : Type}
-
-open MyCommSemigroup
 
 /-- Let $S$ be a commutative semigroup. Then $*$ is commutative: $\forall a, b \in S,  a * b = b * a$. -/
 Statement (a b c : S) [inst : MyCommSemigroup S]: a * b = b * a := by
@@ -29,5 +25,3 @@ Statement (a b c : S) [inst : MyCommSemigroup S]: a * b = b * a := by
   rfl
 
 Conclusion "Good work. We can now use the `mul_comm` rule to rewrite expressions in a commutative semigroup."
-
-end MySemigroup

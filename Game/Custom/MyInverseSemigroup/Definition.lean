@@ -1,4 +1,4 @@
-import Mathlib.Algebra.Group.Defs
+import Game.Custom.MyMonoid.Definitions
 
 universe u
 
