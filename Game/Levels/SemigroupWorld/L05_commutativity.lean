@@ -15,14 +15,16 @@ namespace MySemigroup
 
 NewDefinition MyCommSemigroup
 
-NewTheorem MySemigroup.mul_comm
+NewTheorem MyCommSemigroup.mul_comm
+
+-- NewTheorem MySemigroup.mul_comm
 
 variable {S : Type}
 
-open MySemigroup
+open MyCommSemigroup
 
 /-- Let $S$ be a commutative semigroup. Then $*$ is commutative: $\forall a, b \in S,  a * b = b * a$. -/
-Statement (a b c : S) [inst : MySemigroup S]: a * b = b * a := by
+Statement (a b c : S) [inst : MyCommSemigroup S]: a * b = b * a := by
   rewrite [mul_comm]
   rfl
 
