@@ -5,10 +5,10 @@ The natural numbers. These are used in Tutorial World to demonstrate certain tac
 -/
 DefinitionDoc MyNat as "ℕ" in "Tutorial"
 
--- ~~~ SEMIGROUP DEFINTIONS ~~~
+-- SEMIGROUP DEFINTIONS
 
 /--
-A **semigroup** is a set equipped with an associative binary operation. The binary operation is denoted by $*$ and the associativity axiom states that for all elements $a, b, c$ in the semigroup, we have $(a * b) * c = a * (b * c)$.
+A **semigroup** is a set $S$ equipped with an associative binary operation. The binary operation is denoted by $*$ and the associativity axiom states that for all elements $a, b, c ∈ S$, $(a * b) * c = a * (b * c)$.
 -/
 DefinitionDoc MySemigroup as "Semigroup" in "Semigroup"
 
@@ -19,16 +19,14 @@ if and only if $a * a = a$.
 DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
 
 /--
-A **commutative semigroup** is a semigroup that has a commuatitive binary operation: for all elements $a, b$ in the semigroup, we have $a * b = b * a$.
+A **commutative semigroup** is a semigroup $S$ that has a commuatitive binary operation: for all elements $a, b ∈ S$, $a * b = b * a$.
 -/
 DefinitionDoc MyCommSemigroup as "Commutative Semigroup" in "Semigroup"
 
--- ~~~ INVERSE SEMIGROUP DEFINITIONS ~~~
+-- INVERSE SEMIGROUP DEFINITIONS
 
 /--
-An **inverse-semigroup** $S$, is a semigroup that also has the following property:
-for all elements $x ∈ S$, there exists an element $y ∈ S$.
-Such that  `$x * y * x = x$` and `$y * x * y = y$`.
+An **inverse semigroup** is a semigroup $S$ that has the property that for all $a ∈ S$, there exists a unique element $a⁻¹ ∈ S$ such that  $a * a⁻¹ * a = a$ and $a⁻¹ * a * a⁻¹ = a⁻¹$.
 -/
 DefinitionDoc MyInverseSemigroup as "Inverse Semigroup" in "Inverse Semigroup"
 
@@ -37,25 +35,19 @@ A **weak inverse** of an element $x$ in a semigroup $S$ is some $y ∈ S$ such t
 -/
 DefinitionDoc MyInverseSemigroup.Weak_inverse as "Weak inverse" in "Inverse Semigroup"
 
-/--
-Let $S$ be an inverse-semigroup and let $a ∈ S$. Then $a$ is an **idempotent**
-if and only if $a * a = a$.
--/
-DefinitionDoc MyInverseSemigroup.Idempotent as "Idempotent" in "Inverse Semigroup"
-
--- ~~~ MONOID DEFNITIONS ~~~
+-- MONOID DEFNITIONS
 
 /--
-A **monoid** is a semigroup with the additional property of having an **identity element**. An identity element $e$ is such that for all elements $a$ in the monoid, $e * a = a$ and $a * e = a$.
+A **monoid** $M$ is a semigroup with the additional property of having an **identity element**. An identity element $e ∈ M$ is such that for all $a ∈ M$, $e * a = a$ and $a * e = a$.
 -/
 DefinitionDoc MyMonoid as "Monoid" in "Monoid"
 
 /--
-A **commutative monoid** is a monoid that has a commuatitive binary operation: for all elements $a, b$ in the monoid, we have $a * b = b * a$.
+A **commutative monoid** is a monoid $M$ that has a commuatitive binary operation: for all elements $a, b ∈ M$, $a * b = b * a$.
 -/
 DefinitionDoc MyCommMonoid as "Commutative Monoid" in "Monoid"
 
--- ~~~ GROUP DEFINITIONS ~~~
+-- GROUP DEFINITIONS
 
 /--
 A **Group** is a set \( G \) equipped with an operation \( * \)
@@ -78,26 +70,3 @@ For the element $a ∈ G$,
 An inverse semigroup has no identity element, hence it has a different, more general notion of inverse.
 -/
 DefinitionDoc MyGroup.Weak_inverse as "Weak inverse" in "Group"
-
-
--- ## Game Notes
---
--- This level introduces you to groups and proofs about them.
--- Use the provided axioms and theorems to navigate the group structure.
--- *Write with `\\G` to refer to the group in your proofs.*
--- "
-
--- DefinitionDoc mygroup.mul_left_cancel as "mul_left_cancel" "
--- The left cancellation law in a group.
---
--- This theorem states that for all elements \( a, x, y \in G \),
--- if \( a * x = a * y \), then \( x = y \).
---
--- Intuitively, multiplying both sides of an equation on the left by the same element \( a \)
--- preserves equality, and this law lets us \"cancel\" \( a \) from both sides.
---
--- ## Game Notes
---
--- This property is fundamental to groups and is used frequently in proofs.
--- *Write with `\\mul_left_cancel`.*
--- "

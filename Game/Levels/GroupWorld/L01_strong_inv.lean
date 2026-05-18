@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MyGroup.Definition
+import Game.Custom.MyStructures.Definitions
 import Game.Doc.Theorems
 import Game.Doc.Tactics
 import Game.Doc.Definitions

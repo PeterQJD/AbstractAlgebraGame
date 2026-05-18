@@ -1,6 +1,6 @@
 import Game.Metadata
 
--- ~~~ MYNAT THEOREMS ~~~
+-- MYNAT THEOREMS
 
 /--
 For all natural numbers $a$, $a + 0 = a$.
@@ -19,39 +19,46 @@ This matches the MyNat zero with the literal 0.
 -/
 TheoremDoc MyNat.zero_eq_0 as "zero_eq_0" in "Tutorial"
 
--- ~~~ SEMIGROUP THEOREMS ~~~
+-- SEMIGROUP THEOREMS
 
 /--
-Multiplication (i.e., the binary operation) is **associative** if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
+In a semigroup $S$, multiplication is **associative**: $∀ a, b, c ∈ S$, we have $(a * b) * c = a * (b * c)$.
 -/
-TheoremDoc MySemigroup.mul_assoc as "mul_assoc" in "Semigroup"
+TheoremDoc MySemigroup.mul_assoc as "mul_assoc" in "Axioms"
 
 /--
-Multiplication (i.e., the binary operation) is **commutative** if for all $a, b$, we have $a * b = b * a$.
+In a commutative semigroup $S$, multiplication is **commutative**: $∀ a, b ∈ S$, we have $a * b = b * a$.
 -/
-TheoremDoc MyCommSemigroup.mul_comm as "mul_comm" in "Semigroup"
+TheoremDoc MyCommSemigroup.mul_comm as "mul_comm" in "Axioms"
 
--- ~~~ MONOID THEOREMS ~~~
+-- INVERSE SEMIGROUP THEOREMS
+
+/--
+For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x * x⁻¹ * x = x$.
+-/
+TheoremDoc MyInvSemigroup.mul_inv as "mul_inv" in "Axioms"
+
+/--
+For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x⁻¹ * x * x⁻¹ = x⁻¹$.
+-/
+TheoremDoc MyInvSemigroup.inv_mul as "inv_mul" in "Axioms"
+
+-- MONOID THEOREMS
+
+/--
+In a monoid $M$, $e$ denotes the identity element.
+-/
+TheoremDoc MyMonoid.e as "e" in "Axioms"
 
 /--
 For all elements $a$ in a monoid $M$, $e * a = a$, where $e$ is the **identity element**.
 -/
-TheoremDoc MyMonoid.id_mul as "id_mul" in "Monoid"
+TheoremDoc MyMonoid.id_mul as "id_mul" in "Axioms"
 
 /--
 For all elements $a$ in a monoid $M$, $a * e = a$, where $e$ is the **identity element**.
 -/
-TheoremDoc MyMonoid.mul_id as "mul_id" in "Monoid"
-
-/--
-Multiplication (i.e., the binary operation) is **associative** if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
--/
-TheoremDoc MyMonoid.mul_assoc as "mul_assoc" in "Monoid"
-
-/--
-Multiplication (i.e., the binary operation) is **commutative** if for all $a, b$, we have $a * b = b * a$.
--/
-TheoremDoc MyMonoid.mul_comm as "mul_comm" in "Monoid"
+TheoremDoc MyMonoid.mul_id as "mul_id" in "Axioms"
 
 /--
 This theorem states that: if a monoid contains two elements $e₁$ and $e₂$ that have the identity property.
@@ -59,25 +66,7 @@ Then those elements are equal, hence the `identity element` within a monoid is `
 -/
 TheoremDoc MyMonoid.id_unique as "id_unique" in "Monoid"
 
-/--
-A binary operation of a magma with the following properties...
--/
-TheoremDoc MyMonoid.monoid_magma_comm as "monoid_magma_comm" in "Monoid"
-
-/--
-The binary operation of a magma with the following properties...
-is commutative.
--/
-TheoremDoc MyMonoid.monoid_magma_assoc as "monoid_magma_assoc" in "Monoid"
-
--- ~~~ INVERSE SEMI GROUP THEOREMS ~~~
-
-/--
-Multiplication (i.e., the binary operation) is `associative` if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
--/
-TheoremDoc MyInverseSemigroup.mul_assoc as "mul_assoc" in "Inverse Semigroup"
-
--- ~~~ GROUP THEOREMS ~~~
+-- GROUP THEOREMS
 
 /--
 This **Group axiom** states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$

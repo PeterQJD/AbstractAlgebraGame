@@ -9,6 +9,10 @@ def Idempotent {S : Type u} [MySemigroup S] (x : S) :  Prop := x * x = x
 
 end MySemigroup
 
+class MyInvSemigroup (S : Type u) extends MySemigroup S, Inv S where
+  (mul_inv : ∀ a : S, a * a⁻¹ * a = a)
+  (inv_mul : ∀ a : S, a⁻¹ * a * a⁻¹ = a⁻¹)
+
 class MyCommSemigroup (S : Type u) extends MySemigroup S :=
   (mul_comm : ∀ a b : S, a * b = b * a)
 

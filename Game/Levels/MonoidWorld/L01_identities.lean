@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Custom.MyMonoid.Definitions
+import Game.Custom.MyStructures.Definitions
 import Game.Doc.Theorems
 import Game.Doc.Tactics
 import Game.Doc.Definitions
@@ -19,9 +19,9 @@ open MyMonoid
 
 NewDefinition MyMonoid
 
-NewTheorem MyMonoid.id_mul MyMonoid.mul_id
+NewTheorem MyMonoid.e MyMonoid.id_mul MyMonoid.mul_id
 
-variable {M : Type} -- M for monoid seems fitting.
+variable {M : Type}
 
 /-- In a monoid $M$, $∀ a ∈ M, e * a = a * e$. -/
 Statement [inst : MyMonoid M] (a : M) : e * a = a * e := by
