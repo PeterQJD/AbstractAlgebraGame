@@ -9,10 +9,10 @@ In this level, you'll prove that a product of two elements $a$ and $b$ is an ide
 "
 open MySemigroup
 
-variable {S : Type}
+variable {S : Type} [inst : MySemigroup S]
 
 /--Let $S$ be a semigroup and let $a, b ∈ S$. If $a * b * a = a$, then $a * b$ is an idempotent.-/
-Statement (a b: S) [inst : MySemigroup S] (h : a * b * a = a) : Idempotent (a * b):= by
+Statement (a b: S) (h : a * b * a = a) : Idempotent (a * b):= by
   Hint (hidden := true) "Try 'rewrite [Idempotent]' to use the definition of an element being an idempotent."
   rewrite [Idempotent]
   rewrite [← mul_assoc]

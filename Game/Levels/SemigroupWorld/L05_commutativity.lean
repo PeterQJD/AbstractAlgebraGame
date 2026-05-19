@@ -17,10 +17,10 @@ NewDefinition MyCommSemigroup
 
 NewTheorem MyCommSemigroup.mul_comm
 
-variable {S : Type}
+variable {S : Type} [inst : MyCommSemigroup S]
 
 /-- Let $S$ be a commutative semigroup. Then $*$ is commutative: $\forall a, b \in S,  a * b = b * a$. -/
-Statement (a b c : S) [inst : MyCommSemigroup S]: a * b = b * a := by
+Statement (a b c : S) : a * b = b * a := by
   rewrite [mul_comm]
   rfl
 

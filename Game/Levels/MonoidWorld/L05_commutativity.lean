@@ -18,10 +18,10 @@ NewDefinition MyCommMonoid
 
 NewTheorem MyCommMonoid.mul_comm
 
-variable {M : Type}
+variable {M : Type} [inst : MyCommMonoid M]
 
 /-- Let $M$ be a commutative monoid. Then $*$ is commutative: $\forall a, b \in M,  a * b = b * a$. -/
-Statement [inst : MyCommMonoid M] (a b c : M) : a * b = b * a := by
+Statement (a b c : M) : a * b = b * a := by
   rewrite [mul_comm]
   rfl
 

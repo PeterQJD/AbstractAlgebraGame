@@ -31,17 +31,26 @@ In a commutative semigroup $S$, multiplication is **commutative**: $∀ a, b ∈
 -/
 TheoremDoc MyCommSemigroup.mul_comm as "mul_comm" in "Axioms"
 
+/--
+Let $S$ be a semigroup. For all $a, b, c ∈ S$, $(a * b * c) * (a * b * c) = a * (b * c * a * b) * c$.
+-/
+TheoremDoc MySemigroup.sq_assoc as "sq_assoc" in "Theorems"
+
 -- INVERSE SEMIGROUP THEOREMS
 
 /--
 For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x * x⁻¹ * x = x$.
 -/
-TheoremDoc MyInvSemigroup.mul_inv as "mul_inv" in "Axioms"
+TheoremDoc MyInvSemigroup.mul_inv_mul as "mul_inv_mul" in "Axioms"
 
 /--
 For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x⁻¹ * x * x⁻¹ = x⁻¹$.
 -/
-TheoremDoc MyInvSemigroup.inv_mul as "inv_mul" in "Axioms"
+TheoremDoc MyInvSemigroup.inv_mul_inv as "inv_mul_inv" in "Axioms"
+
+/-- Let $S$ be an inverse semigroup and let $i, j ∈ S$. Let $x = (i * j)⁻¹$. Then $j * x *i$ is an idempotent.
+-/
+TheoremDoc MyInvSemigroup.inv_prod_idempotent as "inv_prod_idempotent" in "Theorems"
 
 -- MONOID THEOREMS
 

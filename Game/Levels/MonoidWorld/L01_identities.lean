@@ -21,10 +21,10 @@ NewDefinition MyMonoid
 
 NewTheorem MyMonoid.e MyMonoid.id_mul MyMonoid.mul_id
 
-variable {M : Type}
+variable {M : Type} [inst : MyMonoid M]
 
 /-- In a monoid $M$, $∀ a ∈ M, e * a = a * e$. -/
-Statement [inst : MyMonoid M] (a : M) : e * a = a * e := by
+Statement (a : M) : e * a = a * e := by
   rewrite [id_mul]
   rewrite [mul_id]
   rfl

@@ -11,10 +11,10 @@ You will need to use `mul_assoc` at least once in your proof.
 open MySemigroup
 open MyMonoid
 
-variable {M : Type}
+variable {M : Type} [inst : MyMonoid M]
 
 /-- Let $a$ be an element of a monoid $M$. If there exist elements $b, c ∈ M$ such that $a * b = e$ and $c * a = e$ then $b = c$.-/
-Statement [inst : MyMonoid M] (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b = c := by
+Statement (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b = c := by
   rewrite [← id_mul b]
   rewrite [← h2]
   rewrite [mul_assoc]
@@ -22,6 +22,4 @@ Statement [inst : MyMonoid M] (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b 
   rewrite [mul_id]
   rfl
 
-Conclusion "
-Good work!
-"
+Conclusion "Good work!"

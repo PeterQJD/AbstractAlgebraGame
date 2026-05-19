@@ -24,10 +24,10 @@ NewDefinition MySemigroup
 
 NewTheorem MySemigroup.mul_assoc
 
-variable {S : Type}
+variable {S : Type} [inst : MySemigroup S]
 
 /-- Let $S$ be a semigroup. Then $*$ is associative: $∀ a, b, c \in S, (a * b) * c = a * (b * c)$ -/
-Statement [inst : MySemigroup S] (a b c : S) : (a * b) * c = a * (b * c) := by
+Statement (a b c : S) : (a * b) * c = a * (b * c) := by
   rewrite [mul_assoc]
   rfl
 

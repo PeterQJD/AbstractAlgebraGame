@@ -11,10 +11,10 @@ The order in which you use `id_mul` and `mul_id` shouldn't matter.
 
 open MyMonoid
 
-variable {M : Type}
+variable {M : Type} [inst : MyMonoid M]
 
 /-- For all $a, b ∈ M$, $e * a * b * e = a * b$. -/
-Statement [inst : MyMonoid M] (a b : M) : e * a * b * e = a * b := by
+Statement (a b : M) : e * a * b * e = a * b := by
   rewrite [id_mul]
   rewrite [mul_id]
   rfl

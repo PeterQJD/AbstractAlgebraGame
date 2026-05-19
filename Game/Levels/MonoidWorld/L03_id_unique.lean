@@ -10,14 +10,12 @@ Now we are going to prove that the identity element $e$ is unique. In other word
 
 open MyMonoid
 
-variable {M : Type}
+variable {M : Type} [inst : MyMonoid M]
 
 /-- In a monoid, the identity element is unique.-/
-Statement [inst : MyMonoid M] (f : M) (h1 : ∀ a, f * a = a) (h2 : ∀ a, a * f = a) : f = e := by
+Statement (f : M) (h1 : ∀ a, f * a = a) (h2 : ∀ a, a * f = a) : f = e := by
   specialize h1 e
   rewrite [mul_id] at h1
   exact h1
 
-Conclusion "
-Good work!
-"
+Conclusion "Good work!"

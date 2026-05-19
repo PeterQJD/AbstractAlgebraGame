@@ -8,10 +8,10 @@ Introduction "Use `mul_comm` and other tactics to close the goal."
 
 open MyCommSemigroup
 
-variable {S : Type}
+variable {S : Type} [inst : MyCommSemigroup S]
 
 /--Let $S$ be a commutative semigroup. Then for all $a, b, c ∈ S$, $a * (b * c) = c * b * a$.-/
-Statement (a b c: S) [inst : MyCommSemigroup S] : (a * (b * c)) = c * b * a := by
+Statement (a b c: S) : (a * (b * c)) = c * b * a := by
   rewrite [mul_comm]
   rewrite [mul_comm b c]
   rfl

@@ -9,10 +9,10 @@ Introduction "In this level you will show that commutativity follows from an ass
 
 open MyMonoid
 
-variable {M : Type}
+variable {M : Type} [inst : MyMonoid M]
 
 /-- Let $M$ be a monoid and let $a, b ∈ M$. If, $\forall x, y, z ∈ M$, $x * (y * z) = (x * z) * y$ then $a * b = b * a$. -/
-Statement [inst : MyMonoid M] {a b : M} (h : ∀ x y z : M, x * (y * z) = (x * z) * y) : a * b = b * a := by
+Statement {a b : M} (h : ∀ x y z : M, x * (y * z) = (x * z) * y) : a * b = b * a := by
   specialize h e a b
   rewrite [id_mul] at h
   rewrite [id_mul] at h

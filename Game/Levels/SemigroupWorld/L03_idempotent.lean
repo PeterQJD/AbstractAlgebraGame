@@ -13,9 +13,9 @@ open MySemigroup
 
 NewDefinition MySemigroup.Idempotent
 
-variable {S : Type}
+variable {S : Type} [inst : MySemigroup S]
 
-Statement (a : S) [inst : MySemigroup S]: Idempotent (a) ↔ a * a = a := by
+Statement (a : S) : Idempotent (a) ↔ a * a = a := by
   Hint (hidden := true) "This result is true by definition so you only need to prompt Lean to check that with the `rfl` tactic."
   rfl
 
