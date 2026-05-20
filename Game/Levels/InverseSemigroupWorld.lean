@@ -1,6 +1,7 @@
 import Game.Levels.InverseSemigroupWorld.L01_inverses
 import Game.Levels.InverseSemigroupWorld.L02_idempotents
-import Game.Levels.InverseSemigroupWorld.L03_idempotent_inverse
+import Game.Levels.InverseSemigroupWorld.L03_inverse_product_idempotent
+import Game.Levels.InverseSemigroupWorld.L04_idempotent_inverse
 
 World "InverseSemigroupWorld"
 
