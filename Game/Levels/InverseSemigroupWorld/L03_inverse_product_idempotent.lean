@@ -3,7 +3,7 @@ import Game.Levels.InverseSemigroupWorld.L02_idempotents
 
 World "InverseSemigroupWorld"
 Level 3
-Title "Idempotents and inverses"
+Title "Inverse Product Idempotent"
 
 Introduction "
 Over the course of the next few levels we're going to show that in any inverse semigroup, idempotents commute.
@@ -20,8 +20,8 @@ variable {S : Type} [inst : MyInvSemigroup S]
 
 namespace MyInvSemigroup
 
-/-- Let $S$ be an inverse semigroup and let $i, j ∈ S$. Let $x = (i * j)⁻¹$. Then $j * x *i$ is an idempotent. -/
-Statement inv_prod_idempotent (i j x : S) (h : x = (i * j)⁻¹) : Idempotent (j * x * i) := by
+/-- Let $S$ be an inverse semigroup and let $a, b ∈ S$. Let $x = (a * b)⁻¹$. Then $b * x * a$ is an idempotent. -/
+Statement inv_prod_idempotent (a b x : S) (h : x = (a * b)⁻¹) : Idempotent (b * x * a) := by
   rewrite [Idempotent]
   rewrite [sq_assoc]
   rewrite [mul_assoc x]

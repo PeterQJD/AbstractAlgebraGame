@@ -13,8 +13,7 @@ A **semigroup** is a set $S$ equipped with an associative binary operation. The 
 DefinitionDoc MySemigroup as "Semigroup" in "Semigroup"
 
 /--
-Let $S$ be a semigroup and let $a ∈ S$. Then $a$ is an **idempotent**
-if and only if $a * a = a$.
+Let $S$ be a semigroup and let $a ∈ S$. Then $a$ is an **idempotent** if $a * a = a$.
 -/
 DefinitionDoc MySemigroup.Idempotent as "Idempotent" in "Semigroup"
 
