@@ -1,30 +1,26 @@
-import Game.Levels.GroupWorld.L01_strong_inv
-import Game.Levels.GroupWorld.L02_inverse_trick
+import Game.Levels.GroupWorld.L01_inverses
+import Game.Levels.GroupWorld.L02_trick
 import Game.Levels.GroupWorld.L03_inv_inv
-import Game.Levels.GroupWorld.L04_mul_left_eq_self
-import Game.Levels.GroupWorld.L05_eq_mul_inv_of_mul_eq
-import Game.Levels.GroupWorld.L06_eq_inv_of_mul_eq_one
-import Game.Levels.GroupWorld.L07_inv_eq_of_mul_eq_one
+import Game.Levels.GroupWorld.L04_left_identity
+import Game.Levels.GroupWorld.L05_solving_equations_one
+import Game.Levels.GroupWorld.L06_left_inverse
+import Game.Levels.GroupWorld.L07_right_inverse
 import Game.Levels.GroupWorld.L08_product_inv
-import Game.Levels.GroupWorld.L09_mul_left_cancel
-import Game.Levels.GroupWorld.L10_mul_eq_of_eq_inv_mul
-import Game.Levels.GroupWorld.L11_abelian
+import Game.Levels.GroupWorld.L09_left_cancellation
+import Game.Levels.GroupWorld.L10_solving_equations_two
+import Game.Levels.GroupWorld.L11_comm
 
 
 
 World "GroupWorld"
 Title "Group World"
 
-Introduction
-"
-## Welcome to Group World!
+Introduction "
+Welcome to Group World!
 
-Just like the structures encountered in our previous worlds.
-Now we have went a step further with yet more 'structure', with three main axioms now at our disposal.
-Associativity (of the binary operation), existance of an identity element and existance of inverse elements.
+We can think of a group in two different ways: as a monoid in which every elements has a unique inverse or as an inverse semigroup with an identity element.
 
-The tactics used will be predominatley rewrites.
+Over the course of the levels in this world, we'll build up a library of basic theorems about groups and just like in the previous worlds the main tactic that we'll use is `rewrite`.
 
-### click start to begin the first level!
-
+Let's get started!
 "

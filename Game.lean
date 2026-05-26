@@ -3,7 +3,7 @@ import Game.Levels.TutorialWorld
 import Game.Levels.SemigroupWorld
 import Game.Levels.MonoidWorld
 import Game.Levels.InverseSemigroupWorld
--- import Game.Levels.GroupWorld
+import Game.Levels.GroupWorld
 
 import I18n
 
@@ -59,8 +59,8 @@ CaptionLong "In this game you will prove basic propositions in different algebra
 -- Manually adding dependencies as a consequence of more modular handling of structures.
 Dependency SemigroupWorld → MonoidWorld
 Dependency SemigroupWorld → InverseSemigroupWorld
--- Dependency InverseSemigroupWorld → GroupWorld
--- Dependency MonoidWorld → GroupWorld
+Dependency InverseSemigroupWorld → GroupWorld
+Dependency MonoidWorld → GroupWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 

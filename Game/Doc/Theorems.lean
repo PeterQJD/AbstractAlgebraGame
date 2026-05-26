@@ -39,16 +39,17 @@ TheoremDoc MySemigroup.sq_assoc as "sq_assoc" in "Theorems"
 -- INVERSE SEMIGROUP THEOREMS
 
 /--
-For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x * x⁻¹ * x = x$.
+For all $a$ in an inverse semigroup $S$ there exists a unique element $a⁻¹$ satisfying $a * a⁻¹ * a = a$.
 -/
 TheoremDoc MyInvSemigroup.mul_inv_mul as "mul_inv_mul" in "Axioms"
 
 /--
-For all $x$ in an inverse semigroup $S$ there exists a unique element $x⁻¹$ satisfying $x⁻¹ * x * x⁻¹ = x⁻¹$.
+For all $a$ in an inverse semigroup $S$ there exists a unique element $a⁻¹$ satisfying $a⁻¹ * a * a⁻¹ = a⁻¹$.
 -/
 TheoremDoc MyInvSemigroup.inv_mul_inv as "inv_mul_inv" in "Axioms"
 
-/-- Let $S$ be an inverse semigroup and let $i, j ∈ S$. Let $x = (i * j)⁻¹$. Then $j * x *i$ is an idempotent.
+/--
+Let $S$ be an inverse semigroup and let $a, b ∈ S$. Let $x = (a * b)⁻¹$. Then $b * x * a$ is an idempotent.
 -/
 TheoremDoc MyInvSemigroup.inv_prod_idempotent as "inv_prod_idempotent" in "Theorems"
 
@@ -70,120 +71,66 @@ For all elements $a$ in a monoid $M$, $a * e = a$, where $e$ is the **identity e
 TheoremDoc MyMonoid.mul_id as "mul_id" in "Axioms"
 
 /--
-This theorem states that: if a monoid contains two elements $e₁$ and $e₂$ that have the identity property.
-Then those elements are equal, hence the `identity element` within a monoid is `unique`.
+The identitiy element of a monoid is unqiue.
 -/
 TheoremDoc MyMonoid.id_unique as "id_unique" in "Monoid"
 
 -- GROUP THEOREMS
 
 /--
-This **Group axiom** states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g⁻¹ * g = e$ (where e is the identity element in the group G).
-
-## Please note:
-The inverse is applied multiplicativly on the left, hence mul_left_inv.
+For all elements $a$ in a group $G$, $a * a⁻¹ = e$, where $e$ is the identity element.
 -/
-TheoremDoc MyGroup.mul_left_inv as "mul_left_inv" in "Group"
+TheoremDoc MyGroup.mul_inv as "mul_inv" in "Axioms"
 
 /--
-This **Group axiom** states that for every element $g ∈ G$, there exists an inverse element $g⁻¹ ∈ G$
-such that $g * g⁻¹ = e$ (where e is the identity element in the group G)
-q
-## Please note:
-This result allows us to apply inverses on the right.
+For all elements $a$ in a group $G$, $a ⁻¹ * a = e$, where $e$ is the identity element.
 -/
-TheoremDoc MyGroup.mul_right_inv as "mul_right_inv" in "Group"
-
-/--
-Multiplication (i.e., the binary operation) is `associative` if for all $a, b, c$, we have $(a * b) * c = a * (b * c)$.
--/
-TheoremDoc MyGroup.mul_assoc as "mul_assoc" in "Group"
-
-/--
-This **Group axiom** states that there exists an element $e ∈ G$ which has the following property:
-$e * g = g $ for all $g ∈ G$
-
-In practice this is used to apply the identity on the left.
-
-### Important note
-This element $e$ is denoted as $1$ in the editor.
--/
-TheoremDoc MyGroup.one_mul as "one_mul" in "Group"
-
-
-/--
-This **Group axiom** states that there exists an element $e ∈ G$ which has the following property:
-$g * e = g $ for all $g ∈ G$
-
-In practice this is used to apply the identity on the right.
-
-### Important note
-This element $e$ is denoted as $1$ in the editor.
--/
-TheoremDoc MyGroup.mul_one as "one_mul" in "Group"
-
+TheoremDoc MyGroup.inv_mul as "inv_mul" in "Axioms"
 
 -- Level theorems below, axioms as theorems above:
 
 /--
-This theorem states that for an element $a ∈ G$.
-The inverse of the inverse element of $a$ is equal to $a$.
-More compactly put, $(a⁻¹)⁻¹ = a$.
+For all elements $a$ in a group $G$, $(a⁻¹)⁻¹ = a$.
 -/
-TheoremDoc MyGroup.inv_inv as "inv_inv" in "Group"
+TheoremDoc MyGroup.inv_inv as "inv_inv" in "Theorems"
 
 /--
-This theorem states that, given a group $G$ with elements $a, b ∈ G$.
-If $a * b = b$, then $a = 1$.
-Where $1$ is the identity element in $G$
+Le $G$ be a group and let $a, b ∈ G$. If $a * b = b$ then $a = e$.
 -/
-TheoremDoc MyGroup.mul_left_eq_self as "mul_left_eq_self" in "Group"
+TheoremDoc MyGroup.mul_left_eq_self as "mul_left_eq_self" in "Theorems"
 
 /--
-This theorem states that, for elements $a,b,c ∈ G$.
-Assuming that $a * c = b$. It follows that $a = b * c⁻¹$.
+Let $G$ be a group and let $a, b, x ∈ G$. If $x * a = b$ then $x = b * a⁻¹$.
 -/
-TheoremDoc MyGroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Group"
-
+TheoremDoc MyGroup.eq_mul_inv_of_mul_eq as "eq_mul_inv_of_mul_eq" in "Theorems"
 
 /--
-This theorem states that, for elements $a,b ∈ G$.
-Assuming the product $a * b = 1$, then it follows that $a = b⁻¹$.
-
-Simply put, if $a$ reduces $b$ to the identity, then $a$ is the inverse of $b$.
+Let $G$ be a group and let $a, b ∈ G$. If $a * b = e$ then $a = b⁻¹$.
 -/
-TheoremDoc MyGroup.eq_inv_of_mul_eq_one as "eq_inv_mul_eq_one" in "Group"
+TheoremDoc MyGroup.eq_inv_of_mul_eq_id as "eq_inv_of_mul_eq_id" in "Theorems"
 
 /--
-This theorem states that, for elements $a,b ∈ G$.
-Assuming the product $a * b = 1$, it follows that $a⁻¹ = b$.
-
-Simply put, if $b$ reduces $a$ to the identity, then $b$ is the inverse of $a$.
+Let $G$ be a group and let $a, b ∈ G$. If $a * b = e$ then $b = a⁻¹$.
 -/
-TheoremDoc MyGroup.inv_eq_of_mul_eq_one as "inv_eq_of_mul_eq_one" in "Group"
+TheoremDoc MyGroup.inv_eq_of_mul_eq_id as "inv_eq_of_mul_eq_id" in "Group"
 
 /--
-This theorem pertains to the inverse of a product of two elements in a group.
-It states that $(a * b)⁻¹ = b⁻¹ * a⁻¹$ for all elements $a,b ∈ G$.
+Let $G$ be a group and let $a, b ∈ G$. Then $(a * b)⁻¹ = b⁻¹ * a⁻¹$$.
 -/
-TheoremDoc MyGroup.product_inv as "product_inv" in "Group"
+TheoremDoc MyGroup.product_inv as "product_inv" in "Theorems"
 
 /--
 This theorem states that for elements $a, x, y ∈ G $.
 If $a * x = a * y$ is true, then $x = y$.
 -/
-TheoremDoc MyGroup.mul_left_cancel as "mul_left_cancel" in "Group"
+TheoremDoc MyGroup.mul_left_cancel as "mul_left_cancel" in "Theorems"
 
 /--
-This theorem states that for elements $a, x, y ∈ G$.
-If $x = a⁻¹ * y$ is true. Then
-it follows that $a * b = y$.
+Let $G$ be a group and let $a, b, x ∈ G$. If $x = b * a⁻¹$ then $a * x = b$.
 -/
-TheoremDoc MyGroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Group"
+TheoremDoc MyGroup.mul_eq_of_eq_inv_mul as "mul_eq_of_eq_inv_mul" in "Theorems"
 
 /--
-This theorem states that, for a group "G" with the property, $∀ x ∈ G, x * x = 1$.
-Then such a group must be Abelian (the binary operation is commutative).
+Let $G$ be a group. If, for all $x ∈ G$, $x ^ 2 = e$ then $G$ is a commutative group.
 -/
-TheoremDoc MyGroup.order_of_all_two_abelian as "order_of_all_two_implies_abelian" in "Group"
+TheoremDoc MyGroup.mul_comm_of_sq_eq_one as "mul_comm_of_sq_eq_one" in "Theorems"

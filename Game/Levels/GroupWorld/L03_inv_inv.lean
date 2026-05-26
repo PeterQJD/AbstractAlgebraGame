@@ -1,31 +1,41 @@
-import Game.Levels.GroupWorld.L02_inverse_trick
+import Game.Levels.GroupWorld.L02_trick
 
 World "GroupWorld"
 Level 3
 
-Title "inverse of an inverse"
+Title "
+The inverse of an inverse.
+"
 
-Introduction "Now considering the previous two levels, recall
-that to write an inverse element it requires a forward-slash -1 next to the element.
+Introduction "
+The goal of this level is to prove that for all $a ∈ G$ in a group $G$, $(a⁻¹)⁻¹ = a$.
 
-Now here is your first proper exercise! prove that the inverse of the inverse of {a} is equal to {a}"
+Remember that to input $⁻¹$ you type backslash followed by -1.
+
+The tricks introduced in the previous level will help!
+"
+
+open MySemigroup
+open MyMonoid
+open MyGroup
 
 namespace MyGroup
 
-variable {G : Type} [MyGroup G]
+variable {G : Type} [inst : MyGroup G]
 
-open MyGroup
-
+/--
+Let $G$ be a group and let $a$. Then $(a⁻¹)⁻¹ = a.
+-/
 Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
-  Hint (hidden := true) "Try introducing the identity with ← backwriting, specifing a⁻¹⁻¹"
-  rewrite [← one_mul a⁻¹⁻¹]
-  Hint (hidden := true) "Try using a similar approach from the last level with 'a'."
-  rewrite [← mul_right_inv a]
+  rewrite [← id_mul a⁻¹⁻¹]
+  rewrite [← mul_inv a]
   rewrite [mul_assoc]
-  rewrite [mul_right_inv]
-  rewrite [mul_one]
+  rewrite [mul_inv]
+  rewrite [mul_id]
   rfl
 
 Conclusion "Well done, you have proved your first theorem in group world!"
+
+end MyGroup
 
 NewTheorem MyGroup.inv_inv

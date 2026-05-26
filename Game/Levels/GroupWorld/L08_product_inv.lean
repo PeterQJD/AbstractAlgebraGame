@@ -1,38 +1,41 @@
-import Game.Levels.GroupWorld.L07_inv_eq_of_mul_eq_one
+import Game.Levels.GroupWorld.L07_right_inverse
 
 
 World "GroupWorld"
 Level 8
 
-Title "Product Inverse"
-
-Introduction "In this level you will show that given a group $G$ and $a, b ∈ G$ then
-$(a * b)⁻¹ = b⁻¹ * a⁻¹$. This result will prove useful in upcoming levels
+Title "
+Product Inverse
 "
+
+Introduction "
+In this level we will prove that the inverse of a product of two group elements is the reverse product of their inverses.
+
+You will be familiar with this result in the context of matrix multiplication and composition of inverses.
+
+Some of the theorems proved in the previous levels will help you to close the goal.
+"
+
+open MySemigroup
+open MyMonoid
+open MyGroup
+
+variable {G : Type} [inst : MyGroup G]
 
 namespace MyGroup
 
-variable {G : Type} [MyGroup G]
-
-open MyGroup
-
-Statement product_inv {a b : G}: (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
-  Hint "Applying a previous proven result might be the way to go"
-  Branch
-    apply inv_eq_of_mul_eq_one
-    rewrite [mul_assoc]
-    rewrite [← mul_assoc b]
-    rewrite [mul_right_inv]
-    rewrite [one_mul]
-    rewrite [mul_right_inv]
-    rfl
-
+/--
+Let $G$ be a group and let $a, b ∈ G$. Then $(a * b)⁻¹ = b⁻¹ * a⁻¹$.
+-/
+Statement product_inv {a b : G} : (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
   apply eq_mul_inv_of_mul_eq
-  apply eq_inv_of_mul_eq_one
+  apply eq_inv_of_mul_eq_id
   rewrite [mul_assoc]
-  rewrite [← mul_left_inv (a * b)]
+  rewrite [inv_mul (a * b)]
   rfl
 
 Conclusion "Well done!"
+
+end MyGroup
 
 NewTheorem MyGroup.product_inv

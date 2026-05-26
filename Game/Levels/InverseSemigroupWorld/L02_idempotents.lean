@@ -6,7 +6,9 @@ Level 2
 Title "Idempotents"
 
 Introduction "
-Both $a * a⁻¹$ and $a⁻¹ * a$ are idempotent elements of an inverse semigroup.
+Idempotents are particularly important in the theory of inverse semigroups.
+
+In this level we'll prove that both $a * a⁻¹$ and $a⁻¹ * a$ are idempotent elements.
 "
 
 open MySemigroup

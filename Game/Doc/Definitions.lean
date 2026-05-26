@@ -42,30 +42,19 @@ A **monoid** $M$ is a semigroup with the additional property of having an **iden
 DefinitionDoc MyMonoid as "Monoid" in "Monoid"
 
 /--
-A **commutative monoid** is a monoid $M$ that has a commuatitive binary operation: for all elements $a, b ∈ M$, $a * b = b * a$.
+A **commutative monoid** is a monoid $M$ that has a commutative binary operation: for all elements $a, b ∈ M$, $a * b = b * a$.
 -/
 DefinitionDoc MyCommMonoid as "Commutative Monoid" in "Monoid"
 
 -- GROUP DEFINITIONS
 
 /--
-A **Group** is a set \( G \) equipped with an operation \( * \)
-that satisfies:
-
-Associativity: \( $(a * b) * c = a * (b * c)$ \)
-Identity: There exists \( $e \in G$ \) such that \( $e * a = a * e = a$ \)
-Inverses: For every \( $a \in G$ \), there exists \( $a⁻¹ \in G$ \) with \( $a * a⁻¹ = a⁻¹ * a = e$ \)
+A **group** $G$ is a monoid in which every element has a unique inverse: for all $a ∈ G$, $a * a⁻¹ = e$ and $a⁻¹ * a = e$.
 
 -/
 DefinitionDoc MyGroup as "Group" in "Group"
 
 /--
-A **weak inverse** of an element $x$ in a group $G$ is some $y ∈ G$ such that $x * y * x = x ∧ y * x * y = y$.
-
-The major difference between this notion of weak inverse, and the group inverse.
-Recall that an inverse semigroup does not contain an identity element.
-For the element $a ∈ G$,
- its group inverse $a⁻¹$ is characterised by the fact that when it acts on $a$, it reduces $a$ to the identity.
-An inverse semigroup has no identity element, hence it has a different, more general notion of inverse.
+A **commutative group** is a group $G$ that has a commutative binary operation: for all elements $a, b ∈ G$, $a * b = b * a$.
 -/
-DefinitionDoc MyGroup.Weak_inverse as "Weak inverse" in "Group"
+DefinitionDoc MyCommGroup as "Commutative Group" in "Group"
