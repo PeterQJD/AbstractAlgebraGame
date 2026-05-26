@@ -1,7 +1,9 @@
 import Game.Levels.SemigroupWorld.L06_using_comm
 
 World "SemigroupWorld"
+
 Level 7
+
 Title "Products of Idempotents"
 
 Introduction "
@@ -25,4 +27,10 @@ Statement (a b : S) (ha : Idempotent a) (hb : Idempotent b) : Idempotent (a * b)
   rewrite [hb]
   rfl
 
-Conclusion "Well done! You've conquered Semigroup World!"
+Conclusion "
+Well done! You've conquered Semigroup World.
+
+Semigroups can be given additional structure in one two ways: by adding an identity element, which gives us a monoid, or by introducing inverses, which leads to inverse semigroups.
+
+We recommend that you move on to Monoid World next and then try the levels of Inverse Semigroup World.
+"

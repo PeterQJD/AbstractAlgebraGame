@@ -2,15 +2,15 @@ import Game.Levels.SemigroupWorld
 import Game.Levels.InverseSemigroupWorld.L02_idempotents
 
 World "InverseSemigroupWorld"
+
 Level 3
+
 Title "Inverse Product Idempotent"
 
 Introduction "
-Over the course of the next few levels we're going to show that in any inverse semigroup, idempotents commute.
+If $x = (a * b)⁻¹$ then $b * x * a$ is an idempotent.
 
-To do this, we'll prove a series of helper theorems, the first of which is detailed in this level.
-
-A theorem introduced back in SemigroupWorld will help.
+A theorem introduced in Semigroup World can be used to shorten your proof.
 "
 
 open MySemigroup
@@ -20,7 +20,9 @@ variable {S : Type} [inst : MyInvSemigroup S]
 
 namespace MyInvSemigroup
 
-/-- Let $S$ be an inverse semigroup and let $a, b ∈ S$. Let $x = (a * b)⁻¹$. Then $b * x * a$ is an idempotent. -/
+/--
+Let $S$ be an inverse semigroup and let $a, b ∈ S$. Let $x = (a * b)⁻¹$. Then $b * x * a$ is an idempotent.
+-/
 Statement inv_prod_idempotent (a b x : S) (h : x = (a * b)⁻¹) : Idempotent (b * x * a) := by
   rewrite [Idempotent]
   rewrite [sq_assoc]
@@ -29,7 +31,9 @@ Statement inv_prod_idempotent (a b x : S) (h : x = (a * b)⁻¹) : Idempotent (b
   rewrite [inv_mul_inv]
   rfl
 
-Conclusion "Good job!"
+Conclusion "
+Good job!
+"
 
 end MyInvSemigroup
 

@@ -1,7 +1,9 @@
 import Game.Levels.SemigroupWorld.L03_idempotent
 
 World "SemigroupWorld"
+
 Level 4
+
 Title "Idempotent Products"
 
 Introduction "
@@ -11,7 +13,9 @@ open MySemigroup
 
 variable {S : Type} [inst : MySemigroup S]
 
-/--Let $S$ be a semigroup and let $a, b ∈ S$. If $a * b * a = a$, then $a * b$ is an idempotent.-/
+/--
+Let $S$ be a semigroup and let $a, b ∈ S$. If $a * b * a = a$, then $a * b$ is an idempotent.
+-/
 Statement (a b: S) (h : a * b * a = a) : Idempotent (a * b) := by
   Hint (hidden := true) "Try 'rewrite [Idempotent]' to use the definition of an element being an idempotent."
   rewrite [Idempotent]
@@ -19,4 +23,6 @@ Statement (a b: S) (h : a * b * a = a) : Idempotent (a * b) := by
   rewrite [h]
   rfl
 
-Conclusion "Nice work!"
+Conclusion "
+Nice work!
+"

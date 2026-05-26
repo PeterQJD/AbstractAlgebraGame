@@ -1,6 +1,7 @@
 import Game.Levels.GroupWorld.L02_trick
 
 World "GroupWorld"
+
 Level 3
 
 Title "
@@ -34,7 +35,9 @@ Statement inv_inv (a : G) : a ⁻¹ ⁻¹ = a := by
   rewrite [mul_id]
   rfl
 
-Conclusion "Well done, you have proved your first theorem in group world!"
+Conclusion "
+Well done, you have proved your first theorem in group world!
+"
 
 end MyGroup
 

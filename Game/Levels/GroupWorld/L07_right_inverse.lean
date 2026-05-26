@@ -3,12 +3,10 @@ import Game.Levels.GroupWorld.L06_left_inverse
 World "GroupWorld"
 Level 7
 
-Title "
-Right Inverse
-"
+Title "Right Inverse"
 
 Introduction "
-In this level we'll prove the *right* version of the result introduced in the previous level.
+In this level you'll prove the *right* version of the result introduced in the previous level.
 "
 
 open MySemigroup

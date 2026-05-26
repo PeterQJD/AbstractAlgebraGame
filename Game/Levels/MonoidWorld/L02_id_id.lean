@@ -2,7 +2,9 @@ import Game.Levels.MonoidWorld.L01_identities
 
 
 World "MonoidWorld"
+
 Level 2
+
 Title "A simple identity."
 
 Introduction "

@@ -1,7 +1,9 @@
 import Game.Levels.MonoidWorld.L04_partial_inv
 
 World "MonoidWorld"
+
 Level 5
+
 Title "Commutativity"
 
 Introduction "
@@ -20,9 +22,13 @@ NewTheorem MyCommMonoid.mul_comm
 
 variable {M : Type} [inst : MyCommMonoid M]
 
-/-- Let $M$ be a commutative monoid. Then $*$ is commutative: $\forall a, b \in M,  a * b = b * a$. -/
+/--
+Let $M$ be a commutative monoid. Then $*$ is commutative: $\forall a, b \in M,  a * b = b * a$.
+-/
 Statement (a b c : M) : a * b = b * a := by
   rewrite [mul_comm]
   rfl
 
-Conclusion "Good work. We can now use the `mul_comm` rule to rewrite expressions in a commutative monoid."
+Conclusion "
+Good work. We can now use the `mul_comm` rule to rewrite expressions in a commutative monoid.
+"

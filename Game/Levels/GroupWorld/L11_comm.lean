@@ -1,13 +1,13 @@
 import Game.Levels.GroupWorld.L10_solving_equations_two
 
 World "GroupWorld"
+
 Level 11
 
-Title "
-Commutativity"
+Title "Commutativity"
 
 Introduction "
-In this, the final level of Group World, we will prove that if, for all $x ∈ G$, $x ^ 2 = e$ then $G$ is a commutative group.
+In this, the final level of Group World, you will prove that if, for all $x ∈ G$, $x ^ 2 = e$ then $G$ is a commutative group.
 "
 
 open MySemigroup
@@ -38,7 +38,9 @@ Statement mul_comm_of_sq_eq_one {a b : G} (h : ∀ x : G, x * x = e) : a * b = b
   rewrite [h]
   rfl
 
-Conclusion "Well done!"
+Conclusion "
+Well done!
+"
 
 end MyGroup
 

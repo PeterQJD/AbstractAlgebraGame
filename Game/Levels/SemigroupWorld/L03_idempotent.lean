@@ -1,7 +1,9 @@
 import Game.Levels.SemigroupWorld.L02_using_assoc
 
 World "SemigroupWorld"
+
 Level 3
+
 Title "Idempotents"
 
 Introduction "
@@ -16,9 +18,9 @@ NewDefinition MySemigroup.Idempotent
 variable {S : Type} [inst : MySemigroup S]
 
 Statement (a : S) : Idempotent a ↔ a * a = a := by
-  Hint (hidden := true) "This result is true by definition so you only need to prompt Lean to check that with the `rfl` tactic."
+  Hint (hidden := true) "This result is true by definition, so `rfl` should work."
   rfl
 
 Conclusion "
-We can now use `rewrite [Idempotent]` to transform `Idempotent (a)` to `a * a = a` whenever we see it in a goal.`
+You can now use `rewrite [Idempotent]` to transform `Idempotent (a)` to `a * a = a` whenever you see it in a goal.`
 "

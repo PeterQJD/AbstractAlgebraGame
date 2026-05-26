@@ -1,7 +1,7 @@
 import Game.Levels.GroupWorld.L04_left_identity
 
-
 World "GroupWorld"
+
 Level 5
 
 Title "
@@ -11,7 +11,7 @@ Solving Equations 1
 Introduction "
 A group provides enough structure for us to solve simple equations of the form $x * a = b$.
 
-We'll use all the group axioms to show that $x = b * a⁻¹$.
+You'll use all the group axioms to show that $x = b * a⁻¹$.
 "
 
 open MySemigroup
@@ -32,6 +32,8 @@ Statement eq_mul_inv_of_mul_eq {a b x : G} (h : x * a = b) : x = b * a⁻¹ := b
   rewrite [mul_id]
   rfl
 
-Conclusion "Well done!"
+Conclusion "
+Well done!
+"
 
 NewTheorem MyGroup.eq_mul_inv_of_mul_eq

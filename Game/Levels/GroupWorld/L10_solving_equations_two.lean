@@ -1,13 +1,13 @@
 import Game.Levels.GroupWorld.L09_left_cancellation
 
 World "GroupWorld"
+
 Level 10
 
-Title "
-Solving Equations 2"
+Title "Solving Equations 2"
 
 Introduction "
-In this level we will show that $x = b * a⁻¹$ is the unique solution of the equation $x * a = b$.
+In this level you will show that $x = b * a⁻¹$ is the unique solution of the equation $x * a = b$.
 
 There is an obvious route to closing the goal, but an alternative approach is to use the theorem introduced in the previous level.
 "
@@ -31,6 +31,8 @@ Statement mul_eq_of_eq_inv_mul (a b x : G) (h : x = b * a⁻¹) : x * a = b := b
   rewrite [mul_id]
   rfl
 
-Conclusion "Well done!"
+Conclusion "
+Well done!
+"
 
 NewTheorem MyGroup.mul_left_cancel

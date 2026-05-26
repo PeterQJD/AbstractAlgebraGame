@@ -1,7 +1,7 @@
 import Game.Levels.GroupWorld.L03_inv_inv
 
-
 World "GroupWorld"
+
 Level 4
 
 Title "
@@ -33,7 +33,9 @@ Statement mul_left_eq_self {a b : G}  (h : a * b = b):  a = e := by
   rewrite [mul_id]
   rfl
 
-Conclusion "Excellent work!"
+Conclusion "
+Excellent work!
+"
 
 end MyGroup
 

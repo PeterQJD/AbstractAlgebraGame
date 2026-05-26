@@ -1,7 +1,9 @@
 import Game.Levels.MonoidWorld.L03_id_unique
 
 World "MonoidWorld"
+
 Level 4
+
 Title "Partial inverses"
 
 Introduction "
@@ -13,7 +15,9 @@ open MyMonoid
 
 variable {M : Type} [inst : MyMonoid M]
 
-/-- Let $a$ be an element of a monoid $M$. If there exist elements $b, c ∈ M$ such that $a * b = e$ and $c * a = e$ then $b = c$.-/
+/--
+Let $a$ be an element of a monoid $M$. If there exist elements $b, c ∈ M$ such that $a * b = e$ and $c * a = e$ then $b = c$.
+-/
 Statement (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b = c := by
   rewrite [← id_mul b]
   rewrite [← h2]
@@ -22,4 +26,6 @@ Statement (a b c : M) (h1 : a * b = e) (h2 : c * a = e) : b = c := by
   rewrite [mul_id]
   rfl
 
-Conclusion "Good work!"
+Conclusion "
+Well done!
+"

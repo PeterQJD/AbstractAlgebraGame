@@ -1,7 +1,9 @@
 import Game.Levels.SemigroupWorld.L04_prod_idempotent
 
 World "SemigroupWorld"
+
 Level 5
+
 Title "Commutativity"
 
 Introduction "
@@ -19,9 +21,13 @@ NewTheorem MyCommSemigroup.mul_comm
 
 variable {S : Type} [inst : MyCommSemigroup S]
 
-/-- Let $S$ be a commutative semigroup. Then $*$ is commutative: $\forall a, b \in S,  a * b = b * a$. -/
+/--
+Let $S$ be a commutative semigroup. Then $*$ is commutative: $\forall a, b \in S,  a * b = b * a$.
+-/
 Statement (a b c : S) : a * b = b * a := by
   rewrite [mul_comm]
   rfl
 
-Conclusion "Good work. We can now use the `mul_comm` rule to rewrite expressions in a commutative semigroup."
+Conclusion "
+You can now use the `mul_comm` rule to rewrite expressions in a commutative semigroup.
+"

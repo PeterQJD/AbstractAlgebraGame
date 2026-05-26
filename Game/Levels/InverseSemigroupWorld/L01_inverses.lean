@@ -6,7 +6,9 @@ import Game.Doc.Definitions
 
 
 World "InverseSemigroupWorld"
+
 Level 1
+
 Title "Inverses"
 
 Introduction "
@@ -25,7 +27,9 @@ NewTheorem MyInvSemigroup.mul_inv_mul MyInvSemigroup.inv_mul_inv
 
 variable {S : Type} [inst : MyInvSemigroup S]
 
-/-- Let $S$ be an inverse semigroup. Then for all $a ∈ S$ there exists a unique inverse $a⁻¹ ∈ S$ such that $a * a⁻¹ * a = a$ and $a⁻¹ * a * a⁻¹ = a⁻¹$ -/
+/--
+Let $S$ be an inverse semigroup. Then for all $a ∈ S$ there exists a unique inverse $a⁻¹ ∈ S$ such that $a * a⁻¹ * a = a$ and $a⁻¹ * a * a⁻¹ = a⁻¹$.
+-/
 Statement (a : S) : a * a⁻¹ * a = a ∧ a⁻¹ * a * a⁻¹ = a⁻¹ := by
   constructor
   · rewrite [mul_inv_mul]
@@ -33,4 +37,6 @@ Statement (a : S) : a * a⁻¹ * a = a ∧ a⁻¹ * a * a⁻¹ = a⁻¹ := by
   · rewrite [inv_mul_inv]
     rfl
 
-Conclusion "Good job!"
+Conclusion "
+Good job!
+"

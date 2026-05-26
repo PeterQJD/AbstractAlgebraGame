@@ -5,7 +5,9 @@ import Game.Doc.Tactics
 import Game.Doc.Definitions
 
 World "SemigroupWorld"
+
 Level 1
+
 Title "Associativity"
 
 Introduction "
@@ -26,9 +28,13 @@ NewTheorem MySemigroup.mul_assoc
 
 variable {S : Type} [inst : MySemigroup S]
 
-/-- Let $S$ be a semigroup. Then $*$ is associative: $∀ a, b, c \in S, (a * b) * c = a * (b * c)$ -/
+/--
+Let $S$ be a semigroup. Then $*$ is associative: $∀ a, b, c \in S, (a * b) * c = a * (b * c)$.
+-/
 Statement (a b c : S) : (a * b) * c = a * (b * c) := by
   rewrite [mul_assoc]
   rfl
 
-Conclusion "Nice! We now have access to the associative rule."
+Conclusion "
+Nice! We now have access to the associative rule.
+"

@@ -1,13 +1,13 @@
 import Game.Levels.GroupWorld.L08_product_inv
 
-
 World "GroupWorld"
+
 Level 9
 
 Title "Left Cancellation"
 
 Introduction "
-In this level we will show that if $a * b = a * c$ for group elements $a, b, c$ then we can cancel $a$ from both sides of the equation.
+In this level you will show that if $a * b = a * c$ for group elements $a, b, c$ then we can cancel $a$ from both sides of the equation.
 "
 
 open MySemigroup
@@ -31,7 +31,9 @@ Statement mul_left_cancel (a b c : G) (h : a * b = a * c) : b = c := by
   rewrite [id_mul]
   rfl
 
-Conclusion "Well done! Now lets see what we can prove with our new result."
+Conclusion "
+Well done! Now lets see what we can prove with our new result.
+"
 
 end MyGroup
 
