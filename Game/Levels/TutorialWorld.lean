@@ -21,5 +21,5 @@ Tactics are used to write proofs of theorems. You can think of the finished proo
 
 Many of the tactics used in Lean are based on very familiar mathematical concepts (like induction) while others have been introduced to simplify and speeed up the writing process in Lean.
 
-Let's dive in!
+Let's dive in! Good luck!
 "
